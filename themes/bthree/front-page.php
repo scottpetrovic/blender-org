@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 				<div class="container homebuttons">
 			      <!-- Three columns of text below the carousel -->
 			      <div class="row">

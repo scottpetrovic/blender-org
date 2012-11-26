@@ -45,7 +45,11 @@
 	          <div class="nav-collapse collapse">
 	            <ul class="nav">
 	            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>            
+
 	            </ul>
+	            <ul class="nav pull-right">
+	                <li><a href="#">Store</a></li>
+                </ul>
 	          </div><!--/.nav-collapse -->
 	        </div><!-- /.navbar-inner -->
 	      </div><!-- /.navbar -->

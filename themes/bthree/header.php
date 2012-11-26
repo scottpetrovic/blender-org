@@ -40,10 +40,11 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </a>
-	          <a class="brand" href="#">blender.org</a>
+	          <a class="brand" href="/">blender.org</a>
 	          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 	          <div class="nav-collapse collapse">
 	            <ul class="nav">
+	            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>
 	              <li class="active"><a href="#">features</a></li>
 	              <li><a href="#">download</a></li>
 	              <li><a href="#">developers</a></li> 

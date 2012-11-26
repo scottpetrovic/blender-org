@@ -1,7 +1,11 @@
 /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
-@media (min-width: 940px) {
+a, a:link, a:visited {
+    color: #008eff;
+}
 
+a:hover, a:focus {
+    color: #ff3c00;
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -11,13 +15,14 @@
   margin-top: 20px;
 /*  margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
   border-bottom: thin solid #ccc;
+  -webkit-text-shadow: none;
 }
 
 /* Remove border and change up box shadow for more contrast */
 .navbar .navbar-inner {
+    box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;
     background: transparent;
     border-radius: 0;
     border:0;
@@ -34,6 +39,11 @@
 /* Navbar links: increase padding for taller navbar */
 .navbar .nav > li > a {
   padding: 15px 20px;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
+    color: #ff3c00;
 }
 
 /* Offset the responsive button for proper vertical alignment */
@@ -41,11 +51,23 @@
   margin-top: 10px;
 }
 
-.navbar .nav .active {
-  background: transparent;
-  color: orange;
+/* Active link on the navbar */
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:focus,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .current-menu-item  > a, .navbar-inverse .nav .current-menu-item  > a:focus,
+.navbar-inverse .nav .current-menu-item  > a:hover {
+    background: transparent;
+    color: #008eff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
-    
+
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .current-menu-item  > a:hover {
+    color: #ff3c00;
+}
+ 
 .container.homebuttons {
 	margin-top: 100px;
 }

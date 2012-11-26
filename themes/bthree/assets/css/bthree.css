@@ -39,3 +39,7 @@
 
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
+    
+.container.homebuttons {
+	margin-top: 100px;
+}

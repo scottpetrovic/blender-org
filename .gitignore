@@ -2,6 +2,7 @@
 /index.php
 /plugins/index.php
 /plugins/akismet/*
+/plugins/cms-tree-page-view/*
 /plugins/hello.php
 /themes/index.php
 /themes/twentyeleven/*

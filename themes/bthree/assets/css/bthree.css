@@ -1,12 +1,7 @@
 /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
-@media (min-width: 1200px) {
-  .container {
-    width: 940px;
-  }
-  .span12 {
-    width: 940px;
-  }
+@media (min-width: 940px) {
+
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */

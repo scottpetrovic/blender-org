@@ -28,12 +28,15 @@ a:hover, a:focus {
     border:0;
 }
 
-/* Downsize the brand/project name a bit */
 .navbar .brand {
-  padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-  font-size: 16px;
-  font-weight: bold;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    display: block;
+    float: left;
+    padding: 14px 0 0 0;
+    margin: 2px 0 0 -20px;
+    text-shadow: 0;
+    width: 123px;
+    height: 36px;
+    background: url('../img/blender_logo_small.png') transparent no-repeat top left;
 }
 
 /* Navbar links: increase padding for taller navbar */

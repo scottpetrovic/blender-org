@@ -1,11 +1,13 @@
-blender-org
-===========
+# blender-org theme
 
 We are making the new blender.org skin.
 
-# Installation
+## Installation
 
 1. Get a copy of Wordpress
 2. Install it
 3. Check out this repository as a 'wp_content' folder
 4. The theme and plugins are going to be there (there is a gitignore file to ignore the existing files from defauls wordpress install)
+
+## Plugins currently used
+- [CMS Page order](http://wordpress.org/extend/plugins/cms-page-order/)

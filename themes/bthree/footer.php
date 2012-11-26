@@ -10,6 +10,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-1.8.3.min.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-carousel.js"></script>
+
     <!--
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-transition.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-alert.js"></script>
@@ -21,7 +23,7 @@
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-popover.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-button.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-collapse.js"></script>
-    <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-carousel.js"></script>
+    
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-typeahead.js"></script>
     -->
   </body>

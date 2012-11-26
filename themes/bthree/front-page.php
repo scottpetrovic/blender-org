@@ -1,5 +1,50 @@
 <?php get_header(); ?>
 
+                <div class="container">
+
+                <!-- Carousel
+                ================================================== -->
+                <div id="myCarousel" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="item active">
+<!--                       <img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/frontpage_slides/slide-01.jpg" alt="">-->
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h1>Your Own 3D Software</h1>
+                          <p class="lead">Blender is the free open source 3D content creation suite, available
+                                            for all major operating systems under the GNU General Public License.</p>
+                          <a class="btn btn-large btn-primary" href="#">Download Now</a>
+                          <p class="lead small"><small><a href="">What's new?</a> - <a href="">Other Operating Systems</a></small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+<!--                       <img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/frontpage_slides/slide-02.jpg" alt="">-->
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h1>Another example headline.</h1>
+                          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                          <a class="btn btn-large btn-primary" href="#">Learn more</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+<!--                      <img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/frontpage_slides/slide-03.jpg" alt=""> -->
+                      <div class="container">
+                        <div class="carousel-caption">
+                          <h1>One more for good measure.</h1>
+                          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                          <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                </div><!-- /.carousel -->
+
+                </div>
+
 				<div class="container homebuttons">
 			      <!-- Three columns of text below the carousel -->
 			      <div class="row">

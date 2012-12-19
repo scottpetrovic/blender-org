@@ -44,7 +44,20 @@
 	          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 	          <div class="nav-collapse collapse">
 	            <ul class="nav">
-	            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>            
+	            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>  
+	            	
+	            	
+<?php
+  if($post->post_parent)
+  	$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+  else
+  	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1");
+  if ($children) { ?>
+  	<ul class="sub-nav">
+	  	<?php echo $children; ?>
+	</ul>
+<?php } ?>
+        
 
 	            </ul>
 	            <ul class="nav pull-right">

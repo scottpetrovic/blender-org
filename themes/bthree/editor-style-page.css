@@ -1,0 +1,25 @@
+body {
+   background: #e7e7e7;
+
+
+.col-1 {
+   float:left;
+   width:47%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+
+.col-2 {
+   float:right;
+   width:47%;
+   padding:1%;
+   border: 1px dotted #ccc;
+   background: #fff;
+}
+
+img { /* Makes sure your images stay within their columns */
+   max-width: 100%;
+   width: auto;
+   height: auto;
+}

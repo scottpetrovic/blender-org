@@ -1,14 +1,12 @@
 <?php
 /*
-Template Name: Page with Sidebar
+Template Name: Page with Header
 */
 ?>
 
 <?php get_header(); ?>
 
 		<div class="container">
-			<div class="row">
-				<div class="span8">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -17,17 +15,12 @@ Template Name: Page with Sidebar
 							<h1 class="entry-title"><?php the_title(); ?></h1>
 						</header><!-- .entry-header -->
 					
-						<div class="entry-content">
+						<div class="row entry-content">
 							<?php the_content(); ?>
 						</div><!-- .entry-content -->
 					</article><!-- #post-<?php the_ID(); ?> -->
 
 
 				<?php endwhile; // end of the loop. ?>
-				</div>
-				<div class="span4">
-					<?php get_sidebar(); ?>
-				</div>
-			</div>
 		</div>
 <?php get_footer(); ?>

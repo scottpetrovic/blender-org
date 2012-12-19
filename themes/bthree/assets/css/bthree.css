@@ -60,7 +60,9 @@ a.btn{ color: white;}
 .navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:focus,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .current-menu-item  > a, .navbar-inverse .nav .current-menu-item  > a:focus,
-.navbar-inverse .nav .current-menu-item  > a:hover {
+.navbar-inverse .nav .current-menu-item  > a:hover,
+.navbar-inverse .nav .sub-nav .current_page_item  > a, .navbar-inverse .nav .sub-nav .current_page_item  > a:focus,
+.navbar-inverse .nav .sub-nav .current_page_item  > a:hover {
     background: transparent;
     color: #008eff;
     box-shadow: none;
@@ -72,6 +74,15 @@ a.btn{ color: white;}
 .navbar-inverse .nav .current-menu-item  > a:hover {
     color: #ff3c00;
 }
+
+.nav .sub-nav {
+	list-style: none;
+}
+
+.nav .sub-nav a {
+	color: #777;
+}
+
  
 .container.homebuttons {
 	margin-top: 100px;

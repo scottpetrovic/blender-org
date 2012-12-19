@@ -20,6 +20,54 @@ add_action( 'init', 'register_my_menus' );
 register_sidebars( 2, array( 'name' => 'Sidebar %d' ) );
 
 
+
+
+   add_filter( 'default_content', 'custom_editor_content' );
+      function custom_editor_content( $content ) {
+         global $current_screen;
+         if ( $current_screen->post_type == 'page') {
+            $content = '
+<div class="col-1 span6">
+a
+	&nbsp;
+</div>
+<div class="col-2 span6">
+as
+	&nbsp;
+</div>
+            ';
+         }
+         elseif ( $current_screen->post_type == 'POSTTYPE') {
+            $content = '
+
+            ';
+         }
+         else {
+            $content = '
+
+
+            ';
+         }
+         return $content;
+       }
+
+
+
+function custom_editor_style() {
+   global $current_screen;
+   add_editor_style(
+   array(
+      'editor-style.css',
+      'editor-style-'.$current_screen->post_type.'.css'
+    )
+   );
+ }
+
+ add_action( 'admin_head', 'custom_editor_style' );
+
+
+
+
 /**
  * Adds Foo_Widget widget.
  */

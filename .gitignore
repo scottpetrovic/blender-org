@@ -6,6 +6,8 @@
 /plugins/cms-tree-page-view/*
 /plugins/hello.php
 /themes/index.php
+/themes/twentytwelve/*
 /themes/twentyeleven/*
 /themes/twentyten/*
-themes/bthree/.DS_Store
+/themes/bthree/.DS_Store
+/uploads/*

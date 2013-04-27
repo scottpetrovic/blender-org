@@ -27,7 +27,75 @@
 	</head>
 
 	<body>
+
+
+<?php 
+	function page_ancestry() { 
+		//generating an array with page ids 
+		//with the top most page in array element $page_tree[0]
+		global $post;
+		$this_page = $post;
+		$test = true;
+		$page_lineage = array();
+		$page_lineage[] = $this_page->ID; 
+		  while( $test ) :
+		    if($this_page->post_parent) :
+		    $page_lineage[] = $this_page->post_parent;
+		    $this_page = get_page($this_page->post_parent);
+		    else :
+		    $test = false;
+		    endif;
+		  endwhile;
+		$page_tree = array_reverse($page_lineage);
+		return $page_tree;
+	}
 	
+	/*
+	function top_level_list_pages() {
+		?>
+		<div class="layer-parent">
+			<?php wp_page_menu('depth=1'); ?>
+		</div> <!--/ .layer-parent -->
+		<?php } 
+	*/
+	
+	function child_level_list_pages() {
+		global $post; 
+		$pages_tree = page_ancestry(); 
+		if($pages_tree[0]) : 
+			$this_page = $pages_tree[0]; 
+			// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
+			$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
+			if(plist) { ?>
+				<div class="navbar second-level">
+					<ul class="nav">
+						<?php echo $plist; ?>
+					</ul>
+				</div> <!--/ .second-level -->
+			<?php }
+		endif; //end if($pages_tree[0]) 
+	}
+	
+	function grandchild_level_list_pages() { 
+		global $post; 
+		$pages_tree = page_ancestry(); 
+		if($pages_tree[1]) : 
+			$this_page = $pages_tree[1]; 
+			// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
+			$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
+			if(plist) { ?>
+				<div class="navbar third-level">
+					<ul class="nav">
+						<?php echo $plist; ?>
+					</ul>
+				</div> <!--/ .third-level -->
+			<?php }
+		endif; //end if($pages_tree[1]) 
+	}
+	
+?>
+	
+<<<<<<< HEAD
 		<div class="header">
 			<div class="container">
 			    <div class="navbar">
@@ -60,6 +128,38 @@
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </a>
+=======
+		<!-- NAVBAR
+	    ================================================== -->
+	    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+	    <div class="container navbar-wrapper">
+	
+	      <div class="navbar navbar-inverse">
+	        <div class="navbar-inner">
+	          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </a>
+	          <a class="brand" href="/" ></a>
+	          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+	          <div class="nav-collapse collapse">
+	            <ul class="nav">
+	            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>              	
+	            </ul>
+	            <ul class="nav pull-right">
+	                <li><a href="#">Store</a></li>
+                </ul>
+	          </div><!--/.nav-collapse -->
+	        </div><!-- /.navbar-inner -->
+	      </div><!-- /.navbar -->
+	      <?php child_level_list_pages();?>
+	      <div class="clearfix"></div>
+	      <?php grandchild_level_list_pages();?>
+	    </div><!-- /.container -->
+	    
+>>>>>>> Added 3 level navigation system
 
 				    <div class="clearfix"></div>
 			    </div> <!--  // NAV BAR -->

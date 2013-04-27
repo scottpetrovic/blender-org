@@ -1,0 +1,115 @@
+
+/* Navigation Bar */
+.navbar {
+  margin: 0;
+  padding: 0;
+  border-bottom: thin solid darken(@color_background, 10%);
+}
+
+.navbar-inner {
+  float:right;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  font-family: @font_condensed;
+  padding: 0;
+  margin: 0;
+  .box-shadow-none;}
+
+.navbar .brand, 
+.navbar .nav > li > a {
+  color: lighten(@color_text, 25%); }
+
+.navbar-inner a {
+  text-transform: uppercase;
+  font-size: 110%;
+  font-weight: lighter;}
+
+.navbar .nav>.active>a,
+.navbar .nav>.active>a:hover,
+.navbar .nav>.active>a:focus  {
+  background-color: transparent;
+  .box-shadow-none;
+  color: @color_link;
+}
+.navbar .nav>.active>a:hover,
+.navbar .nav>.active>a:focus {color: @color_link_hover;}
+
+/* DROPDOWN MENUS */
+.dropdown-menu {
+  background-color: fade(@color_background, 85%);
+  padding: 0;
+  z-index:9999;
+  .box-shadow(1px, 1px, 2px, darken(@color_background, 60%), 25%);
+}
+
+.dropdown-menu > li > a,
+.drowdown-subenu > a {
+  border-bottom: 1px solid transparent;
+  font-weight: lighter;
+  .transition(all, 0.1s, ease-in)
+}
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-submenu:hover > a, 
+.dropdown-submenu:focus > a {
+  .linear-gradient(top, darken(@color_background, 1%), darken(@color_background, 4%));
+  background-image: none;
+  color: @color_link;
+}
+
+.dropdown-menu > .active > a {
+  .linear-gradient(top, darken(@color_background, 2%), darken(@color_background, 8%));
+  color: @color_text;
+  .transition(background-color, 0.15s, ease-in);
+}
+
+.dropdown-menu > .active > a:hover {
+  .linear-gradient(top, darken(@color_background, 1%), darken(@color_background, 4%));
+  color: @color_link_hover;
+}
+
+.dropdown-menu > li > a {padding: 6px 12px 6px 6px;}
+.dropdown-menu > li > a i {opacity: 0.5; .transition(opacity, 0.2s, ease-in)}
+.dropdown-menu > li > a:hover i {opacity: 0.8;}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle,
+.navbar .nav li.dropdown.active>.dropdown-toggle,
+.navbar .nav li.dropdown.open.active>.dropdown-toggle {
+  background-color: transparent;
+  color: @color_link;
+}
+
+.navbar .nav li.dropdown>.dropdown-toggle .caret {
+  border-top-color: lighten(@color_text, 20%);
+  border-bottom-color: lighten(@color_text, 20%);
+  position:relative;
+  right: -10px;
+}
+
+/* // DROPDOWN MENUS */
+
+/* LOGO */
+.header a.logo {
+  display: block;
+  position: relative;
+  float:left;
+  top: 4px;
+  height: 40px;
+  font-family: @font_condensed;
+  color: lighten(@color_text, 5%);
+  text-align:right; 
+  font-size: 120%;
+  background: url(../images/logo.png) no-repeat;
+  font-weight: lighter;
+  line-height: 180%;
+  width: 142px;
+  opacity: 1.0;
+  background-size: 32px 32px;
+  .transition(opacity, 0.2s, ease-in);
+}
+a.logo:hover {
+  color: @color_text;
+  opacity: 0.8;
+}

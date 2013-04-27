@@ -1,0 +1,69 @@
+.box-shadow (@x: 1px, @y: 1px, @blur: 3px, @color: @color_text, @alpha) {
+    -webkit-box-shadow: @x @y @blur fade(@color, @alpha);
+    -moz-box-shadow:  @x @y @blur fade(@color, @alpha);
+    box-shadow:  @x @y @blur fade(@color, @alpha); }
+.box-shadow-none {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+.text-shadow (@x: 1px, @y: 1px, @blur: 3px, @color: @color_text, @alpha) {
+    -webkit-text-shadow: @x @y @blur fade(@color, @alpha);
+    -moz-text-shadow:  @x @y @blur fade(@color, @alpha);
+    text-shadow:  @x @y @blur fade(@color, @alpha); }
+.text-shadow-none {
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  text-shadow: none; }
+.transition (@prop: all, @time: 0.1s, @ease: ease-in) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;}
+.transition-none {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+.linear-gradient (@origin: top, @start: darken(@color_background, 15%), @stop: darken(@color_background, 25%)) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop); }
+.border-radius (@radius: 3px) {
+    -webkit-border-radius: @radius; 
+    -moz-border-radius: @radius;
+    border-radius: @radius; }
+.background_dots(@shape:circle, @from:white, @to:black, @after:pink, @size1:10px, @size2:20px){
+    background: -webkit-radial-gradient(@shape, @from, @to), -webkit-radial-gradient(@shape, @after, @to) @size1 @size1;
+    background: -moz-radial-gradient(@shape, @from, @to), -moz-radial-gradient(@shape, @after, @to) @size1 @size1;
+    background: radial-gradient(@shape, @from, @to), radial-gradient(@shape, @after, @to) @size1 @size1;
+    background-size: @size1 @size2; }
+
+.horizontal_flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}

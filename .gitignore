@@ -4,6 +4,8 @@
 /plugins/wordpress-importer/*
 /plugins/akismet/*
 /plugins/cms-tree-page-view/*
+/plugins/advanced-custom-fields/*
+/plugins/media-library-assistant/*
 /plugins/hello.php
 /themes/index.php
 /themes/twentytwelve/*

@@ -19,6 +19,70 @@ add_action( 'init', 'register_my_menus' );
 
 register_sidebars( 2, array( 'name' => 'Sidebar %d' ) );
 
+function page_ancestry() { 
+	//generating an array with page ids 
+	//with the top most page in array element $page_tree[0]
+	global $post;
+	$this_page = $post;
+	$test = true;
+	$page_lineage = array();
+	$page_lineage[] = $this_page->ID; 
+	  while( $test ) :
+	    if($this_page->post_parent) :
+	    $page_lineage[] = $this_page->post_parent;
+	    $this_page = get_page($this_page->post_parent);
+	    else :
+	    $test = false;
+	    endif;
+	  endwhile;
+	$page_tree = array_reverse($page_lineage);
+	return $page_tree;
+}
+
+	
+/*
+function top_level_list_pages() {
+	?>
+	<div class="layer-parent">
+		<?php wp_page_menu('depth=1'); ?>
+	</div> <!--/ .layer-parent -->
+	<?php } 
+*/
+
+function second_level_nav() {
+	global $post; 
+	$pages_tree = page_ancestry(); 
+	if($pages_tree[0]) : 
+		$this_page = $pages_tree[0]; 
+		// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
+		$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
+		if(plist) { ?>
+			<div class="navbar second-level">
+				<ul class="nav">
+					<?php echo $plist; ?>
+				</ul>
+			</div> <!--/ .second-level -->
+		<?php }
+	endif; //end if($pages_tree[0]) 
+}
+
+function third_level_nav() { 
+	global $post; 
+	$pages_tree = page_ancestry(); 
+	if($pages_tree[1]) : 
+		$this_page = $pages_tree[1]; 
+		// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
+		$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
+		if(plist) { ?>
+			<div class="navbar third-level">
+				<ul class="nav">
+					<?php echo $plist; ?>
+				</ul>
+			</div> <!--/ .third-level -->
+		<?php }
+	endif; //end if($pages_tree[1]) 
+}
+
 
 
 
@@ -63,7 +127,7 @@ function custom_editor_style() {
    );
  }
 
- add_action( 'admin_head', 'custom_editor_style' );
+add_action( 'admin_head', 'custom_editor_style' );
 
 
 

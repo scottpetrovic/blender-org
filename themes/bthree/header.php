@@ -27,7 +27,74 @@
 	</head>
 
 	<body>
+
+
+<?php 
+	function page_ancestry() { 
+		//generating an array with page ids 
+		//with the top most page in array element $page_tree[0]
+		global $post;
+		$this_page = $post;
+		$test = true;
+		$page_lineage = array();
+		$page_lineage[] = $this_page->ID; 
+		  while( $test ) :
+		    if($this_page->post_parent) :
+		    $page_lineage[] = $this_page->post_parent;
+		    $this_page = get_page($this_page->post_parent);
+		    else :
+		    $test = false;
+		    endif;
+		  endwhile;
+		$page_tree = array_reverse($page_lineage);
+		return $page_tree;
+	}
 	
+	/*
+	function top_level_list_pages() {
+		?>
+		<div class="layer-parent">
+			<?php wp_page_menu('depth=1'); ?>
+		</div> <!--/ .layer-parent -->
+		<?php } 
+	*/
+	
+	function child_level_list_pages() {
+		global $post; 
+		$pages_tree = page_ancestry(); 
+		if($pages_tree[0]) : 
+			$this_page = $pages_tree[0]; 
+			// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
+			$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
+			if(plist) { ?>
+				<div class="navbar second-level">
+					<ul class="nav">
+						<?php echo $plist; ?>
+					</ul>
+				</div> <!--/ .second-level -->
+			<?php }
+		endif; //end if($pages_tree[0]) 
+	}
+	
+	function grandchild_level_list_pages() { 
+		global $post; 
+		$pages_tree = page_ancestry(); 
+		if($pages_tree[1]) : 
+			$this_page = $pages_tree[1]; 
+			// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
+			$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
+			if(plist) { ?>
+				<div class="navbar third-level">
+					<ul class="nav">
+						<?php echo $plist; ?>
+					</ul>
+				</div> <!--/ .third-level -->
+			<?php }
+		endif; //end if($pages_tree[1]) 
+	}
+	
+?>
+
 		<div class="header">
 			<div class="container">
 			    <div class="navbar">
@@ -37,16 +104,6 @@
 			          <div class="nav-collapse collapse">
 			            <ul class="nav">
 		            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>  
-						<?php
-						  if($post->post_parent)
-						  	$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-						  else
-						  	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1");
-						  if ($children) { ?>
-						  	<ul class="sub-nav">
-							  	<?php echo $children; ?>
-							</ul>
-						<?php } ?>
 			            </ul>
 			            <ul class="nav pull-right">
 			                <li><a href="#">Store</a></li>
@@ -61,7 +118,12 @@
 			            <span class="icon-bar"></span>
 			          </a>
 
+
 				    <div class="clearfix"></div>
 			    </div> <!--  // NAV BAR -->
+			    <?php child_level_list_pages();?>
+			    <div class="clearfix"></div>
+			    <?php grandchild_level_list_pages();?>
 			</div>
+
 		</div>

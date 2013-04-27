@@ -6,40 +6,19 @@
 @import 'sidebar.css';
 @import 'footer.css';
 
-@media (min-width: 980px){
-  .span3{
-    width: (@container_width / 4) - 8;
-    margin: 0 2px;
-  }
-  .span4{
-    width: (@container_width / 3) - 8;
-    margin: 0 4px;
-  }
-  .row {
-    margin-left: 0;
-  }
-}
+@import 'hero_unit.css';
 
-/* Override Stuff */  
+/* Override Stuff */
 .header a.logo {
   width: 123px;
   height: 36px;
   background-size: 123px 36px;
   top: -2px;
 }
-
+.hero-unit{margin: -32px auto 30px auto}
 
 /* Carousel base class */
-.carousel {
-  margin: 10px 0 0;
-}
-
-.carousel .container {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
+.carousel {margin: 0;}
 
 .carousel-control {
   background-color: transparent;
@@ -50,7 +29,8 @@
 }
 
 .carousel .item {
-  height: 500px;    
+  min-height: 480px;
+  background-size: cover;    
 }
 .carousel img {
   min-width: 100%;
@@ -58,62 +38,36 @@
 }
 
 .carousel-caption {
+    position:absolute;
+    top: 25px;
+    max-width: 60%;
+    margin: 40px auto;
     background-color: transparent;
-    position: static;
-    max-width: 400px;
-    padding: 0 20px;
-    margin: 0 0 150px 450px;
 }
 .carousel-caption h1 {
-    font-size: 240%;
+    font-size: 450%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
 .carousel-caption .lead {
     margin: 0;
     line-height: 1.25;
-    font-size: 120%;
-    color: #666;
+    background-color: fade(@color_background, 70%);
+    color: @color_text;
+    padding: 10px;
+    text-align: center;
 }
 
 .carousel-caption .btn {
   margin-top: 10px;
 }
 
-@media (max-width: 979px) {
-  .carousel .item {
-    height: 500px;
-  }
-  .carousel img {
-    width: auto;
-    height: 500px;
-  }
+.carousel .download {
+  margin-top: 300px;
+  margin-left: 500px;
 }
 
-@media (max-width: 767px) {
-  .carousel {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .carousel .container {
-
-  }
-  .carousel .item {
-    height: 300px;
-  }
-  .carousel img {
-    height: 300px;
-  }
-  .carousel-caption {
-    width: 65%;
-    padding: 0 70px;
-    margin-bottom: 40px;
-  }
-  .carousel-caption h1 {
-    font-size: 30px;
-  }
-  .carousel-caption .lead,
-  .carousel-caption .btn {
-    font-size: 18px;
-  }
-}
 /* End of Carousel */

@@ -8,7 +8,7 @@
 		<meta name="author" content="">
 
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,500' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,500' rel='stylesheet' type='text/css'>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -67,10 +67,11 @@
 			// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
 			$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
 			if(plist) { ?>
-				<div class="navbar second-level">
+				<div class="navbar second_level">
 					<ul class="nav">
 						<?php echo $plist; ?>
 					</ul>
+					<div class="clearfix"></div>
 				</div> <!--/ .second-level -->
 			<?php }
 		endif; //end if($pages_tree[0]) 
@@ -84,19 +85,19 @@
 			// find a condition that shows this page and its brothers/sisters in the ancestry of the current page
 			$plist = wp_list_pages('title_li=&child_of=' . $this_page .'&depth=1&echo=0'); 
 			if(plist) { ?>
-				<div class="navbar third-level">
+				<div class="navbar third_level">
 					<ul class="nav">
 						<?php echo $plist; ?>
 					</ul>
+					<div class="clearfix"></div>
 				</div> <!--/ .third-level -->
 			<?php }
 		endif; //end if($pages_tree[1]) 
 	}
 	
 ?>
-
-		<div class="header">
-			<div class="container">
+		<div class="container">
+			<div class="header">
 			    <div class="navbar">
 					<a class="logo" href="<?php echo site_url(); ?>"></a>
 				    <div class="navbar-inner">
@@ -109,7 +110,6 @@
 			                <li><a href="#">Store</a></li>
 		                </ul>
 			          </div><!--/.nav-collapse -->
-
 				    </div>
 
 			          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -117,13 +117,11 @@
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </a>
-
-
 				    <div class="clearfix"></div>
 			    </div> <!--  // NAV BAR -->
-			    <?php child_level_list_pages();?>
-			    <div class="clearfix"></div>
-			    <?php grandchild_level_list_pages();?>
-			</div>
+				    <?php child_level_list_pages();?>
+				    <?php grandchild_level_list_pages();?>
 
+			</div>
+			 <div class="clearfix"></div>
 		</div>

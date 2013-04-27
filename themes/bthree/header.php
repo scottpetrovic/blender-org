@@ -94,8 +94,7 @@
 	}
 	
 ?>
-	
-<<<<<<< HEAD
+
 		<div class="header">
 			<div class="container">
 			    <div class="navbar">
@@ -105,16 +104,6 @@
 			          <div class="nav-collapse collapse">
 			            <ul class="nav">
 		            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>  
-						<?php
-						  if($post->post_parent)
-						  	$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-						  else
-						  	$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1");
-						  if ($children) { ?>
-						  	<ul class="sub-nav">
-							  	<?php echo $children; ?>
-							</ul>
-						<?php } ?>
 			            </ul>
 			            <ul class="nav pull-right">
 			                <li><a href="#">Store</a></li>
@@ -128,40 +117,13 @@
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </a>
-=======
-		<!-- NAVBAR
-	    ================================================== -->
-	    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
-	    <div class="container navbar-wrapper">
-	
-	      <div class="navbar navbar-inverse">
-	        <div class="navbar-inner">
-	          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </a>
-	          <a class="brand" href="/" ></a>
-	          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-	          <div class="nav-collapse collapse">
-	            <ul class="nav">
-	            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>              	
-	            </ul>
-	            <ul class="nav pull-right">
-	                <li><a href="#">Store</a></li>
-                </ul>
-	          </div><!--/.nav-collapse -->
-	        </div><!-- /.navbar-inner -->
-	      </div><!-- /.navbar -->
-	      <?php child_level_list_pages();?>
-	      <div class="clearfix"></div>
-	      <?php grandchild_level_list_pages();?>
-	    </div><!-- /.container -->
-	    
->>>>>>> Added 3 level navigation system
+
 
 				    <div class="clearfix"></div>
 			    </div> <!--  // NAV BAR -->
+			    <?php child_level_list_pages();?>
+			    <div class="clearfix"></div>
+			    <?php grandchild_level_list_pages();?>
 			</div>
+
 		</div>

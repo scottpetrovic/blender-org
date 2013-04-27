@@ -65,7 +65,5 @@
       
       <div id="push"></div>
 	</div>
-
-
-
+<?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

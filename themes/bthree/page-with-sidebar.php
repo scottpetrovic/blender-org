@@ -9,7 +9,6 @@ Template Name: Page with Sidebar
 		<div class="container">
 			<div class="row">
 				<div class="span8">
-
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

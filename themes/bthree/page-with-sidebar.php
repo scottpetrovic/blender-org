@@ -29,4 +29,5 @@ Template Name: Page with Sidebar
 				</div>
 			</div>
 		</div>
+<?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

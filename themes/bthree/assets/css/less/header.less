@@ -95,7 +95,6 @@
 .navbar li.current_page_parent a, 
 .navbar li.current_page_ancestor a {
   color: @color_text_secondary;
-  text-transform: capitalize;
 }
 
 .navbar li.current_page_item a {
@@ -103,14 +102,14 @@
   //border-bottom: 1px solid fade(@color_text_secondary, 30%);
 }
 
-.second_level{
+.second_level,
+.third_level {
   width: 100%;
-  background-color: darken(@color_background, 3%);
+  text-transform: capitalize;
 }
-.third_level{
-  width: 100%;
-  background-color: darken(@color_background, 6%);
-}
+
+.second_level{background-color: darken(@color_background, 3%);}
+.third_level{background-color: darken(@color_background, 6%);}
 
 .navbar.second_level li {
   line-height: 80%;

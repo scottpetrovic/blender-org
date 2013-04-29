@@ -26,4 +26,5 @@ Template Name: Page with Header
 				</div>
 			</div>
 		</div>
+<?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

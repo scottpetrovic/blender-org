@@ -11,6 +11,6 @@ footer ul li{display:inline;list-style-position:inside;margin-right:25px;}
 footer .connect a{float:left;}
 footer .connect li{margin:0;}
 footer .connect i{font-size:300%;opacity:0.7;}
-.sitemap{clear:both;margin-top:20px;padding:8px 0 20px 0;border-top:thin solid #d2d2d2;}
+.sitemap{width:98%;clear:both;margin-top:20px;padding:8px 0 20px 0;border-top:thin solid #d2d2d2;}
 .sitemap ul{display:block;}
 .sitemap li{float:left;clear:left;}

@@ -6,7 +6,8 @@ Template Name: Download Page
 
 <?php get_header(); ?>
 <?php get_header('title'); ?>
-		<div class="container">
+
+		<div class="container download">
 			<div class="row">
 				<div class="span8">
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -20,16 +21,14 @@ Template Name: Download Page
 					} else {
 						$current_version = $blender_version;
 					}
-
 					?>
-
 				<ul class="nav nav-tabs">
-				  <li class="active" ><a href="#windows" data-toggle="tab">Windows</a></li>
-				  <li><a href="#osx" data-toggle="tab">Mac OSX</a></li>
-				  <li><a href="#linux" data-toggle="tab">Linux</a></li>
-				  <li><a href="#source" data-toggle="tab">Source Code</a></li>
+				  <li class="active windows"><a id="active_windows" href="#windows" data-toggle="tab">Windows</a></li>
+				  <li><a id="active_osx" href="#osx" data-toggle="tab">Mac OSX</a></li>
+				  <li><a id="active_linux" href="#linux" data-toggle="tab">Linux</a></li>
+				  <li><a id="active_source" href="#source" data-toggle="tab">Source Code</a></li>
 				</ul>
-				<div class="tab-content">
+				<div class="tab-content windows">
 				  <div class="tab-pane fade in active" id="windows">
 				  	<h1>Windows <?=$current_version?></h1>
 			  	  </div>
@@ -43,7 +42,6 @@ Template Name: Download Page
 				  	<h1>Source code for Blender <?=$current_version?></h1>
 				  </div>
 				</div>
- 
  				<?php endwhile; // end of the loop. ?>
 				</div> <!-- // span8 -->
 				<div class="span4">
@@ -51,5 +49,29 @@ Template Name: Download Page
 				</div>
 			</div>
 		</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#active_windows').live('click',function(){
+		    $('.tab-content').addClass('windows').removeClass('linux osx source');
+		    $('.nav-tabs li').removeClass('osx linux source');
+			$('.nav-tabs li.active').addClass('windows');
+		});
+		$('#active_osx').live('click',function(){
+		    $('.tab-content').addClass('osx').removeClass('windows linux source');
+		    $('.nav-tabs li').removeClass('windows linux source');
+			$('.nav-tabs li.active').addClass('osx');
+		});
+		$('#active_linux').live('click',function(){
+		    $('.tab-content').addClass('linux').removeClass('windows osx source');
+		    $('.nav-tabs li').removeClass('windows osx source');
+			$('.nav-tabs li.active').addClass('linux');
+		});
+		$('#active_source').live('click',function(){
+		    $('.tab-content').addClass('source').removeClass('windows linux osx');
+		    $('.nav-tabs li').removeClass('windows linux osx');
+			$('.nav-tabs li.active').addClass('source');
+		});
+	});
+</script>
 <?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

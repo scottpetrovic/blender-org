@@ -146,4 +146,14 @@ class Foo_Widget extends WP_Widget {
 
 add_action( 'widgets_init', create_function( '', 'register_widget( "foo_widget" );' ) );
 
+// Get the name of the current template for CSS and other stuff 
+function get_page_template_name() {
+  if (is_page()) {
+    global $post;
+    // Grab the template filename from Page metadata, but discard any .php extension.
+    return str_replace('.php', '', get_post_meta($post->ID, '_wp_page_template', true));   
+  }
+  return '';
+}
+
 ?>

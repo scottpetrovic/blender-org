@@ -32,7 +32,7 @@
 						<h4>Connect</h4>
 						<a href="http://www.twitter.com/blendernetwork"><li><i class="icon-twitter-sign"></i></li></a>
 						<a href="http://www.facebook.com/BlenderNetwork"><li><i class="icon-facebook-sign"></i></li></a>
-						<a href="{url path="/contact"}"><li><i class="icon-envelope"></i></li></a>
+						<a href="{url path="/contact"}"><li><i class="icon-user-md"></i></li></a>
 					</ul>
 					</div>
 				</div>

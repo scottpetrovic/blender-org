@@ -1,0 +1,23 @@
+@import 'defines.less';
+.nav-tabs>.active>a,
+.nav-tabs>.active>a:hover {
+    color: white;
+    background-color: transparent;
+    border:none;
+}
+.tab-content {
+    background-color: @color_os_windows;  
+}
+
+.nav-tabs>li>a:hover {background-color: fade(@color_text_secondary, 10%)}
+.nav-tabs>li.active {font-weight: bold;}
+ 
+.windows {background-color: @color_os_windows;}
+.osx {background-color: @color_os_osx;}
+.linux {background-color: @color_os_linux;}
+.source {background-color: @color_os_source;}  
+
+.tab-content.windows {border-bottom: thick solid darken(@color_os_windows, 10%);}
+.tab-content.osx {border-bottom: thick solid darken(@color_os_osx, 10%);}
+.tab-content.linux {border-bottom: thick solid darken(@color_os_linux, 10%);}
+.tab-content.source {border-bottom: thick solid darken(@color_os_source, 10%);}

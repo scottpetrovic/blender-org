@@ -12,7 +12,8 @@ Template Name: Download Page
 				<div class="span8">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
-					<?php 
+					<?php
+					/* Get the custom fields! */
 					$blender_version = get_post_meta(get_the_ID(), 'blender_version', true);
 					$blender_version_char = get_post_meta(get_the_ID(), 'blender_version_char', true);
 					$blender_release_date = get_post_meta(get_the_ID(), 'blender_release_date', true);
@@ -28,6 +29,7 @@ Template Name: Download Page
 					$os_prefix_osx = 'OSX_10.6';
 					$os_prefix_linux = 'linux-glibc211';
 
+					/* URL of mirrors for easy changing some day */
 					$url_download_nl1 = 'http://download.blender.org/release/Blender' . $blender_version . '/blender-' . $current_version;
 					$url_download_nl2 = 'http://ftp.nluug.nl/pub/graphics/blender/release/Blender' . $blender_version . '/blender-' . $current_version;
 					$url_download_usa = 'http://mirror.cs.umn.edu/blender.org/release/Blender' . $blender_version . '/blender-' . $current_version;
@@ -36,10 +38,9 @@ Template Name: Download Page
 					$choose_mirror = '<div class="choose"><i class="icon-arrow-right"></i> Choose a mirror</div>';
 
 					function download_links($os, $bits, $extension) {
-					
-						global $os,$url_download_usa,$url_download_de,
-							   $url_download_nl1,$url_download_nl2;
-					
+						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux,
+							   $url_download_usa, $url_download_de, $url_download_nl1, $url_download_nl2;
+
 						echo '
 						<ul class="links ' . $bits . '">
 							<!-- ' . $bits . ' Bit -->
@@ -48,11 +49,36 @@ Template Name: Download Page
 							<a id="do_download" target="_blank" href="' . $url_download_nl1 . '-' . $os . $bits . $extension . '" title="Download from The Netherlands mirror #1"><li>NL 1</li></a>
 							<a id="do_download" target="_blank" href="' . $url_download_nl2 . '-' . $os . $bits . $extension . '" title="Download from The Netherlands mirror #2"><li>NL 2</li></a>
 						</ul>';
-					} ?>
+					}
 
+					$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+					function get_os() { 
+
+					    global $user_agent, $os_platform, $os_name;
+
+					    $os_platform =   "unknown";
+					    $os_array    =   array(
+					                            '/win/i'     			=>  'windows',
+					                            '/macintosh|mac os x/i' =>  'osx',
+					                            '/linux/i'              =>  'linux'
+					                        );
+
+					    foreach ($os_array as $regex => $value) { 
+					        if (preg_match($regex, $user_agent)) {
+					            $os_platform    =   $value;
+					        }
+					    }
+						if ($os_platform == 'windows') { $os_name = 'Windows';}
+						else if ($os_platform == 'linux'){ $os_name = 'GNU / Linux'; }
+						else if ($os_platform == 'osx'){ $os_name = 'Mac OSX'; }
+						
+					}
+					get_os();
+					?>
 				<div class="post_header">
 					<div class="introduction">
-						<h1>Blender <?=$current_version?></h1>
+						<h1>Get Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
 						Blender <?=$current_version?> is the latest release from the <a href="<?=get_site_url() . '/foundation'?>">Blender Foundation</a>.
 						To download it, please select your platform and location. Blender is Free & Open Source Software.
 						<br/><br/>
@@ -60,16 +86,14 @@ Template Name: Download Page
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<h1>Other Operating Systems</h1>
 				<ul class="nav nav-tabs">
-				  <li class="active windows"><a id="active_windows" href="#windows" data-toggle="tab">Windows</a></li>
-				  <li><a id="active_osx" href="#osx" data-toggle="tab">Mac OSX</a></li>
-				  <li><a id="active_linux" href="#linux" data-toggle="tab">Linux</a></li>
+				  <li class="<?=($os_platform == 'windows')?'active '.$os_platform:''?>"><a id="active_windows" href="#windows" data-toggle="tab">Windows</a></li>
+				  <li class="<?=($os_platform == 'osx')?'active '.$os_platform:''?>"><a id="active_osx" href="#osx" data-toggle="tab">Mac OSX</a></li>
+				  <li class="<?=($os_platform == 'linux')?'active '.$os_platform:''?>"><a id="active_linux" href="#linux" data-toggle="tab">Linux</a></li>
 				  <li><a id="active_source" href="#source" data-toggle="tab">Source Code</a></li>
 				</ul>
-				<div class="tab-content windows" id="tab-content">
-				  <div class="tab-pane fade in active" id="windows">
-				  	<? $os = 'windows';?>
+				<div class="tab-content <?=$os_platform?>" id="tab-content">
+				  <div class="tab-pane fade <?=($os_platform == 'windows')?'in active':''?>" id="windows">
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-logo-windows"></i> Blender <?=$current_version?> for Windows</h1>
@@ -85,24 +109,24 @@ Template Name: Download Page
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
 			  			<h2>Installer</h2>
-						<? download_links($os, 32, '.exe'); ?>
-						<? download_links($os, 64, '.exe'); ?>
+						<? download_links($os_prefix_windows, 32, '.exe'); ?>
+						<? download_links($os_prefix_windows, 64, '.exe'); ?>
 						<div class="clearfix"></div>
 						<?=$choose_mirror?>
 				  	</div> <!-- Installer-->
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
 				  		<h2>.ZIP</h2>
-						<? download_links($os, 32, '.zip'); ?>
-						<? download_links($os, 64, '.zip'); ?>
+						<? download_links($os_prefix_windows, 32, '.zip'); ?>
+						<? download_links($os_prefix_windows, 64, '.zip'); ?>
 						<div class="clearfix"></div>
 						<?=$choose_mirror?>
 				  	</div> <!-- .ZIP-->
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
 				  		<h2>.7z</h2>
-						<? download_links($os, 32, '.7z'); ?>
-						<? download_links($os, 64, '.7z'); ?>
+						<? download_links($os_prefix_windows, 32, '.7z'); ?>
+						<? download_links($os_prefix_windows, 64, '.7z'); ?>
 						<div class="clearfix"></div>
 						<?=$choose_mirror?>
 				  	</div> <!-- 7z-->
@@ -115,8 +139,7 @@ Template Name: Download Page
 			 	 </div>
 			  	 </div> <!-- // WINDOWS -->
 
-				  <div class="tab-pane fade" id="osx">
-				  	<? $os = 'OSX_10.6';?>
+				  <div class="tab-pane fade <?=($os_platform == 'osx')?'in active':''?>" id="osx">
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-logo-apple"></i>Blender <?=$current_version?> for Mac OSX</h1>
@@ -132,8 +155,8 @@ Template Name: Download Page
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
 				  		<h2>.ZIP</h2>
-						<? download_links($os, '-i386', '.zip'); ?>
-						<? download_links($os, '-x86_64', '.zip'); ?>
+						<? download_links($os_prefix_osx, '-i386', '.zip'); ?>
+						<? download_links($os_prefix_osx, '-x86_64', '.zip'); ?>
 						<div class="clearfix"></div>
 						<?=$choose_mirror?>
 				  	</div> <!-- .ZIP-->
@@ -146,8 +169,7 @@ Template Name: Download Page
 			 	 </div>
 			  	 </div> <!-- // OSX -->
 
-				  <div class="tab-pane fade" id="linux">
-				  	<? $os = 'linux-glibc211';?>
+				  <div class="tab-pane fade <?=($os_platform == 'linux')?'in active':''?>" id="linux">
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-tux"></i> Blender <?=$current_version?> for GNU / Linux</h1>
@@ -164,8 +186,8 @@ Template Name: Download Page
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
 				  		<h2>Tarball .bz2</h2>
-						<? download_links($os, '-i686', '.tar.bz2'); ?>
-						<? download_links($os, '-x86_64', '.tar.bz2'); ?>
+						<? download_links($os_prefix_linux, '-i686', '.tar.bz2'); ?>
+						<? download_links($os_prefix_linux, '-x86_64', '.tar.bz2'); ?>
 						<div class="clearfix"></div>
 						<?=$choose_mirror?>
 				  	</div> <!-- // tar.bz2-->
@@ -176,7 +198,7 @@ Template Name: Download Page
 				  <div class="tab-pane fade" id="source">
 				  	<div class="header">
 				  		<div class="title">
-				  			<h1>Source Code for Blender <?=$current_version?></h1>
+				  			<h1><i class="icon-logo-blender"></i> Source Code for Blender <?=$current_version?></h1>
 							There are multiple ways to get the source code for blender. 
 							If you are going to actually try to use the source code you should really use svn to checkout the latest version. 
 							If this is of interest to you, check out our getting involved section.
@@ -237,7 +259,7 @@ Template Name: Download Page
  				<?php endwhile; // end of the loop. ?>
 				</div> <!-- // span8 -->
 				<div class="span4">
-					<?php get_sidebar(); ?>
+					<?php get_sidebar(); ?> 
 				</div>
 			</div>
 		</div>
@@ -245,7 +267,8 @@ Template Name: Download Page
 <script type="text/javascript">
 	$(document).ready(function(){
 		var padding = 15;
-		$('.tab-content').height($('#windows').height() + padding);
+//		var os_platform = 'div.' + '<?php echo $os_platform; ?>';
+//		$('.tab-content').height((os_platform).height() + padding);
 		
 		$('#active_windows').live('click',function(){
 		 	$(".tab-content").animate({height:$("#windows").height() + padding}, 200);

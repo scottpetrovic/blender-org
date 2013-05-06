@@ -1,0 +1,45 @@
+.box-shadow-none{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+.text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
+.transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
+.horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
+.nav-tabs>.active>a,.nav-tabs>.active>a:hover{color:white;background-color:transparent;border:none;}
+.tab-content{color:white;overflow:hidden;border-top:thin solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
+.tab-content a{color:#ffffff;}
+.nav-tabs>li>a:hover{background-color:rgba(0, 128, 128, 0.1);}
+.nav-tabs>li.active{font-weight:bold;}
+.windows{background-color:#476b85;}
+.osx{background-color:#6b527a;}
+.linux{background-color:#6a8547;}
+.source{background-color:#4d4d4d;}
+.tab-content.windows{border-bottom:thick solid #365063;}
+.tab-content.osx{border-bottom:thick solid #513d5c;}
+.tab-content.linux{border-bottom:thick solid #506336;}
+.tab-content.source{border-bottom:thick solid #333333;}
+.tab-content .header{width:100%;margin:25px auto;padding:0;}
+.post_header{margin:0 0 35px 0;}
+.download .package{position:relative;width:98%;margin:5px auto;clear:both;border-top:thin solid rgba(248, 248, 248, 0.1);border-left:10px solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
+.download .package .icon{position:relative;font-size:400%;color:rgba(255, 255, 255, 0.85);float:left;margin:15px 0 0 15px;-webkit-text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);-moz-text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);}
+.download .package h2{float:left;font-size:240%;margin:20px 0 0 20px;}
+.download .package .links,.download .header .depth{position:relative;float:right;width:128px;text-align:center;font-size:90%;padding:10px 0;margin:0;}
+.download .header .depth{text-align:center;font-size:120%;}
+.download .header .depth small{color:rgba(255, 255, 255, 0.6);-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
+.download .package .choose{position:absolute;top:40%;right:40%;opacity:0;-webkit-transition:all 0.15s ease-out;-moz-transition:all 0.15s ease-out;-o-transition:all 0.15s ease-out;-ms-transition:all 0.15s ease-out;transition:all 0.15s ease-out;}
+.download .package:hover .choose{right:38%;opacity:1.0;}
+.download .header .border-left{border-left:thin solid rgba(255, 255, 255, 0.3);}
+.download .header .title{margin:0 0 20px 0;float:left;}
+.download .package ul{list-style-type:none;}
+.download .package li{margin:2px 0;line-height:110%;}
+.download .package li:hover{font-weight:bold;}
+.download .windows .package{background-color:#5986a6;}
+.download .windows .package:hover{background-color:#608ba9;}
+.download .osx .package{background-color:#866699;}
+.download .osx .package:hover{background-color:#8b6c9d;}
+.download .linux .package{background-color:#85a659;}
+.download .linux .package:hover{background-color:#89a960;}
+.download .source .package{background-color:#666666;}
+.download .source .package:hover{background-color:#6b6b6b;}
+.download .package:hover .links{background-color:rgba(248, 248, 248, 0.1);}
+.download .package .links a:hover li:before{content:"\f054";font-family:FontAwesome;float:left;left:28%;position:absolute;opacity:0.5;}
+.download .tab-content .alert i{font-size:150%;float:left;margin:0 10px 0 0;opacity:0.5;}
+.download .tab-content .alert{background-color:transparent;font-size:90%;border:none;color:white;-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
+.download .tab-content .alert a:hover{font-weight:bold;}

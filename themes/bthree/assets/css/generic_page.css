@@ -2,15 +2,11 @@
 .text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
 .horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
-footer{font-size:80%;margin:0 0 10px 0;}
-footer .connect ul{border-left:3px solid #dfdfdf;}
-.sitemap a{color:#444444;}
-.sitemap li:hover{color:#008080;}
-footer ul{list-style-type:none;display:inline;margin:0 0 0 20px;}
-footer ul li{display:inline;list-style-position:inside;margin-right:25px;}
-footer .connect a{float:left;}
-footer .connect li{margin:0;}
-footer .connect i{font-size:300%;opacity:0.7;}
-.sitemap{width:98%;clear:both;margin-top:20px;padding:8px 0 20px 0;border-top:thin solid #d2d2d2;}
-.sitemap ul{display:block;}
-.sitemap li{float:left;clear:left;}
+.page_title .container{position:relative;min-height:165px;}
+.page_title .container .panel{position:absolute;top:50%;min-width:30%;margin:-50px 0 0 0;}
+.page_title .backdrop{background-size:cover;background-position:50% 30%;}
+.page_title .container .panel h1{font-size:360%;padding-bottom:10px;font-weight:700;}
+.nav-tabs{margin:0;border:none;}
+.nav-tabs>li>a{color:#333;border:none;-webkit-transition:all 0.15s ease-in;-moz-transition:all 0.15s ease-in;-o-transition:all 0.15s ease-in;-ms-transition:all 0.15s ease-in;transition:all 0.15s ease-in;}
+.tab-content h1{color:white;}
+.tab-pane{margin:5px 16px;}

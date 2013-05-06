@@ -1,4 +1,4 @@
-
+@import 'defines.less';
 /* Navigation Bar */
 .navbar {
   margin: 0;
@@ -89,6 +89,35 @@
 }
 
 /* // DROPDOWN MENUS */
+
+/* NAVIGATION LEVELS */
+.navbar li.current_page_item a, 
+.navbar li.current_page_parent a, 
+.navbar li.current_page_ancestor a {
+  color: @color_text_secondary;
+}
+
+.navbar li.current_page_item a {
+  font-weight: bold;
+  //border-bottom: 1px solid fade(@color_text_secondary, 30%);
+}
+
+.second_level,
+.third_level {
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.second_level{background-color: darken(@color_background, 3%);}
+.third_level{background-color: darken(@color_background, 6%);}
+
+.navbar.second_level li {
+  line-height: 80%;
+}
+.navbar.third_level li {
+  line-height: 50%;
+  font-size: 95%;
+}
 
 /* LOGO */
 .header a.logo {

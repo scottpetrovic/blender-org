@@ -2,15 +2,13 @@
 .text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
 .horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
-footer{font-size:80%;margin:0 0 10px 0;}
-footer .connect ul{border-left:3px solid #dfdfdf;}
-.sitemap a{color:#444444;}
-.sitemap li:hover{color:#008080;}
-footer ul{list-style-type:none;display:inline;margin:0 0 0 20px;}
-footer ul li{display:inline;list-style-position:inside;margin-right:25px;}
-footer .connect a{float:left;}
-footer .connect li{margin:0;}
-footer .connect i{font-size:300%;opacity:0.7;}
-.sitemap{width:98%;clear:both;margin-top:20px;padding:8px 0 20px 0;border-top:thin solid #d2d2d2;}
-.sitemap ul{display:block;}
-.sitemap li{float:left;clear:left;}
+.hero-unit{padding:0;margin:-31px 0 20px 0;font-size:130%;line-height:120%;background-color:#f8f8f8;border-top:1px solid #dfdfdf;border-bottom:3px solid #dfdfdf;background-image:url(../images/frontpage_unit.jpg);background-size:cover;}
+.hero-unit h3{margin:0;padding:0;border:0;}
+.hero-unit .panel{font-size:80%;}
+.hero-unit .search{color:#444444;float:right;padding:15px 15px 0 0;margin:0;}
+.hero-unit .search p{padding:0 30px 0 0;}
+.hero-unit .search form{width:100%;margin:5px 0 0 0;}
+.hero-unit .search small a{float:right;font-size:70%;margin:0 46px 0 0 ;color:white;}
+.hero-unit .search small a:hover{color:#ff4400;}
+.hero-unit .span6{width:45%;}
+.solo .panel{margin:25px 15px 0 0;}

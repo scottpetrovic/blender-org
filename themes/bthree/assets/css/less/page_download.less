@@ -6,11 +6,17 @@
     border:none;
 }
 .tab-content {
-    background-color: @color_os_windows;  
+    color: white;
+    overflow: hidden;
+  border-top: thin solid fade(@color_background, 10%);
+  .box-shadow(1px, 1px, 2px, black, 20%)
 }
+             
+.tab-content a {color: white}
 
 .nav-tabs>li>a:hover {background-color: fade(@color_text_secondary, 10%)}
 .nav-tabs>li.active {font-weight: bold;}
+
  
 .windows {background-color: @color_os_windows;}
 .osx {background-color: @color_os_osx;}
@@ -21,3 +27,120 @@
 .tab-content.osx {border-bottom: thick solid darken(@color_os_osx, 10%);}
 .tab-content.linux {border-bottom: thick solid darken(@color_os_linux, 10%);}
 .tab-content.source {border-bottom: thick solid darken(@color_os_source, 10%);}
+
+.tab-content .header {
+  width: 100%;
+  margin: 25px auto;
+  padding: 0;
+}
+
+.post_header {
+  margin: 0 0 35px 0;
+}
+
+/* inside tab-content */
+
+.download .package {
+  position:relative;
+  width: 98%;
+  margin: 5px auto;
+  clear:both;
+  border-top: thin solid fade(@color_background, 10%);
+  border-left: 10px solid fade(@color_background, 10%);
+  .box-shadow(1px, 1px, 2px, black, 20%)
+}
+
+.download .package .icon {
+  position:relative;
+  font-size: 400%;
+  color: fade(white, 85%);
+  float:left;
+  margin: 15px 0 0 15px;
+  .text-shadow(1px,1px,2px, black, 30%);
+}
+
+.download .package h2 {
+  float:left;
+  font-size: 240%;
+  margin: 20px 0 0 20px;
+}
+
+.download .package .links,
+.download .header .depth {
+  position:relative;
+  float:right;
+  width: 128px;
+  text-align:center;
+  font-size: 90%;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.download .header .depth {
+  text-align: center;
+  font-size: 120%;
+}
+.download .header .depth small {
+  color: fade(white, 60%);
+  .text-shadow-none()
+}
+
+.download .package .choose {
+  position: absolute;
+  top: 40%; right: 40%;
+  opacity: 0;
+  .transition(all, 0.15s, ease-out);
+}
+.download .package:hover .choose {right: 38%; opacity: 1.0;}
+
+.download .header .border-left {border-left: thin solid fade(white, 30%)}
+.download .header .title {
+  margin: 0 0 20px 0;
+  float:left;
+}
+
+.download .package ul {list-style-type: none;}
+.download .package li {margin: 2px 0; line-height: 110%;}
+.download .package li:hover {font-weight: bold;}
+
+.download .windows .package {background-color: lighten(@color_os_windows, 10%);}
+.download .windows .package:hover {background-color: lighten(@color_os_windows, 12%);}
+.download .osx .package {background-color: lighten(@color_os_osx, 10%);}
+.download .osx .package:hover {background-color: lighten(@color_os_osx, 12%);}
+.download .linux .package {background-color: lighten(@color_os_linux, 10%);}
+.download .linux .package:hover {background-color: lighten(@color_os_linux, 12%);}
+.download .source .package {background-color: lighten(@color_os_source, 10%);}
+.download .source .package:hover {background-color: lighten(@color_os_source, 12%);}
+
+.download .package:hover .links {
+  background-color: fade(@color_background, 10%);
+}
+
+.download .package:hover .links a {
+}
+.download .package .links a:hover li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  float:left;
+  left: 28%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.download .tab-content .alert i {
+  font-size: 150%;
+  float:left;
+  margin: 0 10px 0 0;
+  opacity: 0.5;
+}
+
+.download .tab-content .alert {
+  background-color: transparent;
+  font-size: 90%;
+  border: none;
+  color: white;
+  .text-shadow-none();}
+
+.download .tab-content .alert a:hover {
+  font-weight: bold;
+}

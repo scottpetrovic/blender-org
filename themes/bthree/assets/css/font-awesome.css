@@ -273,3 +273,8 @@ ul.icons{list-style-type:none;text-indent:-0.75em;}ul.icons li [class^="icon-"],
 .icon-github-alt:before{content:"\f113";}
 .icon-folder-close-alt:before{content:"\f114";}
 .icon-folder-open-alt:before{content:"\f115";}
+.icon-logo-blender:before{content:"\f116";}
+.icon-tux:before{content:"\f117";}
+.icon-logo-creativecommons:before{content:"\f118";}
+.icon-logo-apple:before{content:"\f119";}
+.icon-logo-windows:before{content:"\f11A";}

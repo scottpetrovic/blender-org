@@ -18,6 +18,30 @@ body {
    background: #fff;
 }
 
+
+.span6 {
+	width: 45%;
+	padding: 1%;
+	margin-right: 1%; 
+	border: 1px dotted #ccc;
+	background: #fff;
+	float: left;
+}
+
+.span4 {
+	width: 30%;
+	padding: 1%;
+	margin-right: 1%; 
+	border: 1px dotted #ccc;
+	background: #fff;
+	float: left;
+}
+
+.row {
+	clear: both;
+	margin-bottom: 20px;
+}
+
 img { /* Makes sure your images stay within their columns */
    max-width: 100%;
    width: auto;

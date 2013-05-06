@@ -86,34 +86,37 @@ function third_level_nav() {
 
 
 
-   add_filter( 'default_content', 'custom_editor_content' );
-      function custom_editor_content( $content ) {
-         global $current_screen;
-         if ( $current_screen->post_type == 'page') {
-            $content = '
-<div class="col-1 span6">
-a
-	&nbsp;
-</div>
-<div class="col-2 span6">
-as
-	&nbsp;
-</div>
-            ';
-         }
-         elseif ( $current_screen->post_type == 'POSTTYPE') {
-            $content = '
+add_filter( 'default_content', 'custom_editor_content' );
 
-            ';
-         }
-         else {
-            $content = '
+function custom_editor_content( $content ) {
+	global $current_screen;
+	if ( $current_screen->post_type == 'page') {
+    	$content = '
+    	<div class="row">
+			<div class="span6">
+			a
+			&nbsp;
+			</div>
+			<div class="span6">
+			as
+			&nbsp;
+			</div>
+		</div>
+			';
+ }
+ elseif ( $current_screen->post_type == 'POSTTYPE') {
+    $content = '
+
+    ';
+ }
+ else {
+    $content = '
 
 
-            ';
-         }
-         return $content;
-       }
+    ';
+ }
+ return $content;
+}
 
 
 

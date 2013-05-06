@@ -18,6 +18,13 @@ body {
    background: #fff;
 }
 
+.span6 {
+	width: 40%;
+	padding: 1%;
+	border: 1px dotted #ccc;
+	background: #fff;
+}
+
 img { /* Makes sure your images stay within their columns */
    max-width: 100%;
    width: auto;

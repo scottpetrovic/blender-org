@@ -7,6 +7,8 @@
 /plugins/advanced-custom-fields/*
 /plugins/media-library-assistant/*
 /plugins/hello.php
+/plugins/post-snippets/*
+/plugins/siteorigin-panels/*
 /themes/index.php
 /themes/twentytwelve/*
 /themes/twentyeleven/*

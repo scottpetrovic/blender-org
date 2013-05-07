@@ -6,12 +6,13 @@
     border:none;
 }
 .tab-content {
-    color: white;
-    overflow: hidden;
+  position:relative;
+  color: white;
+  overflow: hidden;
   border-top: thin solid fade(@color_background, 10%);
   .box-shadow(1px, 1px, 2px, black, 20%)
 }
-             
+
 .tab-content a {color: white}
 
 .nav-tabs>li>a:hover {background-color: fade(@color_text_secondary, 10%)}
@@ -143,4 +144,36 @@
 
 .download .tab-content .alert a:hover {
   font-weight: bold;
+}
+
+@tab_thanks_height: 200px;
+
+
+.thanks {
+  position: absolute;
+  top: 0; left: 0;
+  color: white;
+  text-align:center;
+  margin: 15px;
+  background-color: fade(@color_text, 95%);
+  display: none;
+  width: 96%;
+  min-height: @tab_thanks_height - 20;
+  clear:both;
+  .box-shadow(1px,1px,3px,black,20%);
+  .transition(all, 0.2s, ease-in);
+}
+
+.thanks .alert {}
+
+.tab-thanks {
+  min-height: 200px;
+  height: @tab_thanks_height;
+  width: 100%;  
+  clear:both;
+  display:block;
+}
+
+.thanks i {
+  font-size: 300%;
 }

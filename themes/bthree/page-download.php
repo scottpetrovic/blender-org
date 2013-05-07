@@ -6,7 +6,47 @@ Template Name: Download Page
 
 <?php get_header(); ?>
 <?php get_header('title'); ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var padding = 15;
+		
+		$('#active_windows').live('click',function(){
+		 	$(".tab-content").animate({height:$("#windows").height() + padding}, 200);
+		    $('.tab-content').addClass('windows').removeClass('linux osx source');
+		    $('.nav-tabs li').removeClass('osx linux source');
+			$('.nav-tabs li.active').addClass('windows');
+		});
+		$('#active_osx').live('click',function(){
+			$(".tab-content").animate({height:$("#osx").height() + padding}, 200);
+		    $('.tab-content').addClass('osx').removeClass('windows linux source');
+		    $('.nav-tabs li').removeClass('windows linux source');
+			$('.nav-tabs li.active').addClass('osx');
+		});
+		$('#active_linux').live('click',function(){
+			$(".tab-content").animate({height:$("#linux").height() + padding}, 200);
+		    $('.tab-content').addClass('linux').removeClass('windows osx source');
+		    $('.nav-tabs li').removeClass('windows osx source');
+			$('.nav-tabs li.active').addClass('linux');
+		});
+		$('#active_source').live('click',function(){
+			$(".tab-content").animate({height:$("#source").height() + padding + 60}, 200);
+		    $('.tab-content').addClass('source').removeClass('windows linux osx');
+		    $('.nav-tabs li').removeClass('windows linux osx');
+			$('.nav-tabs li.active').addClass('source');
+		});
 
+		$('a#do_download').click(function(e) {
+			//e.preventDefault();
+		    //$(".thanks").css( { display: "block" } );
+		    $(".thanks").show();
+		    $('.tab-content').addClass('tab-thanks');
+		});
+		$('a#thanks_close').click(function() {
+		    $('.tab-content').removeClass('tab-thanks');
+		    $(".thanks").hide();
+		});
+	});
+</script>
 		<div class="container download">
 			<div class="row">
 				<div class="span8">
@@ -37,18 +77,24 @@ Template Name: Download Page
 
 					$choose_mirror = '<div class="choose"><i class="icon-arrow-right"></i> Choose a mirror</div>';
 
-					function download_links($os, $bits, $extension) {
+					function download_links($os, $architecture, $extension) {
 						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux,
 							   $url_download_usa, $url_download_de, $url_download_nl1, $url_download_nl2;
 
 						echo '
-						<ul class="links ' . $bits . '">
-							<!-- ' . $bits . ' Bit -->
-							<a id="do_download" target="_blank" href="' . $url_download_usa . '-' . $os . $bits . $extension . '" title="Download from the United States"><li>USA</li></a>
-							<a id="do_download" target="_blank" href="' . $url_download_de . '-' . $os . $bits . $extension . '" title="Download from Germany"><li>DE</li></a>
-							<a id="do_download" target="_blank" href="' . $url_download_nl1 . '-' . $os . $bits . $extension . '" title="Download from The Netherlands mirror #1"><li>NL 1</li></a>
-							<a id="do_download" target="_blank" href="' . $url_download_nl2 . '-' . $os . $bits . $extension . '" title="Download from The Netherlands mirror #2"><li>NL 2</li></a>
+						<ul class="links">
+							<!-- ' . $architecture . ' Bit -->
+							<a id="do_download" href="' . $url_download_usa . '-' . $os . $architecture . $extension . '" title="Download from the United States"><li>USA</li></a>
+							<a id="do_download" href="' . $url_download_de . '-' . $os . $architecture . $extension . '" title="Download from Germany"><li>DE</li></a>
+							<a id="do_download" href="' . $url_download_nl1 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #1"><li>NL 1</li></a>
+							<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #2"><li>NL 2</li></a>
 						</ul>';
+					}
+					function download_depth_link($os, $bits, $architecture, $extension, $border) {
+						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux, $url_download_nl2;
+						echo '<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download Blender ' . $bits . 'bit">
+								<div class="depth '. $border . '"><h1>' . $bits . '<small>bit</small></h1></div>
+							  </a>';
 					}
 
 					$user_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -58,11 +104,10 @@ Template Name: Download Page
 					    global $user_agent, $os_platform, $os_name;
 
 					    $os_platform =   "unknown";
-					    $os_array    =   array(
-					                            '/win/i'     			=>  'windows',
+					    $os_array    =   array( '/win/i'     			=>  'windows',
 					                            '/macintosh|mac os x/i' =>  'osx',
 					                            '/linux/i'              =>  'linux'
-					                        );
+					                        	);
 
 					    foreach ($os_array as $regex => $value) { 
 					        if (preg_match($regex, $user_agent)) {
@@ -72,10 +117,10 @@ Template Name: Download Page
 						if ($os_platform == 'windows') { $os_name = 'Windows';}
 						else if ($os_platform == 'linux'){ $os_name = 'GNU / Linux'; }
 						else if ($os_platform == 'osx'){ $os_name = 'Mac OSX'; }
-						
 					}
 					get_os();
 					?>
+
 				<div class="post_header">
 					<div class="introduction">
 						<h1>Get Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
@@ -93,18 +138,16 @@ Template Name: Download Page
 				  <li><a id="active_source" href="#source" data-toggle="tab">Source Code</a></li>
 				</ul>
 				<div class="tab-content <?=$os_platform?>" id="tab-content">
+
+				  <!-- WINDOWS -->
 				  <div class="tab-pane fade <?=($os_platform == 'windows')?'in active':''?>" id="windows">
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-logo-windows"></i> Blender <?=$current_version?> for Windows</h1>
 				  			<h4>Compatible with Windows XP / Vista / 7 / 8</h4>
 						</div>
-				  		<div class="depth border-left">
-							<h1>32<small>bit</small></h1>
-				  		</div>
-				  		<div class="depth">
-							<h1 class="32">64<small>bit</small></h1>
-				  		</div>
+						<? download_depth_link($os_prefix_windows, 32, 32, '.exe', 'border-left');?>
+						<? download_depth_link($os_prefix_windows, 64, 64, '.exe');?>
 				  	</div>
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
@@ -139,18 +182,15 @@ Template Name: Download Page
 			 	 </div>
 			  	 </div> <!-- // WINDOWS -->
 
+				  <!-- MAC OSX -->
 				  <div class="tab-pane fade <?=($os_platform == 'osx')?'in active':''?>" id="osx">
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-logo-apple"></i>Blender <?=$current_version?> for Mac OSX</h1>
 				  			<h4>Requires Mac OS X 10.6+</h4>
 						</div>
-				  		<div class="depth border-left">
-							<h1>32<small>bit</small></h1>
-				  		</div>
-				  		<div class="depth">
-							<h1>64<small>bit</small></h1>
-				  		</div>
+						<? download_depth_link($os_prefix_osx, 32, '-i386', '.zip', 'border-left');?>
+						<? download_depth_link($os_prefix_osx, 64, '-x86_64', '.zip');?>
 				  	</div>
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
@@ -169,6 +209,7 @@ Template Name: Download Page
 			 	 </div>
 			  	 </div> <!-- // OSX -->
 
+				  <!-- LINUX -->
 				  <div class="tab-pane fade <?=($os_platform == 'linux')?'in active':''?>" id="linux">
 				  	<div class="header">
 				  		<div class="title">
@@ -176,12 +217,8 @@ Template Name: Download Page
 				  			<h4>Requires glibc 2.11. Includes Python 3.3, FFmpeg<br/>
 				  				Suits most recent Linux distributions</h4>
 						</div>
-				  		<div class="depth border-left">
-							<h1>32<small>bit</small></h1>
-				  		</div>
-				  		<div class="depth">
-							<h1>64<small>bit</small></h1>
-				  		</div>
+						<? download_depth_link($os_prefix_linux, 32, '-i686', '.tar.bz2', 'border-left');?>
+						<? download_depth_link($os_prefix_linux, 64, '-x86_64', '.tar.bz2');?>
 				  	</div>
 				  	<div class="package">
 				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
@@ -192,7 +229,7 @@ Template Name: Download Page
 						<?=$choose_mirror?>
 				  	</div> <!-- // tar.bz2-->
 				 <div class="clearfix"></div>
-				  </div> <!-- LINUX -->
+				  </div> <!-- // LINUX -->
 
 				  <!-- SOURCE -->
 				  <div class="tab-pane fade" id="source">
@@ -233,6 +270,12 @@ Template Name: Download Page
 				</div><!-- // SOURCE-->
 
   				<div class="clearfix"></div>
+				<div class="thanks">
+					<a id="thanks_close" title="Close" class="pull-right"><i class="icon-remove"></i></a>
+					<h1>Thanks dude you're awesome!</h1>
+					<h2>bring the bags!</i> </h2>
+					<div class="clearfix"></div>
+				</div>
 				</div> <!-- // TABS -->
 				<hr/>
 				<div class="accordion" id="accordion_windows">
@@ -255,7 +298,6 @@ Template Name: Download Page
 				    </div>
 				  </div>
 				</div>
-
  				<?php endwhile; // end of the loop. ?>
 				</div> <!-- // span8 -->
 				<div class="span4">
@@ -263,39 +305,5 @@ Template Name: Download Page
 				</div>
 			</div>
 		</div>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		var padding = 15;
-//		var os_platform = 'div.' + '<?php echo $os_platform; ?>';
-//		$('.tab-content').height((os_platform).height() + padding);
-		
-		$('#active_windows').live('click',function(){
-		 	$(".tab-content").animate({height:$("#windows").height() + padding}, 200);
-		    $('.tab-content').addClass('windows').removeClass('linux osx source');
-		    $('.nav-tabs li').removeClass('osx linux source');
-			$('.nav-tabs li.active').addClass('windows');
-		});
-		$('#active_osx').live('click',function(){
-			$(".tab-content").animate({height:$("#osx").height() + padding}, 200);
-		    $('.tab-content').addClass('osx').removeClass('windows linux source');
-		    $('.nav-tabs li').removeClass('windows linux source');
-			$('.nav-tabs li.active').addClass('osx');
-		});
-		$('#active_linux').live('click',function(){
-			$(".tab-content").animate({height:$("#linux").height() + padding}, 200);
-		    $('.tab-content').addClass('linux').removeClass('windows osx source');
-		    $('.nav-tabs li').removeClass('windows osx source');
-			$('.nav-tabs li.active').addClass('linux');
-		});
-		$('#active_source').live('click',function(){
-			$(".tab-content").animate({height:$("#source").height() + padding + 60}, 200);
-		    $('.tab-content').addClass('source').removeClass('windows linux osx');
-		    $('.nav-tabs li').removeClass('windows linux osx');
-			$('.nav-tabs li.active').addClass('source');
-		});
-
-	});
-</script>
 <?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

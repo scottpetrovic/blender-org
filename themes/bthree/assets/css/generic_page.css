@@ -5,7 +5,7 @@
 .page_title .container{position:relative;min-height:165px;}
 .page_title .container .panel{position:absolute;top:50%;min-width:30%;margin:-50px 0 0 0;}
 .page_title .backdrop{background-size:cover;background-position:50% 30%;}
-.page_title .container .panel h1{font-size:360%;padding-bottom:10px;font-weight:700;}
+.page_title .container .panel h1{font-size:360%;padding-bottom:10px;}
 .nav-tabs{margin:0;border:none;}
 .nav-tabs>li>a{color:#333;border:none;-webkit-transition:all 0.15s ease-in;-moz-transition:all 0.15s ease-in;-o-transition:all 0.15s ease-in;-ms-transition:all 0.15s ease-in;transition:all 0.15s ease-in;}
 .tab-content h1{color:white;}

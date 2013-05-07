@@ -90,9 +90,8 @@ Template Name: Download Page
 							<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #2"><li>NL 2</li></a>
 						</ul>';
 					}
-					function download_depth_link($os, $bits, $architecture, $extension, $border) {
+					function download_depth_link($os, $bits, $architecture, $extension, $border = FALSE) {
 						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux, $url_download_nl2;
-						$border = false;
 						echo '<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download Blender ' . $bits . 'bit">
 								<div class="depth '. $border . '"><h1>' . $bits . '<small>bit</small></h1></div>
 							  </a>';

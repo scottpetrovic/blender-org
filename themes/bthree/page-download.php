@@ -36,7 +36,7 @@ Template Name: Download Page
 		});
 
 		$('a#do_download').click(function(e) {
-			//e.preventDefault();
+			 e.preventDefault(); // Enable to deactivate download
 		    //$(".thanks").css( { display: "block" } );
 		    $(".thanks").show();
 		    $('.tab-content').addClass('tab-thanks');
@@ -57,7 +57,8 @@ Template Name: Download Page
 					$blender_version = get_post_meta(get_the_ID(), 'blender_version', true);
 					$blender_version_char = get_post_meta(get_the_ID(), 'blender_version_char', true);
 					$blender_release_date = get_post_meta(get_the_ID(), 'blender_release_date', true);
-					
+					$download_mirrors 	  = get_post_meta(get_the_ID(), 'download_mirrors', false);
+
 					$release_date = date('F j, Y',strtotime($blender_release_date));
 					
 					if ($blender_version_char){
@@ -78,17 +79,20 @@ Template Name: Download Page
 					$choose_mirror = '<div class="choose"><i class="icon-arrow-right"></i> Choose a mirror</div>';
 
 					function download_links($os, $architecture, $extension) {
-						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux,
+						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux, $download_mirrors,
 							   $url_download_usa, $url_download_de, $url_download_nl1, $url_download_nl2;
 
-						echo '
-						<ul class="links">
-							<!-- ' . $architecture . ' Bit -->
-							<a id="do_download" href="' . $url_download_usa . '-' . $os . $architecture . $extension . '" title="Download from the United States"><li>USA</li></a>
-							<a id="do_download" href="' . $url_download_de . '-' . $os . $architecture . $extension . '" title="Download from Germany"><li>DE</li></a>
-							<a id="do_download" href="' . $url_download_nl1 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #1"><li>NL 1</li></a>
-							<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #2"><li>NL 2</li></a>
-						</ul>';
+						if ($download_mirrors) {
+						echo '<ul class="links">
+							  <!-- ' . $architecture . ' Bit -->';
+						  foreach($download_mirrors as $mirror) {
+								if (in_array('usa', $mirror)) {echo '<a id="do_download" href="' . $url_download_usa . '-' . $os . $architecture . $extension . '" title="Download from the United States"><li>USA</li></a>';}
+								if (in_array('de', $mirror)) {echo '<a id="do_download" href="' . $url_download_de . '-' . $os . $architecture . $extension . '" title="Download from Germany"><li>DE</li></a>';}
+								if (in_array('nl_borg', $mirror)) {echo '<a id="do_download" href="' . $url_download_nl1 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #1"><li>NL 1</li></a>';}
+								if (in_array('nl_nluug', $mirror)) {echo '<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download from The Netherlands mirror #2"><li>NL 2</li></a>';}
+						  }
+						}
+						echo '</ul>';
 					}
 					function download_depth_link($os, $bits, $architecture, $extension, $border = FALSE) {
 						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux, $url_download_nl2;

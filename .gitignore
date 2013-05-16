@@ -1,14 +1,6 @@
 
 /index.php
-/plugins/index.php
-/plugins/wordpress-importer/*
-/plugins/akismet/*
-/plugins/cms-tree-page-view/*
-/plugins/advanced-custom-fields/*
-/plugins/media-library-assistant/*
-/plugins/hello.php
-/plugins/post-snippets/*
-/plugins/siteorigin-panels/*
+/plugins/*
 /themes/index.php
 /themes/twentytwelve/*
 /themes/twentyeleven/*

@@ -93,12 +93,12 @@ function custom_editor_content( $content ) {
 	if ( $current_screen->post_type == 'page') {
     	$content = '
     	<div class="row">
-			<div class="span6">
-			a
+			<div class="span3">
+			Col 1
 			&nbsp;
 			</div>
 			<div class="span6">
-			as
+			Col 2
 			&nbsp;
 			</div>
 		</div>
@@ -119,20 +119,22 @@ function custom_editor_content( $content ) {
 }
 
 
+add_editor_style('editor-style.css');
 
+/*
 function custom_editor_style() {
    global $current_screen;
    add_editor_style(
    array(
       'editor-style.css',
-      'editor-style-'.$current_screen->post_type.'.css'
+      //'editor-style-'.$current_screen->post_type.'.css'
     )
    );
  }
 
 add_action( 'admin_head', 'custom_editor_style' );
 
-
+*/
 
 
 /**

@@ -63,5 +63,5 @@
 				    <?php third_level_nav();?>
 
 			</div>
-			 <div class="clearfix"></div>
 		</div>
+<div class="clearfix"></div>

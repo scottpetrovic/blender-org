@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="hero-unit">
+<div class="frontpage hero-unit">
 
 	    <div id="frontpage" class="carousel slide">
 	      <div class="carousel-inner">

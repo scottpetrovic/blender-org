@@ -1,0 +1,6 @@
+@font-face{font-family:'FontBlont';src:url('font/fontblont-webfont.eot');src:url('font/fontblont-webfont.eot?#iefix') format('embedded-opentype'),url('font/fontblont-webfont.woff') format('woff'),url('font/fontblont-webfont.ttf') format('truetype');font-weight:normal;font-style:normal;}[class^="blicon-"],[class*=" blicon-"]{font-family:FontBlont;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0% 0%;background-repeat:repeat;margin-top:0;}
+.blicon-logo-blender:before{content:"\f000";}
+.blicon-tux:before{content:"\f001";}
+.blicon-creativecommons:before{content:"\f002";}
+.blicon-logo-windows:before{content:"\f003";}
+.blicon-logo-apple:before{content:"\f004";}

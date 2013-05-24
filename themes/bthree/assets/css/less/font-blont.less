@@ -1,0 +1,78 @@
+/*!
+ *  Font Blont 3.0.2
+ *  the iconic font designed for use with Twitter Bootstrap
+ *  -------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation
+ *  can be found at: http://fortawesome.github.com/Font-Awesome/
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  - The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome"
+
+ *  Contact
+ *  -------------------------------------------------------
+ *  Email: dave@davegandy.com
+ *  Twitter: http://twitter.com/fortaweso_me
+ *  Work: Lead Product Designer @ http://kyruus.com
+ */
+ 
+@FontBlontPath:   "font";
+@borderColor:       #eee;
+@iconMuted:         #eee;
+.border-radius(@radius) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius; }
+
+@font-face {
+  font-family: 'FontBlont';
+  src: url('@{FontBlontPath}/fontblont-webfont.eot');
+  src: url('@{FontBlontPath}/fontblont-webfont.eot?#iefix') format('embedded-opentype'),
+    url('@{FontBlontPath}/fontblont-webfont.woff') format('woff'),
+    url('@{FontBlontPath}/fontblont-webfont.ttf') format('truetype');
+//    url('@{FontBlontPath}/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+//    url('@{FontBlontPath}/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+//    url('@{FontBlontPath}/fontawesome-webfont.svg#fontawesomeregular?v=3.0.1') format('svg');
+
+//  src: url('@{FontBlontPath}/FontBlont.otf') format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  Font Blont styles
+    ------------------------------------------------------- */
+[class^="blicon-"],
+[class*=" blicon-"] {
+  font-family: FontBlont;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+/* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+/* Removed a bunch of stuff here because Font Awesome is awesome and has it already */
+
+/*  Font Blont uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+   
+.blicon-logo-blender:before         { content: "\f000"; }
+.blicon-tux:before                  { content: "\f001"; }
+.blicon-creativecommons:before      { content: "\f002"; }
+.blicon-logo-windows:before         { content: "\f003"; }
+.blicon-logo-apple:before           { content: "\f004"; }
+
+/* \f020 doesn't work in Safari. all shifted one down */

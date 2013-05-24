@@ -54,6 +54,7 @@ function slides_indicator(){
 		$('#carousel').carousel();
 	});
 </script>
+<div class="clearfix"></div>
 <div class="hero-unit">
 	    <div id="carousel" class="carousel slide">
 		  <ol class="carousel-indicators">

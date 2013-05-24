@@ -147,7 +147,7 @@ Template Name: Download Page
 				  <div class="tab-pane fade <?=($os_platform == 'windows')?'in active':''?>" id="windows">
 				  	<div class="header">
 				  		<div class="title">
-				  			<h1><i class="icon-logo-windows"></i> Blender <?=$current_version?> for Windows</h1>
+				  			<h1><i class="blicon-logo-windows"></i> Blender <?=$current_version?> for Windows</h1>
 				  			<h4>Compatible with Windows XP / Vista / 7 / 8</h4>
 						</div>
 						<? download_depth_link($os_prefix_windows, 32, 32, '.exe', 'border-left');?>
@@ -190,7 +190,7 @@ Template Name: Download Page
 				  <div class="tab-pane fade <?=($os_platform == 'osx')?'in active':''?>" id="osx">
 				  	<div class="header">
 				  		<div class="title">
-				  			<h1><i class="icon-logo-apple"></i>Blender <?=$current_version?> for Mac OSX</h1>
+				  			<h1><i class="blicon-logo-apple"></i>Blender <?=$current_version?> for Mac OSX</h1>
 				  			<h4>Requires Mac OS X 10.6+</h4>
 						</div>
 						<? download_depth_link($os_prefix_osx, 32, '-i386', '.zip', 'border-left');?>
@@ -217,7 +217,7 @@ Template Name: Download Page
 				  <div class="tab-pane fade <?=($os_platform == 'linux')?'in active':''?>" id="linux">
 				  	<div class="header">
 				  		<div class="title">
-				  			<h1><i class="icon-tux"></i> Blender <?=$current_version?> for GNU / Linux</h1>
+				  			<h1><i class="blicon-tux"></i> Blender <?=$current_version?> for GNU / Linux</h1>
 				  			<h4>Requires glibc 2.11. Includes Python 3.3, FFmpeg<br/>
 				  				Suits most recent Linux distributions</h4>
 						</div>
@@ -239,7 +239,7 @@ Template Name: Download Page
 				  <div class="tab-pane fade" id="source">
 				  	<div class="header">
 				  		<div class="title">
-				  			<h1><i class="icon-logo-blender"></i> Source Code for Blender <?=$current_version?></h1>
+				  			<h1><i class="blicon-logo-blender"></i> Source Code for Blender <?=$current_version?></h1>
 							There are multiple ways to get the source code for blender. 
 							If you are going to actually try to use the source code you should really use svn to checkout the latest version. 
 							If this is of interest to you, check out our getting involved section.

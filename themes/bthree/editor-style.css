@@ -38,7 +38,8 @@ h1 {
 
 .row {
 	clear: both;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	overflow: auto;
 }
 
 img { /* Makes sure your images stay within their columns */

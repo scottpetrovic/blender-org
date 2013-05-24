@@ -12,6 +12,7 @@
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-1.8.3.min.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap.min.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-carousel.js"></script>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-tab.js"></script>
 
     <!--
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-transition.js"></script>
@@ -19,7 +20,6 @@
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-modal.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-dropdown.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-tab.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-tooltip.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-popover.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-button.js"></script>

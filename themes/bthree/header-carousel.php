@@ -13,6 +13,7 @@ function slides($number){
 		$slide_title = get_post_meta(get_the_ID(), 'slide_' . $number . '_title', true);
 		$slide_link = get_post_meta(get_the_ID(), 'slide_' . $number . '_link', true);
 		$slide_description = get_post_meta(get_the_ID(), 'slide_' . $number . '_description', true);
+		$slide_position = get_post_meta(get_the_ID(), 'slide_' . $number . '_position', true);
 		$slide_image_id = get_post_meta(get_the_ID(), 'slide_' . $number . '_image', true);
 		$slide_image = wp_get_attachment_url($slide_image_id);
 
@@ -22,9 +23,10 @@ function slides($number){
 			style="background-image: url(' . $slide_image . ');
 	        		   background-position: 50% 30%;" >
           <div class="container">
-            <div class="carousel-caption">
-              <h1>' . $slide_title . '+' . $count. '</h1>
+            <div class="carousel-caption ' . $slide_position . '">
+              <h1>' . $slide_title . '</h1>
               ' . (($slide_description != '') ? '<p class="lead"> ' . $slide_description . '</p>' : ''). '
+              <div class="clearfix"></div>
           	</div>
 		  </div>
 		</div>

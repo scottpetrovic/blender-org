@@ -48,3 +48,82 @@
 .solo .panel {
   margin: 25px 15px 0 0;
 }
+
+/* Carousel base class */
+.carousel {margin: 0;}
+
+.carousel-control {
+  background-color: transparent;
+  border: 0;
+  font-size: 850%;
+  margin-top: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+.carousel .item {
+  min-height: @carousel_height; // Frontpage is twice as tall
+  background-size: cover;    
+}
+.carousel img {
+  min-width: 100%;
+  height: 500px;
+}
+
+.carousel-caption {
+    position:absolute;
+    top: (@carousel_height / 4);
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: center;
+    //background-color: rgba(0,0,0,0.2);
+}
+.carousel-caption h1 {
+    font-size: 400%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+ 
+.carousel-caption .lead {
+    margin: 0;
+    line-height: 1.25;
+    background-color: fade(@color_background, 70%);
+    color: @color_text;
+    padding: 10px;
+}
+
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+.carousel .download {
+  margin-top: 300px;
+  margin-left: 500px;
+}
+
+
+.carousel-caption.top {
+  margin: 0;
+  top:0;
+}
+.carousel-caption.bottom {
+  margin: 0;
+  top: (@carousel_height / 2) - 20; // half height minus padding
+  bottom:0;
+}
+.carousel-caption.left {
+  float:left;
+  margin: 0;
+  left:0;
+  text-align:left;
+}
+.carousel-caption.right {
+  float:right;
+  margin: 0;
+  right: -15px;
+  text-align:right;
+  left: 40%;
+}
+
+/* END OF CAROUSEL */

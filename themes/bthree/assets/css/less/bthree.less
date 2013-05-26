@@ -32,61 +32,11 @@
 .frontpage.hero-unit{
     margin: -32px auto 30px auto;
 }
-
-/* Carousel base class */
-.carousel {margin: 0;}
-
-.carousel-control {
-  background-color: transparent;
-  border: 0;
-  font-size: 850%;
-  margin-top: 0;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+.frontpage .carousel .item {
+  min-height: (@carousel_height * 1.6);
 }
-
-.carousel .item {
-  min-height: 480px;
-  background-size: cover;    
-}
-.carousel img {
-  min-width: 100%;
-  height: 500px;
-}
-
-.carousel-caption {
-    position:absolute;
-    top: 25px;
-    max-width: 60%;
-    margin: 40px auto;
-    background-color: transparent;
-}
-.carousel-caption h1 {
-    font-size: 450%;
-    font-weight: bold;
-    color: white;
-    width: 100%;
-    text-align: center;
-}
-
-.carousel-caption .lead {
-    margin: 0;
-    line-height: 1.25;
-    background-color: fade(@color_background, 70%);
-    color: @color_text;
-    padding: 10px;
-    text-align: center;
-}
-
-.carousel-caption .btn {
-  margin-top: 10px;
-}
-
-.carousel .download {
-  margin-top: 300px;
-  margin-left: 500px;
-}
-
-/* End of Carousel 
+ 
+/* 
 
 header.entry-header {
   margin-left: 20px;

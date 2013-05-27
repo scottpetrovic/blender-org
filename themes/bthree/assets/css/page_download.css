@@ -3,7 +3,7 @@
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
 .horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
 .nav-tabs>.active>a,.nav-tabs>.active>a:hover{color:white;background-color:transparent;border:none;}
-.tab-content{position:relative;color:white;overflow:hidden;border-top:thin solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
+.tab-content{color:white;overflow:hidden;clear:both;border-top:thin solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
 .tab-content a{color:#ffffff;}
 .nav-tabs>li>a:hover{background-color:rgba(0, 128, 128, 0.1);}
 .nav-tabs>li.active{font-weight:bold;}
@@ -41,9 +41,17 @@
 .download .package:hover .links{background-color:rgba(248, 248, 248, 0.1);}
 .download .package .links a:hover li:before{content:"\f054";font-family:FontAwesome;float:left;left:28%;position:absolute;opacity:0.5;}
 .download .tab-content .alert i{font-size:150%;float:left;margin:0 10px 0 0;opacity:0.5;}
-.download .tab-content .alert{background-color:transparent;font-size:90%;border:none;color:white;-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
+.download .tab-content .alert{background-color:transparent;font-size:90%;border:none;color:white;margin:0;-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .download .tab-content .alert a:hover{font-weight:bold;}
 #tab-replace{margin:0;padding:0;}
-.thanks{color:white;text-align:center;margin:15px;background-color:rgba(68, 68, 68, 0.95);display:none;width:96%;min-height:180px;clear:both;-webkit-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 3px rgba(0, 0, 0, 0.2);-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
-.tab-thanks{min-height:200px;height:200px;width:100%;clear:both;display:block;}
-.thanks i{font-size:300%;}
+.thanks{height:88%;text-align:center;clear:both;-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
+#clear_download i{font-size:150%;color:rgba(68, 68, 68, 0.2);cursor:pointer;}
+.thanks h1{font-size:400%;font-weight:bold;}
+.thanks .donations{width:100%;margin:20px auto;}
+.thanks .donations .donate_way{max-width:28%;min-height:250px;background-color:#ebebeb;float:left;margin:0 30px 0 0;padding:0 10px;border-bottom:2px solid rgba(68, 68, 68, 0.1);overflow:hidden;-webkit-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
+.thanks .donations .donate_way h1{margin:25px 0 4px 0;padding-top:0;}
+.thanks .donations .donate_way:hover{background-color:#f3f3f3;}
+@-webkit-keyframes slide_away{0%{-webkit-transform:translatex(0px);} 49%{-webkit-transform:translatex(150px);opacity:0.5;} 50%{-webkit-transform:translatex(-150px);opacity:0.5;} 100%{-webkit-transform:translatex(0px);}}@keyframes slide_away{0%{-webkit-transform:translatex(0px);} 49%{-webkit-transform:translatex(150px);} 50%{-webkit-transform:translatex(-150px);} 100%{-webkit-transform:translatex(0px);}}@keyframes rotating{0%{transform:rotate(0deg);} 100%{transform:rotate(-180deg);}}@-webkit-keyframes rotating{0%{-webkit-transform:rotate(0deg);} 100%{-webkit-transform:rotate(-180deg);}}.thanks .donations .donate_way.shopping:hover h1{-webkit-animation:slide_away 0.5s;}
+.thanks .donations .donate_way h1{-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
+.thanks .donations .donate_way.donation:hover h1{color:darkred;opacity:0.5;}
+.thanks .donations .donate_way.devfund:hover h1{-webkit-animation:rotating 1s ease-in-out;}

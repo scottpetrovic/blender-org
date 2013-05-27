@@ -71,7 +71,7 @@
 
 .carousel-caption {
     position:absolute;
-    top: (@carousel_height / 4);
+    top: (@carousel_height / 4.5);
     max-width: 60%;
     margin: 0 auto;
     background-color: transparent;
@@ -87,10 +87,11 @@
  
 .carousel-caption .lead {
     margin: 0;
+    font-size: 100%;
     line-height: 1.25;
     background-color: fade(@color_background, 70%);
     color: @color_text;
-    padding: 10px;
+    padding: 6px 10px;
 }
 
 .carousel-caption .btn {
@@ -104,18 +105,16 @@
 
 
 .carousel-caption.top {
-  margin: 0;
   top:0;
 }
 .carousel-caption.bottom {
-  margin: 0;
   top: (@carousel_height / 2) - 20; // half height minus padding
   bottom:0;
 }
 .carousel-caption.left {
   float:left;
   margin: 0;
-  left:0;
+  left: -15px;
   text-align:left;
 }
 .carousel-caption.right {

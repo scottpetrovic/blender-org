@@ -8,8 +8,9 @@ Template Name: Download Page
 <?php get_header('carousel'); ?>
 <script type="text/javascript">
 	$(document).ready(function(){
-		var padding = 15;
-		
+		//var padding = 15;
+		var padding = 0;
+
 		$('#active_windows').live('click',function(){
 		 	$(".tab-content").animate({height:$("#windows").height() + padding}, 200);
 		    $('.tab-content').addClass('windows').removeClass('linux osx source');
@@ -35,21 +36,19 @@ Template Name: Download Page
 			$('.nav-tabs li.active').addClass('source');
 		});
 
-		$('a#do_download').click(function(e) {
-			 e.preventDefault(); // Enable to deactivate download
-		    //$(".thanks").css( { display: "block" } );
-		    $(".thanks").show();
-		    $('.tab-content').addClass('tab-thanks');
+		$('a#do_download').click(function(e){
+			 e.preventDefault(); // Comment to activate downloads
+			$('.card').addClass('flip');
 		});
-		$('a#thanks_close').click(function() {
-		    $('.tab-content').removeClass('tab-thanks');
-		    $(".thanks").hide();
+
+		$('a#clear_download').click(function(){
+			$('.card').removeClass('flip');
 		});
 	});
 </script>
 		<div class="container download">
 			<div class="row">
-				<div class="span8">
+				<div class="span8 relative">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php the_content(); ?>
 					<?php
@@ -135,6 +134,9 @@ Template Name: Download Page
 					</div>
 				</div>
 				<div class="clearfix"></div>
+			<div class="relative" style="min-height: 450px"> <!-- relative parent -->
+			<div class="card"> <!-- Flipity Flip! -->
+			<div class="front">
 				<ul class="nav nav-tabs">
 				  <li class="<?=($os_platform == 'windows')?'active '.$os_platform:''?>"><a id="active_windows" href="#windows" data-toggle="tab">Windows</a></li>
 				  <li class="<?=($os_platform == 'osx')?'active '.$os_platform:''?>"><a id="active_osx" href="#osx" data-toggle="tab">Mac OSX</a></li>
@@ -148,7 +150,7 @@ Template Name: Download Page
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="blicon-logo-windows"></i> Blender <?=$current_version?> for Windows</h1>
-				  			<h4>Compatible with Windows XP / Vista / 7 / 8</h4>
+				  			<h4>Compatible with Windows 8 / 7 Vista / XP</h4>
 						</div>
 						<? download_depth_link($os_prefix_windows, 32, 32, '.exe', 'border-left');?>
 						<? download_depth_link($os_prefix_windows, 64, 64, '.exe');?>
@@ -180,9 +182,9 @@ Template Name: Download Page
 				 <div class="clearfix"></div>
 				 <div class="alert alert-info">
 				 	<i class="icon-info-sign"></i>
-				 	<p>If the application reports an error on startup, please install the Visual C++ 2008 Redistributable Package.
+				 	If the application reports an error on startup, please install the Visual C++ 2008 Redistributable Package.
 				 	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=29">32bit</a> / 
-				 	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">64bit</a></p>
+				 	<a href="http://www.microsoft.com/en-us/download/details.aspx?id=15336">64bit</a>
 			 	 </div>
 			  	 </div> <!-- // WINDOWS -->
 
@@ -274,14 +276,43 @@ Template Name: Download Page
 				</div><!-- // SOURCE-->
 
   				<div class="clearfix"></div>
-				<div class="thanks">
-					<a id="thanks_close" title="Close" class="pull-right"><i class="icon-remove"></i></a>
-					<h1>Thanks dude you're awesome!</h1>
-					<h2>bring the bags!</i> </h2>
-					<div class="clearfix"></div>
-				</div>
 				</div> <!-- // TABS -->
-				<hr/>
+			</div><!-- front -->
+			<div class="back">
+				<div class="thanks relative">
+					<h1>Congratulations!</h1>
+					<h2>You're the proud owner of your own 3D software.</h2>
+					<div class="clearfix"></div>
+					<div class="donations">
+						<div class="donate_way shopping">
+							<h1><i class="icon-shopping-cart"></i></h1>
+							<h3>Go Shopping</h3>
+							Find DVDs, books, t-shirts, and more at the Blender Store. 
+							<hr/>
+							<button class="btn btn-small">Visit the Blender Store <i class="icon-external-link"></i></button>
+						</div>
+						<div class="donate_way donation">
+							<h1><i class="icon-heart"></i></h1>
+							<h3>Direct Donation</h3>
+							Support the Blender Foundation directly via PayPal.
+							<hr/>
+							<button class="btn btn-small">Donate via PayPal <i class="icon-external-link"></i></button>
+						</div>
+						<div class="donate_way devfund" style="margin-right: 0;">
+							<h1><i class="icon-cog"></i></h1>
+							<h3>Support Development</h3>
+							You can donate towards the Blender Development Fund.
+							<hr/>
+							<button class="btn btn-small">Donate via PayPal <i class="icon-external-link"></i></button>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<a id="clear_download" title="Back" class="pull-right" style="padding-top: 5px"><i class="icon-undo"></i></a>
+				</div>
+			</div><!-- back -->
+			</div><!-- Flipity Flip! -->
+			</div><!-- //relative parent-->
+				<div class="clearfix"></div>
 				<div class="accordion" id="accordion_windows">
 				  <div class="accordion-group">
 				    <div class="accordion-heading">
@@ -301,13 +332,14 @@ Template Name: Download Page
 				      </div>
 				    </div>
 				  </div>
-				</div>
+				</div> <!-- accordion -->
+
  				<?php endwhile; // end of the loop. ?>
 				</div> <!-- // span8 -->
 				<div class="span4">
 					<?php get_sidebar(); ?> 
 				</div>
-			</div>
-		</div>
+			</div><!-- main row -->
+		</div> <!-- // container download -->
 <?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

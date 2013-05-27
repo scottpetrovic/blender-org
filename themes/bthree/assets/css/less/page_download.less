@@ -6,9 +6,11 @@
     border:none;
 }
 .tab-content {
-  position:relative;
+  //position:relative;
+  //min-height: 100%;
   color: white;
   overflow: hidden;
+  clear:both;
   border-top: thin solid fade(@color_background, 10%);
   .box-shadow(1px, 1px, 2px, black, 20%)
 }
@@ -40,7 +42,6 @@
 }
 
 /* inside tab-content */
-
 .download .package {
   position:relative;
   width: 98%;
@@ -140,40 +141,84 @@
   font-size: 90%;
   border: none;
   color: white;
+  margin: 0;
   .text-shadow-none();}
 
 .download .tab-content .alert a:hover {
   font-weight: bold;
 }
 
-@tab_thanks_height: 200px;
 
 #tab-replace {
   margin: 0; padding: 0;
 }
 .thanks {
-  color: white;
+  height: 88%;
   text-align:center;
-  margin: 15px;
-  background-color: fade(@color_text, 95%);
-  display: none;
-  width: 96%;
-  min-height: @tab_thanks_height - 20;
   clear:both;
-  .box-shadow(1px,1px,3px,black,20%);
   .transition(all, 0.2s, ease-in);
 }
-
 .thanks .alert {}
-
-.tab-thanks {
-  min-height: 200px;
-  height: @tab_thanks_height;
-  width: 100%;  
-  clear:both;
-  display:block;
+#clear_download i {font-size: 150%; color: fade(@color_text, 20%); cursor:pointer;}
+.thanks h1 {
+  font-size: 400%;
+  font-weight: bold;
 }
 
-.thanks i {
-  font-size: 300%;
+.thanks .donations {
+  width: 100%;
+  margin: 20px auto;
+}
+.thanks .donations .donate_way {
+  max-width: 28%;
+  min-height: 250px;
+  background-color: darken(@color_background, 5%);
+  float:left;
+  margin: 0 30px 0 0;
+  padding: 0 10px;
+  border-bottom: 2px solid fade(@color_text, 10%);
+  overflow:hidden;
+  .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
+  .transition(all, 0.2s, ease-in);
+}
+.thanks .donations .donate_way h1 {margin: 25px 0 4px 0; padding-top: 0;}
+
+.thanks .donations .donate_way:hover {
+  background-color: darken(@color_background, 2%)
+}
+
+@-webkit-keyframes slide_away
+{
+0%   {-webkit-transform: translateX(0px);}
+49%  {-webkit-transform: translateX(150px); opacity: 0.5;}
+50%  {-webkit-transform: translateX(-150px);opacity: 0.5;}
+100% {-webkit-transform: translateX(0px);}
+}
+@keyframes slide_away
+{
+0%   {-webkit-transform: translateX(0px);}
+49%  {-webkit-transform: translateX(150px);}
+50%  {-webkit-transform: translateX(-150px);}
+100% {-webkit-transform: translateX(0px);}
+}
+@keyframes rotating {
+0%   { transform: rotate(0deg);}
+100% { transform: rotate(-180deg);}
+}
+@-webkit-keyframes rotating {
+0%   { -webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(-180deg);}
+}
+
+.thanks .donations .donate_way.shopping:hover h1 {
+  -webkit-animation:slide_away 0.5s;
+}
+
+.thanks .donations .donate_way h1 {.transition(all, 0.2s, ease-in);}
+.thanks .donations .donate_way.donation:hover h1 {
+  color:darkred; opacity: 0.5;
+}
+
+.thanks .donations .donate_way.devfund:hover h1 {
+  -webkit-animation: rotating 1s ease-in-out;
 }

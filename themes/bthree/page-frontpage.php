@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Frontpage
+*/
+?>
 <?php get_header(); ?>
 <div class="frontpage hero-unit">
 

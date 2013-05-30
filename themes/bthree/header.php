@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>blender.org - Home of the Blender project - Free and Open 3D Creation Software </title>
+		<title><?=get_bloginfo('name');?> - <?=get_bloginfo('description');?> </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Blender is the open source, cross platform suite of tools for 3D creation." />
 		<meta name="author" content="">

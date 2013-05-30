@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="utf-8">
 		<title><?=get_bloginfo('name');?> - <?=get_bloginfo('description');?> </title>
@@ -13,8 +13,8 @@
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bthree.css" rel="stylesheet">
-		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.css" rel="stylesheet">
-		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-blont.css" rel="stylesheet"> 
+		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.min.css" rel="stylesheet">
+		<!-- <link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-blont.css" rel="stylesheet">--> 
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-1.8.3.min.js" /></script>
 		<?php
 		$template_name = get_page_template_name();

@@ -7,6 +7,15 @@ h1 {
 	font-size: 18px;
 }
 
+.span12 {
+	width: 97%;
+	padding: 1%;
+	margin-right: 1%; 
+	border: 1px dashed #ccc;
+	background: #fff;
+	float: left;
+}
+
 
 .span3 {
 	width: 22%;

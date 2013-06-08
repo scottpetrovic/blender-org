@@ -23,6 +23,7 @@ input,button,select,textarea{font-family:'Open Sans',sans-serif;font-weight:ligh
 .input-append input,.input-prepend input,.input-append select,.input-prepend select,.input-append .uneditable-input,.input-prepend .uneditable-input{background-color:#ffffff;-webkit-transition:background-color 0.1s ease-in;-moz-transition:background-color 0.1s ease-in;-o-transition:background-color 0.1s ease-in;-ms-transition:background-color 0.1s ease-in;transition:background-color 0.1s ease-in;}
 textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus,.uneditable-input:focus{background-color:#ffffff;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-color:#f05000;-webkit-transition:border-color 0.2s ease-in;-moz-transition:border-color 0.2s ease-in;-o-transition:border-color 0.2s ease-in;-ms-transition:border-color 0.2s ease-in;transition:border-color 0.2s ease-in;}
 label{font-weight:normal;}
+ul li{list-style-type:none;}
 li [class^="icon-"]{text-align:left;}
 .top{position:absolute;top:0;}
 .bottom{position:absolute;bottom:0;}
@@ -45,3 +46,6 @@ a.btn-primary{color:white !important;font-weight:bold;background-color:#007ec7 !
 .card.flip .front{z-index:900;-webkit-transform:rotatey(180deg);-moz-transform:rotatey(180deg);-webkit-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);}
 .card .back{position:absolute;top:0;left:0;z-index:800;width:inherit;height:inherit;-webkit-transform:rotatey(-180deg);-webkit-transform-style:preserve-3d;-webkit-backface-visibility:hidden;-moz-transform:rotatey(-180deg);-moz-transform-style:preserve-3d;-moz-backface-visibility:hidden;-webkit-transition:all 0.4s ease-in-out;-moz-transition:all 0.4s ease-in-out;-o-transition:all 0.4s ease-in-out;-ms-transition:all 0.4s ease-in-out;transition:all 0.4s ease-in-out;}
 .card.flip .back{z-index:1000;-webkit-transform:rotatex(0deg) rotatey(0deg);-moz-transform:rotatex(0deg) rotatey(0deg);}
+.box{background-color:white;-webkit-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);padding-top:10px;padding-bottom:0;}
+.box p{margin:20px 10px;}
+.box h2{margin:10px 0 0 15px;}

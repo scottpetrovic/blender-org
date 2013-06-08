@@ -91,6 +91,10 @@ input[type="color"]:focus, .uneditable-input:focus {
 
 label {font-weight: normal;}
 
+ul li {
+  list-style-type: none;
+}
+
 /* Override Font-Awesome props */
 li [class^="icon-"]{
   text-align:left;
@@ -232,4 +236,18 @@ a.btn-primary {
   z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.box {
+  background-color: white;
+  .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.box p {
+  margin: 20px 10px;
+}
+.box h2 {
+  margin: 10px 0 0 15px;
 }

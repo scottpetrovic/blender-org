@@ -9,3 +9,5 @@
 .sidebar_block .side_login p{font-size:90%;}
 .sidebar_block input,.sidebar_block a,.sidebar_block h2,.sidebar_block h3,.sidebar_block p,.sidebar_block form,.sidebar_block .side_login,.sidebar_block .btn{position:relative;z-index:10;}
 ul.latest_blog_posts{list-style-image:url(../images/post.png);}
+ul#sidebar,ol#sidebar{margin:0;}
+ul#sidebar h4,ol#sidebar h4{display:none;}

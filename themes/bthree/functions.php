@@ -17,22 +17,7 @@ add_action( 'init', 'register_my_menus' );
 // Registering 2 sidebars
 // http://codex.wordpress.org/Widgets_API
 
-// register_sidebars( 2, array( 'name' => 'Sidebar %d' ) );
-
-register_sidebar(array(
-	'name' => 'Sidebar 1',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget' => '</div>',
-	'before_title' => '<h2>',
-	'after_title' => '</h2>',
-));
-register_sidebar(array(
-	'name' => 'Footer',
-	'before_widget' => '',
-	'after_widget' => '',
-	'before_title' => '',
-	'after_title' => '',
-));
+register_sidebars( 1, array( 'name' => 'Sidebar %d' ) );
 
 
 function page_ancestry() { 

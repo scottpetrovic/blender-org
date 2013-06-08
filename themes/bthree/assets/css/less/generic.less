@@ -258,13 +258,16 @@ a.btn.external {
 }
 
 .box {
+  position: relative;
   background-color: white;
-  .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
+  min-height: 340px;
   padding-top: 10px;
   padding-bottom: 5px;
+  .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
 }
 
 .box p {
+  position: relative;
   margin: 15px;
 }
 .box h2 {
@@ -293,3 +296,5 @@ a.btn.external {
 .box li{margin-left: 20px;}
 
 .box .btn {min-width: 92%;} 
+
+.box .bottom {width: 96%; margin: 5px 10px 10px 10px;}

@@ -21,6 +21,9 @@ Template Name: Frontpage
 			<?php endwhile; // end of the loop. ?>
 			</div>
 		</div>
+		<div class="row">
+			<?php get_sidebar('Footer'); ?> 
+		</div>
 	</div>
   <div id="push"></div>
 </div>

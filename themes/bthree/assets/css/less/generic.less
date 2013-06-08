@@ -161,6 +161,21 @@ a.btn {
   font-family: @font_condensed;
   font-size: 130%;
   text-transform: capitalize;
+
+  background-color: hsl(0, 0%, 94%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f9f9f9", endColorstr="#efefef");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f9f9f9), to(#efefef));
+  background-image: -moz-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: -ms-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #efefef));
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: -o-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: linear-gradient(#f9f9f9, #efefef);
+  border-color: #efefef #efefef hsl(0, 0%, 93%);
+  color: fade(@color_text, 90%) !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.06);
+  -webkit-font-smoothing: antialiased;
 }
 a.btn-primary {
   color: white !important;
@@ -251,6 +266,7 @@ a.btn-primary {
 .box h2 {
   margin: 10px 0 0 15px;
   font-size: 250%;
+  text-transform: capitalize; 
 }
 
 .box ul li{
@@ -271,3 +287,5 @@ a.btn-primary {
 
 .box ul{margin: 0;}
 .box li{margin-left: 20px;}
+
+.box .btn {min-width: 92%;} 

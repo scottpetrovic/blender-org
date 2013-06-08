@@ -17,7 +17,9 @@ add_action( 'init', 'register_my_menus' );
 // Registering 2 sidebars
 // http://codex.wordpress.org/Widgets_API
 
-register_sidebars( 1, array( 'name' => 'Sidebar %d' ) );
+// register_sidebar(2,array( 'name' => 'Sidebar %d' ) );
+
+register_sidebar(array( 'name' => 'Sidebar 1' ) );
 
 
 function page_ancestry() { 

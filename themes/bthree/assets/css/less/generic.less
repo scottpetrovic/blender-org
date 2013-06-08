@@ -29,10 +29,15 @@ a:visited {
   .transition(color, 0.1s, ease-in);
 }
 
-a:hover, a:active, a:focus,{
+a:hover, a:active, a:focus {
   text-decoration: none;
   color: @color_link_hover;
 } 
+
+.secondary a, .secondary a:link,
+.secondary a:visited { color: @color_link_secondary}
+.secondary a:hover, .secondary a:active,
+.secondary a:focus { color: @color_link_secondary_hover}
 
 strong, b {font-weight: normal;}
 

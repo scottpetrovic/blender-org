@@ -1,8 +1,7 @@
 
 		<div class="container">
-			<footer class="footer">
-		        <p class="pull-right"><a href="#">Back to top</a></p>
-		        <p>&copy; 2012 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			<footer class="footer secondary">
+		        <p class="pull-right"><a href="#"><i class="icon-chevron-up"></i></a></p>
 	        </footer>
 	    </div>
 

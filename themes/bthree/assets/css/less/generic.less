@@ -197,7 +197,17 @@ a.btn-primary {
 }
 
 a.btn.external {
-  border-bottom: 2px solid @color_link_secondary;
+  border-bottom: 2px solid fade(@color_link_secondary, 20%);
+}
+a.btn.external:after {
+  content: '\f08e';
+  float: right;
+  font-size: 75%;
+  color: fade(@color_text, 40%);
+  position:absolute;
+  top: 6px;
+  right: 2px;
+  font-family: "FontAwesome";
 }
 
 /* CARDS

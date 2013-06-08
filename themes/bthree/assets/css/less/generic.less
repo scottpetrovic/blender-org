@@ -157,7 +157,6 @@ li [class^="icon-"]{
  */
 
 a.btn {
-  color: black;
   font-family: @font_condensed;
   font-size: 130%;
   text-transform: capitalize;
@@ -176,6 +175,7 @@ a.btn {
   color: fade(@color_text, 90%) !important;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.06);
   -webkit-font-smoothing: antialiased;
+  border-bottom: 2px solid fade(@color_text, 20%);
 }
 a.btn-primary {
   color: white !important;
@@ -194,6 +194,10 @@ a.btn-primary {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.09);
   -webkit-font-smoothing: antialiased;
   .text-shadow(1px, 1px, 3px, black, 20%)
+}
+
+a.btn.external {
+  border-bottom: 2px solid @color_link_secondary;
 }
 
 /* CARDS

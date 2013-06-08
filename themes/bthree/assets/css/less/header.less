@@ -1,4 +1,4 @@
-@import 'defines.less';
+@import 'defines.less'; // Always import defines
 /* Navigation Bar */ 
 .navbar {
   margin: 0;
@@ -94,12 +94,16 @@
 .navbar li.current_page_item a, 
 .navbar li.current_page_parent a, 
 .navbar li.current_page_ancestor a {
-  color: @color_text_secondary;
+  color: @color_link_secondary;
+}
+.navbar li.current_page_item a:hover, 
+.navbar li.current_page_parent a:hover, 
+.navbar li.current_page_ancestor a:hover {
+  color: @color_link_secondary_hover;
 }
 
 .navbar li.current_page_item a {
-  font-weight: bold;
-  //border-bottom: 1px solid fade(@color_text_secondary, 30%);
+  //border-bottom: 3px solid fade(@color_link_secondary, 60%);
 }
 
 .second_level,

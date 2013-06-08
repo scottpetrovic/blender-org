@@ -25,6 +25,7 @@ textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type=
 label{font-weight:normal;}
 ul li{list-style-type:none;}
 li [class^="icon-"]{text-align:left;}
+article .row-fluid{margin-bottom:15px;}
 .top{position:absolute;top:0;}
 .bottom{position:absolute;bottom:0;}
 .left{float:left;left:0;}
@@ -55,5 +56,5 @@ a.btn.external:after{content:'\f08e';float:right;font-size:75%;color:rgba(68, 68
 .box ul li:after,.box ul li:after{content:"›";position:absolute;left:-10px;top:-2px;text-align:right;font-size:120%;color:rgba(68, 68, 68, 0.5);}
 .box ul{margin:0;}
 .box li{margin-left:20px;}
-.box .btn{min-width:92%;}
+.box .btn{min-width:90%;max-width:90%;}
 .box .bottom{width:96%;margin:5px 10px 10px 10px;}

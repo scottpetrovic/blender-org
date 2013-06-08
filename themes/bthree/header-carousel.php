@@ -24,7 +24,7 @@ function slides($number){
 	        		   background-position: 50% 30%;" >
           <div class="container">
             <div class="carousel-caption ' . $slide_position . '">
-              <h1 ' . (($slide_description != '') ? '' : 'style="margin-top: 70px"'). '>' . $slide_title . '&nbsp</h1>
+              <h1 ' . (($slide_description != '') ? '' : 'style="margin-top: 50px"'). '>' . $slide_title . '&nbsp</h1>
               ' . (($slide_description != '') ? '<p class="lead"> ' . $slide_description . '</p>' : ''). '
               <div class="clearfix"></div>
           	</div>

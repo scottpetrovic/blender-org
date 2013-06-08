@@ -242,12 +242,31 @@ a.btn-primary {
   background-color: white;
   .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
   padding-top: 10px;
-  padding-bottom: 0;
+  padding-bottom: 5px;
 }
 
 .box p {
-  margin: 20px 10px;
+  margin: 15px;
 }
 .box h2 {
   margin: 10px 0 0 15px;
 }
+
+.box ul li{
+  list-style-type: none;
+  position: relative;
+}
+
+.box ul li:after,
+.box ul li:after {
+  content: "›";
+  position: absolute;
+  left: -10px;
+  top: -2px;
+  text-align: right;
+  font-size: 120%;
+  color: fade(@color_text, 50%);
+}
+
+.box ul{margin: 0;}
+.box li{margin-left: 20px;}

@@ -11,3 +11,5 @@
 ul.latest_blog_posts{list-style-image:url(../images/post.png);}
 ul#sidebar,ol#sidebar{margin:0;}
 ul#sidebar h4,ol#sidebar h4{display:none;}
+#sidebar .widget{-webkit-transition:opacity 0.1s ease-out;-moz-transition:opacity 0.1s ease-out;-o-transition:opacity 0.1s ease-out;-ms-transition:opacity 0.1s ease-out;transition:opacity 0.1s ease-out;}
+#sidebar .widget:hover{opacity:0.9;}

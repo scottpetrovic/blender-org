@@ -48,7 +48,7 @@ a.btn-primary{color:white !important;font-weight:bold;background-color:#007ec7 !
 .card.flip .back{z-index:1000;-webkit-transform:rotatex(0deg) rotatey(0deg);-moz-transform:rotatex(0deg) rotatey(0deg);}
 .box{background-color:white;-webkit-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);padding-top:10px;padding-bottom:5px;}
 .box p{margin:15px;}
-.box h2{margin:10px 0 0 15px;}
+.box h2{margin:10px 0 0 15px;font-size:250%;}
 .box ul li{list-style-type:none;position:relative;}
 .box ul li:after,.box ul li:after{content:"›";position:absolute;left:-10px;top:-2px;text-align:right;font-size:120%;color:rgba(68, 68, 68, 0.5);}
 .box ul{margin:0;}

@@ -42,12 +42,14 @@ function slides_indicator(){
 
 		foreach ($carousel_slides as $slide) {
 
-		echo '
-		<!-- Item ' . $count . ' -->
-			<li data-target="#carousel" data-slide-to="' . $count . '" class="' . (($count == 0) ? 'active' : '').'" ></li>
-	   		';
-
-			$count = $count + 1;
+		if (count($carousel_slides) > 1) {
+			echo '
+			<!-- Item ' . $count . ' -->
+				<li data-target="#carousel" data-slide-to="' . $count . '" class="' . (($count == 0) ? 'active' : '').'" ></li>
+		   		';
+	
+				$count = $count + 1;
+			}
 		}
 }
 ?>

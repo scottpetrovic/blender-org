@@ -23,7 +23,7 @@ Template Name: Frontpage
 		</div>
 		<hr/>
 		<div class="row">
-			<?php get_sidebar('Footer'); ?> 
+			<?php get_sidebar(); ?> 
 		</div>
 	</div>
   <div id="push"></div>

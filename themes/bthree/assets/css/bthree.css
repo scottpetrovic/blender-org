@@ -12,6 +12,7 @@
 .horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
 @media (max-width:767px){.sitemap .span3{float:left;width:25%;} .sitemap .span3.connect a{display:block;clear:both;}}.header a.logo{width:123px;height:36px;background-size:123px 36px;top:-2px;}
 .frontpage .hero-unit{margin:-32px auto 30px auto;}
-.frontpage .carousel .item{min-height:448px;}
-.frontpage .carousel-caption{top:99.55555555555556px;}
-.frontpage .carousel-caption.bottom{top:298px;}
+.full .hero-unit{margin:0 auto 30px auto;}
+.frontpage .carousel .item,.full .carousel .item{min-height:448px;}
+.frontpage .carousel-caption,.full .carousel-caption{top:99.55555555555556px;}
+.frontpage .carousel-caption.bottom,.full .carousel-caption.bottom{top:298px;}

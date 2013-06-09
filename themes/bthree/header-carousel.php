@@ -2,6 +2,8 @@
 $count = 0;
 while ( have_posts() ) : the_post();
 
+$carousel_size = get_post_meta(get_the_ID(), 'carousel_size', true);
+
 function slides($number){
 
 	global $count;
@@ -53,6 +55,7 @@ function slides_indicator(){
 		}
 }
 ?>
+<?=(($carousel_size == 'full') ? '<div class="full">' : '')?>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#carousel').carousel();
@@ -72,4 +75,5 @@ function slides_indicator(){
 	      </div>
 	    </div><!-- //carousel -->
 </div><!-- //hero-unit -->
+<?=(($carousel_size == 'full') ? '</div>' : '')?>
 <?php endwhile; // end of the loop. ?>

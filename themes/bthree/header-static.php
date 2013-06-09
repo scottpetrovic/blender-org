@@ -1,8 +1,8 @@
 <div class="hero-unit page_title">
 	    <div id="page_title">
 			<?php while ( have_posts() ) : the_post();
-				$header_title = get_post_meta(get_the_ID(), 'hero_title', true);
-				$header_image_id = get_post_meta(get_the_ID(), 'hero_image', true);
+				$header_title = get_post_meta(get_the_ID(), 'header_static_title', true);
+				$header_image_id = get_post_meta(get_the_ID(), 'header_static_image', true);
 				$header_image_src = wp_get_attachment_url( $header_image_id);
 			?>
 	        <div class="backdrop"

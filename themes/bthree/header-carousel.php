@@ -9,6 +9,7 @@ function slides($number){
 	global $count;
 
 	$carousel_slides = get_post_meta(get_the_ID(), 'carousel_slides', true);
+	$download_page_id = 110; // To read data from the download page
 
 	if (in_array($number, $carousel_slides)) {
 
@@ -25,9 +26,21 @@ function slides($number){
 			style="background-image: url(' . $slide_image . ');
 	        		   background-position: 50% 30%;" >
           <div class="container">
-
+            ' . ((get_page_template_name() == 'page-frontpage') ? '
+            <div class="download_panel">
+            	<a href="' . get_permalink($download_page_id) . '">
+            	<div class="btn btn-large"><i class="icon-download-alt"></i> Blender '
+        			 . (get_post_meta($download_page_id, 'blender_version', true)) . (get_post_meta($download_page_id, 'blender_version_char', true)) . '
+        		 </div>
+    		 	</a>
+    		 	<ul>
+    		 		<a href=""><li>What\'s New?</li></a>
+    		 		<a href=""><li>Older versions</li></a>
+    		 	</ul>
+            </div>
+            ' : '') . '
             <div class="carousel-caption ' . $slide_position . '">
-              <h1 ' . (($slide_description != '') ? '' : 'style="margin-top: 50px"'). '>' . $slide_title . '&nbsp</h1>
+              <h1 ' . (($slide_description != '') ? '' : 'style="margin-top: 68px"'). '>' . $slide_title . '&nbsp</h1>
               ' . (($slide_description != '') ? '<p class="lead"> ' . $slide_description . '</p>' : ''). '
               <div class="clearfix"></div>
           	</div>

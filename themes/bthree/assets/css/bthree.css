@@ -13,4 +13,5 @@
 @media (max-width:767px){.sitemap .span3{float:left;width:25%;} .sitemap .span3.connect a{display:block;clear:both;}}.header a.logo{width:123px;height:36px;background-size:123px 36px;top:-2px;}
 .full .carousel .item{min-height:448px;}
 .full .carousel-caption{top:99.55555555555556px;}
-.full .carousel-caption.bottom{top:298px;}
+.full .carousel-caption.bottom{top:280px;}
+.full .carousel-caption.center{top:140px;}

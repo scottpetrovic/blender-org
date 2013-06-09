@@ -60,7 +60,7 @@ function slides_indicator(){
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#carousel').carousel({
-			interval: 5000
+			interval: 10000
 		});
 	});
 </script>

@@ -59,7 +59,9 @@ function slides_indicator(){
 <?=(($carousel_size == 'full') ? '<div class="full">' : '')?>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#carousel').carousel();
+		$('#carousel').carousel({
+			interval: 5000
+		});
 	});
 </script>
 <div class="clearfix"></div>

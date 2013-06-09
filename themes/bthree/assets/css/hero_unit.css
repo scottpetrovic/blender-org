@@ -19,7 +19,7 @@
 .carousel-caption{position:absolute;top:62.22222222222222px;margin:0 auto;background-color:transparent;text-align:center;padding:0;}
 .carousel-caption strong,.carousel-caption b{font-weight:bold;}
 .carousel-caption h1{font-size:400%;font-weight:bold;color:white;width:100%;margin:0;-webkit-text-shadow:1px 1px 6px rgba(0, 0, 0, 0.2);-moz-text-shadow:1px 1px 6px rgba(0, 0, 0, 0.2);text-shadow:1px 1px 6px rgba(0, 0, 0, 0.2);}
-.carousel-caption .lead{display:inline-block;max-width:65%;min-width:45%;margin:6px 0 0 0;font-size:100%;line-height:1.25;color:#414141;padding:9px 30px 9px 15px;background-color:rgba(248, 248, 248, 0.9);-webkit-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);}
+.carousel-caption .lead{display:inline-block;max-width:65%;min-width:45%;margin:6px 0 0 0;font-size:100%;line-height:1.25;color:#414141;padding:9px 20px 9px 15px;background-color:rgba(248, 248, 248, 0.9);-webkit-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);}
 .carousel-caption .btn{font-family:'Open Sans Condensed',sans-serif;margin-top:10px;}
 .carousel-caption.top{top:0;}
 .carousel-caption.bottom{top:120px;bottom:0;}

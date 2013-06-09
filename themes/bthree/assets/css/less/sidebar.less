@@ -47,3 +47,14 @@ ul#sidebar h4, ol#sidebar h4 {display:none;}
 
 #sidebar .widget { .transition(opacity, 0.1s, ease-out)}
 #sidebar .widget:hover { opacity: 0.9; }
+
+.horizontal #sidebar {margin: 0}
+
+@media (min-width: 1200px){
+  .horizontal .widget {
+  width: 270px;
+  margin: 0 0 0 30px;
+  float: left;
+  padding: 0;
+  }
+}

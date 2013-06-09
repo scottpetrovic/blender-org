@@ -4,20 +4,6 @@ Template Name: Generic Layout
 */
 ?>
 <?php get_header(); ?>
-
-<?php while ( have_posts() ) : the_post(); ?>
-<?
-$header_type = get_post_meta(get_the_ID(), 'header_type', true);
-$sidebar_type = get_post_meta(get_the_ID(), 'sidebar_type', true);
-?>
-<?php endwhile; // end of the loop. ?>
-
-<?php
-	if ($header_type == 'static'){
-		get_header('static');
-	} else if ($header_type == 'carousel'){ 
-		get_header('carousel');	
-	}?>
 		<div class="container">
 			<div class="row">
 				<div class="<?=(($sidebar_type == 'sidebar') ? 'span8' : 'span12')?>">
@@ -30,19 +16,23 @@ $sidebar_type = get_post_meta(get_the_ID(), 'sidebar_type', true);
 					</article><!-- #post-<?php the_ID(); ?> -->
 				<?php endwhile; // end of the loop. ?>
 				<?=(($sidebar_type == 'sidebar') ? '</div></div>' : '')?>
-				</div>
 			<? if ($sidebar_type == 'bottombar'){ ?>
+				</div> <!-- // span12 -->
+			</div> <!-- // row --> 
 			<div class="row">
-				<div class="span12">
+				<div class="span12 horizontal">
+					<hr/>
+					<div class="row">
 					<?php get_sidebar(); ?>
-				</div>
-			</div>
-			</div>
+					</div>
+				</div> <!-- // span12 -->
+			</div> <!-- // row --> 
 			<? } else if ($sidebar_type == 'sidebar') { ?>
+				</div> <!-- // span8 -->
 				<div class="span4">
 					<?php get_sidebar(); ?>
-				</div
 				</div>
+			</div><!-- // row --> 
 			<? } else {
 				echo '</div>';
 			}?>

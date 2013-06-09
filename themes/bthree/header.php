@@ -65,3 +65,15 @@
 			</div>
 		</div>
 <div class="clearfix"></div>
+<?php
+while ( have_posts() ) : the_post();
+// loop to get custom ids, not efficient but headers can't be defined within a loop
+$header_type = get_post_meta(get_the_ID(), 'header_type', true);
+$sidebar_type = get_post_meta(get_the_ID(), 'sidebar_type', true);
+endwhile; // end of the loop.
+
+if ($header_type == 'static'){
+	get_header('static');
+} else if ($header_type == 'carousel'){ 
+	get_header('carousel');
+}?>

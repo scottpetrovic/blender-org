@@ -3,9 +3,7 @@
 Template Name: Download Page
 */
 ?>
-
 <?php get_header(); ?>
-<?php get_header('carousel'); ?>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//var padding = 15;

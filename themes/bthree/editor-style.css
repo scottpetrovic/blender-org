@@ -45,7 +45,7 @@ h1 {
 }
 
 
-.row {
+.row, .row-fluid {
 	clear: both;
 	margin-bottom: 10px;
 	overflow: auto;

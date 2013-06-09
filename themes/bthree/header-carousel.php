@@ -25,6 +25,7 @@ function slides($number){
 			style="background-image: url(' . $slide_image . ');
 	        		   background-position: 50% 30%;" >
           <div class="container">
+
             <div class="carousel-caption ' . $slide_position . '">
               <h1 ' . (($slide_description != '') ? '' : 'style="margin-top: 50px"'). '>' . $slide_title . '&nbsp</h1>
               ' . (($slide_description != '') ? '<p class="lead"> ' . $slide_description . '</p>' : ''). '
@@ -63,17 +64,19 @@ function slides_indicator(){
 </script>
 <div class="clearfix"></div>
 <div class="hero-unit">
-	    <div id="carousel" class="carousel slide">
-		  <ol class="carousel-indicators">
-			<? slides_indicator(); ?>
-		  </ol>
-	      <div class="carousel-inner">
-			<? slides('1'); ?>
-			<? slides('2'); ?>
-			<? slides('3'); ?>
-			<? slides('4'); ?>
-	      </div>
-	    </div><!-- //carousel -->
+    <div id="carousel" class="carousel slide">
+    <div class="container">
+	  <ol class="carousel-indicators">
+		<? slides_indicator(); ?>
+	  </ol>
+      </div>
+      <div class="carousel-inner">
+		<? slides('1'); ?>
+		<? slides('2'); ?>
+		<? slides('3'); ?>
+		<? slides('4'); ?>
+      </div>
+    </div><!-- //carousel -->
 </div><!-- //hero-unit -->
 <?=(($carousel_size == 'full') ? '</div>' : '')?>
 <?php endwhile; // end of the loop. ?>

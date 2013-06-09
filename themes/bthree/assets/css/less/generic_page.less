@@ -41,6 +41,34 @@
 }
 
 .tab-pane {
-//  background-color: lighten(@color_background, 1%);
   margin: 5px 16px;
 }
+
+.carousel .item {
+  background-position: 50% 30%;
+  .transition(opacity, 0.5s, ease-out)
+}
+.carousel .active.left,
+.carousel .active.right {left:0; opacity:0; z-index:2; width: 100%;}
+.carousel .next {left:0; opacity:1; z-index:1;width: 100%;}
+
+.carousel-indicators li{
+  margin: 0 0 0 20px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid fade(@color_background, 15%);
+}
+.carousel-indicators i {
+  position:relative;
+  margin: 0 0 0 20px;
+  bottom: 6px;
+  width: 5px;
+  height: 5px;
+  border: none;
+  color: fade(@color_background, 65%);
+}
+.carousel-indicators i:hover {cursor: pointer;}
+.carousel-indicators i.active {color: @color_background; background: transparent;}
+
+.carousel-indicators .active {.transition(all, 0.5s, ease-in); pointer-events: none;}
+.carousel-indicators li:hover{cursor:pointer}

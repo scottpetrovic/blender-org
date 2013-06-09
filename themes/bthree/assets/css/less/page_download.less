@@ -196,14 +196,14 @@
 }
 @keyframes slide_away
 {
-0%   {-webkit-transform: translateX(0px);}
-49%  {-webkit-transform: translateX(150px);}
-50%  {-webkit-transform: translateX(-150px);}
-100% {-webkit-transform: translateX(0px);}
+0%   {transform: translateX(0px); -moz-transform: translateX(0px);}
+49%  {transform: translateX(150px); -moz-transform: translateX(150px);}
+50%  {transform: translateX(-150px); -moz-transform: translateX(-150px);}
+100% {transform: translateX(0px); -moz-transform: translateX(0px);}
 }
 @keyframes rotating {
-0%   { transform: rotate(0deg);}
-100% { transform: rotate(-180deg);}
+0%   { transform: rotate(0deg); -moz-transform: rotate(0deg);}
+100% { transform: rotate(-180deg); -moz-transform: rotate(-180deg);}
 }
 @-webkit-keyframes rotating {
 0%   { -webkit-transform: rotate(0deg);}
@@ -211,6 +211,8 @@
 }
 
 .thanks .donations .donate_way.shopping:hover h1 {
+  animation:slide_away 0.5s;
+  -moz-animation:slide_away 0.5s;
   -webkit-animation:slide_away 0.5s;
 }
 
@@ -220,5 +222,7 @@
 }
 
 .thanks .donations .donate_way.devfund:hover h1 {
+  animation: rotating 1s ease-in-out;
+  -moz-animation: rotating 1s ease-in-out;
   -webkit-animation: rotating 1s ease-in-out;
 }

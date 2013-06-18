@@ -30,8 +30,9 @@
 					</ul>
 					<ul class="span3 connect">
 						<h4>Connect</h4>
-						<a href="http://www.twitter.com/blendernetwork"><li><i class="icon-twitter-sign"></i></li></a>
-						<a href="http://www.facebook.com/BlenderNetwork"><li><i class="icon-facebook-sign"></i></li></a>
+						<a href="http://www.twitter.com/blendernetwork"><li><i class="icon-twitter"></i></li></a>
+						<a href="http://www.facebook.com/BlenderNetwork"><li><i class="icon-facebook"></i></li></a>
+						<a href="https://plus.google.com/100968658642850241998"><li><i class="icon-google-plus"></i></li></a>
 						<a href="{url path="/contact"}"><li><i class="icon-envelope"></i></li></a>
 					</ul>
 					</div>

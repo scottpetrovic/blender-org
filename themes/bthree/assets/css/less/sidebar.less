@@ -43,10 +43,27 @@ ul.latest_blog_posts {
 }
 
 ul#sidebar, ol#sidebar {margin: 0;}
-ul#sidebar h4, ol#sidebar h4 {display:none;}
+ul#sidebar h4, ol#sidebar h4 {
+  text-align:left;
+  padding: 10px 0 3px 8px;
+}
 
-#sidebar .widget { .transition(opacity, 0.1s, ease-out)}
+.horizontal hr {width: 100%; margin: 30px 0;}
+
+.horizontal ul#sidebar h4,
+.horizontal ol#sidebar h4 {
+  margin: 0;
+}
+
+#sidebar .widget {
+  background-color: white;
+  text-align:center;
+  .box-shadow(1px, 1px, 1px, darken(@color_background, 60%), 15%);
+  .transition(opacity, 0.1s, ease-out)
+}
+
 #sidebar .widget:hover { opacity: 0.9; }
+#sidebar .widget p {padding: 0; margin: 0;}
 
 .horizontal #sidebar {margin: 0}
 
@@ -55,6 +72,13 @@ ul#sidebar h4, ol#sidebar h4 {display:none;}
   width: 270px;
   margin: 0 0 0 30px;
   float: left;
-  padding: 0;
+   padding: 0 0 2px 0;
   }
+}
+
+.horizontal .widget img {
+  width: 96%;
+  margin: 2px auto;
+  opacity: 0.8;
+  padding: 0;
 }

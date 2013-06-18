@@ -20,6 +20,8 @@
 		$template_name = get_page_template_name();
 		if ($template_name == 'page-download') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_download.css" rel="stylesheet">
+		<? } else if ($template_name == 'page-frontpage') { ?>
+		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_frontpage.css" rel="stylesheet">
 		<? } ?>
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -41,13 +43,11 @@
 			    <div class="navbar">
 					<a class="logo" href="<?php echo site_url(); ?>"></a>
 				    <div class="navbar-inner">
-
 			          <div class="nav-collapse collapse">
 			            <ul class="nav">
-		            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>  
-			            </ul>
-			            <ul class="nav pull-right">
-			                <li><a href="#">Store</a></li>
+		            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>
+			                <li class="nav pull-right"><i class="icon-search"></i></li>
+			                <li class="nav pull-right"><a href="<?=site_url()?>/e-shop">Store</a></li>
 		                </ul>
 			          </div><!--/.nav-collapse -->
 				    </div>

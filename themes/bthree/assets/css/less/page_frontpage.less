@@ -1,0 +1,40 @@
+@import 'defines.less'; // Always import defines
+
+.box .rss-aggregator {
+  margin: 10px auto 0 auto;
+  width: 96%;
+}
+
+.box .rss-aggregator li {
+  margin-top: 5px;
+  margin-left: 25px;
+  clear:both;
+}
+
+.rss-aggregator .feed-item {
+
+}
+
+.box .rss-aggregator li a {
+  font-size: 105%;
+}
+
+.box .rss-aggregator .feed-source {
+  font-size: 80%;
+  color: fade(@color_text, 80%)
+}
+
+.box .rss-aggregator li:after{ .transition(all, 0.2s, ease-in)}
+
+.box .rss-aggregator li:hover:after {color: @color_text;}
+
+.box .rss-aggregator li:hover .feed-source  {
+  color: fade(@color_text, 95%)
+}
+
+.box {
+  border-top: thick solid fade(@color_link_secondary, 20%)
+}
+
+.box .bottom {
+}

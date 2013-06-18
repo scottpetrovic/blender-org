@@ -22,10 +22,10 @@ body {
 
 a, a:link,
 a:visited {
-  color: @color_link;
+  color: @color_link_secondary;
   text-decoration: none;
   outline: 0;
-  .transition(color, 0.1s, ease-in);
+  .transition(all, 0.1s, ease-in);
 }
 
 a:hover, a:active, a:focus {
@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5 {
   font-family: @font_condensed;
   font-weight: normal;
   .text-shadow(1px, 1px, 1px, black, 12%);
+  .transition(color, 0.1s, ease-in);
 }
 
 h1 {font-size: 260%;}
@@ -204,10 +205,10 @@ a.btn.external:after {
   content: '\f08e';
   float: right;
   font-size: 75%;
-  color: fade(@color_text, 40%);
+  color: fade(@color_text, 60%);
   position:absolute;
   top: 6px;
-  right: 2px;
+  right: 8px;
   font-family: "FontAwesome";
 }
 
@@ -271,7 +272,7 @@ a.btn.external:after {
 .box {
   position: relative;
   background-color: white;
-  min-height: 360px;
+  min-height: 380px;
   padding-top: 10px;
   padding-bottom: 5px;
   .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
@@ -290,6 +291,7 @@ a.btn.external:after {
 .box ul li{
   list-style-type: none;
   position: relative;
+  .transition(all, .2s, ease-in-out)
 }
 
 .box ul li:after,
@@ -301,11 +303,17 @@ a.btn.external:after {
   text-align: right;
   font-size: 120%;
   color: fade(@color_text, 50%);
+  .transition(all, 0.15s, ease-in);
 }
 
 .box ul{margin: 0;}
 .box li{margin-left: 20px;}
 
-.box .btn {min-width: 90%; max-width: 90%;} 
+.box .btn {
+  min-width: 90%; max-width: 90%;
+  font-weight: bold;
+  color: fade(@color_text, 50%);
+  padding-top: 4px; padding-bottom: 4px;
+  } 
 
 .box .bottom {width: 96%; margin: 5px 10px 10px 10px;}

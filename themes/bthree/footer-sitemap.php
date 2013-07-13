@@ -1,5 +1,6 @@
-	<div class="container">
-		<footer>
+	<div class="clearfix"></div>
+	<footer>
+		<div class="container">
 			<div class="row">
 				<div class="span12 sitemap">
 					<div class="row">
@@ -38,5 +39,6 @@
 					</div>
 				</div>
 			</div>
-		</footer>					
-	</div>
+			<p class="pull-right"><a href="#"><i class="icon-chevron-up"></i></a></p>
+		</div>
+	</footer>

@@ -1,14 +1,17 @@
 @import 'defines.less';
 footer { 
   font-size: 80%; 
-  margin: 0 0 10px 0;
+  margin: 20px 0 10px 0;
+  background-color: darken(@color_background, 60%);
+  color: @color_background;
+  border-top: 2px solid darken(@color_background, 15%);
 }
 footer .connect ul {
   border-left: 3px solid darken(@color_background, 10%);
 }
 
-.sitemap a{color: @color_text}
-.sitemap li:hover {color: @color_text_secondary} 
+.sitemap a{color: @color_background}
+.sitemap li:hover {color: lighten(@color_text_secondary, 20%)} 
 
 footer ul {
   list-style-type: none;
@@ -33,9 +36,7 @@ footer .connect i {
 .sitemap {
   width: 98%;
   clear:both;
-  margin-top: 20px;
   padding: 8px 0 20px 0;
-  border-top: thin solid darken(@color_background, 15%);
 }
 
 .sitemap ul{

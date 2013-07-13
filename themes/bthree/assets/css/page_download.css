@@ -1,7 +1,7 @@
 .box-shadow-none{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 .text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
-.horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
+.horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH";}
 .nav-tabs>.active>a,.nav-tabs>.active>a:hover{color:white;background-color:transparent;border:none;}
 .tab-content{color:white;overflow:hidden;clear:both;border-top:thin solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
 .tab-content a{color:#ffffff;}
@@ -15,7 +15,7 @@
 .tab-content.osx{border-bottom:thick solid #513d5c;}
 .tab-content.linux{border-bottom:thick solid #506336;}
 .tab-content.source{border-bottom:thick solid #333333;}
-.tab-content .header{width:100%;margin:25px auto;padding:0;}
+.tab-content .header{width:100%;margin:25px auto;padding:0;border:none;background-color:transparent;position:relative;}
 .post_header{margin:0 0 35px 0;}
 .download .package{position:relative;width:98%;margin:5px auto;clear:both;border-top:thin solid rgba(248, 248, 248, 0.1);border-left:10px solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
 .download .package .icon{position:relative;font-size:400%;color:rgba(255, 255, 255, 0.85);float:left;margin:15px 0 0 15px;-webkit-text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);-moz-text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);text-shadow:1px 1px 2px rgba(0, 0, 0, 0.3);}
@@ -51,7 +51,7 @@
 .thanks .donations .donate_way{max-width:28%;min-height:250px;background-color:#ebebeb;float:left;margin:0 30px 0 0;padding:0 10px;border-bottom:2px solid rgba(68, 68, 68, 0.1);overflow:hidden;-webkit-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
 .thanks .donations .donate_way h1{margin:25px 0 4px 0;padding-top:0;}
 .thanks .donations .donate_way:hover{background-color:#f3f3f3;}
-@-webkit-keyframes slide_away{0%{-webkit-transform:translatex(0px);} 49%{-webkit-transform:translatex(150px);opacity:0.5;} 50%{-webkit-transform:translatex(-150px);opacity:0.5;} 100%{-webkit-transform:translatex(0px);}}@keyframes slide_away{0%{transform:translatex(0px);-moz-transform:translatex(0px);} 49%{transform:translatex(150px);-moz-transform:translatex(150px);} 50%{transform:translatex(-150px);-moz-transform:translatex(-150px);} 100%{transform:translatex(0px);-moz-transform:translatex(0px);}}@keyframes rotating{0%{transform:rotate(0deg);-moz-transform:rotate(0deg);} 100%{transform:rotate(-180deg);-moz-transform:rotate(-180deg);}}@-webkit-keyframes rotating{0%{-webkit-transform:rotate(0deg);} 100%{-webkit-transform:rotate(-180deg);}}.thanks .donations .donate_way.shopping:hover h1{animation:slide_away 0.5s;-moz-animation:slide_away 0.5s;-webkit-animation:slide_away 0.5s;}
+@-webkit-keyframes slide_away{0%{-webkit-transform:translateX(0px);} 49%{-webkit-transform:translateX(150px);opacity:0.5;} 50%{-webkit-transform:translateX(-150px);opacity:0.5;} 100%{-webkit-transform:translateX(0px);}}@keyframes slide_away{0%{transform:translateX(0px);-moz-transform:translateX(0px);} 49%{transform:translateX(150px);-moz-transform:translateX(150px);} 50%{transform:translateX(-150px);-moz-transform:translateX(-150px);} 100%{transform:translateX(0px);-moz-transform:translateX(0px);}}@keyframes rotating{0%{transform:rotate(0deg);-moz-transform:rotate(0deg);} 100%{transform:rotate(-180deg);-moz-transform:rotate(-180deg);}}@-webkit-keyframes rotating{0%{-webkit-transform:rotate(0deg);} 100%{-webkit-transform:rotate(-180deg);}}.thanks .donations .donate_way.shopping:hover h1{animation:slide_away 0.5s;-moz-animation:slide_away 0.5s;-webkit-animation:slide_away 0.5s;}
 .thanks .donations .donate_way h1{-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
 .thanks .donations .donate_way.donation:hover h1{color:darkred;opacity:0.5;}
 .thanks .donations .donate_way.devfund:hover h1{animation:rotating 1s ease-in-out;-moz-animation:rotating 1s ease-in-out;-webkit-animation:rotating 1s ease-in-out;}

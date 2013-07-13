@@ -1,10 +1,4 @@
-
-		<div class="container">
-			<footer class="footer secondary">
-		        <p class="pull-right"><a href="#"><i class="icon-chevron-up"></i></a></p>
-	        </footer>
-	    </div>
-
+	<div class="clearfix"></div>
 	<!-- Javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

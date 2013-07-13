@@ -38,15 +38,15 @@
 
 	<body>
 
-		<div class="container">
-			<div class="header">
+		<div class="header">
+			<div class="container">
 			    <div class="navbar">
 					<a class="logo" href="<?php echo site_url(); ?>"></a>
 				    <div class="navbar-inner">
 			          <div class="nav-collapse collapse">
 			            <ul class="nav">
 		            	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => '', 'items_wrap' => '%3$s') ); ?>
-			                <li class="nav pull-right"><i class="icon-search"></i></li>
+			                <!-- <li class="nav pull-right"><i class="icon-search"></i></li> -->
 			                <li class="nav pull-right"><a href="<?=site_url()?>/e-shop">Store</a></li>
 		                </ul>
 			          </div><!--/.nav-collapse -->
@@ -61,7 +61,6 @@
 			    </div> <!--  // NAV BAR -->
 				    <?php second_level_nav();?>
 				    <?php third_level_nav();?>
-
 			</div>
 		</div>
 <div class="clearfix"></div>

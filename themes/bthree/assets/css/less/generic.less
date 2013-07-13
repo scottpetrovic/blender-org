@@ -17,7 +17,12 @@ body {
 }
 
 .header {
-  padding: 10px 0 0 0;
+  padding: 20px 0 0 0;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  background-color: fade(@color_background, 80%);
+  border-bottom: 2px solid fade(@color_background, 30%);
 }
 
 a, a:link,
@@ -224,6 +229,7 @@ a.btn.external:after {
 }
 
 .card .front {
+  background-color: @color_background;
   position: absolute;
   top: 0; left: 0;
   z-index: 900;
@@ -240,10 +246,9 @@ a.btn.external:after {
 }
 .card.flip .front {
   z-index: 900;
-
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
-  .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
+  //.box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);
 }
 
 .card .back {
@@ -251,6 +256,9 @@ a.btn.external:after {
   top: 0; left: 0;
   z-index: 800;
   width: inherit; height: inherit;
+  background-color: @color_background;
+  padding-left:2px;
+  .box-shadow-none;
   //.background_dots(circle, darken(@color_background,10%) 20%, fade(darken(@color_background, 5%), 60%) 20%, fade(darken(@color_background, 5%), 60%) 20%, 10px, 10px);
 
   -webkit-transform: rotateY(-180deg);
@@ -272,7 +280,7 @@ a.btn.external:after {
 .box {
   position: relative;
   background-color: white;
-  min-height: 380px;
+  min-height: 390px;
   padding-top: 10px;
   padding-bottom: 5px;
   .box-shadow(1px, 1px, 3px, darken(@color_background, 60%), 25%);

@@ -48,6 +48,5 @@ if ($header_type == 'static'){
 			<? } else {
 				echo '</div>';
 			}?>
-		</div>
 <?php get_footer('sitemap'); ?>
 <?php get_footer(); ?>

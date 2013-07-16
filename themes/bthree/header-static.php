@@ -1,5 +1,5 @@
-<div class="hero-unit page_title">
-	    <div id="page_title">
+<div class="hero-unit header_static">
+	    <div id="header_static">
 			<?php while ( have_posts() ) : the_post();
 				$header_title = get_post_meta(get_the_ID(), 'header_static_title', true);
 				$header_image_id = get_post_meta(get_the_ID(), 'header_static_image', true);
@@ -16,3 +16,13 @@
 	      </div>
 	    </div><!-- //carousel -->
 </div><!-- //hero-unit -->
+<div class="subnav">
+	<div class="container level-2">
+	<?php second_level_nav();?>
+	</div>
+	<div class="level-3">
+		<div class="container">
+			<?php third_level_nav();?>
+		</div>
+	</div>
+</div>

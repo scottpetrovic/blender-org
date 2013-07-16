@@ -17,16 +17,20 @@
   .box-shadow-none;
 }
 
-.navbar .brand, 
+// Links on nav bar
 .navbar .nav > li > a {
+  position: relative;
   color: @color_text;
  .text-shadow(1px, 1px, 2px, @color_background, 80%);
-  text-transform: uppercase;
+  text-transform: Capitalize;
   font-size: 140%;
+  border-bottom: 3px solid transparent;
+  .transition(all, 0.2s, ease-out)
 }
 
 .navbar .nav > li > a:hover {
-  color: lighten(@color_text, 10%);
+  color: @color_link;
+  border-bottom: 3px solid fade(@color_link, 60%);
 }
 
 .navbar .nav>.active>a,
@@ -36,7 +40,11 @@
   .box-shadow-none;
 }
 .navbar .nav>.active>a:hover,
-.navbar .nav>.active>a:focus {color: @color_link_hover;}
+.navbar .nav>.active>a:focus {
+  border-bottom: 3px solid fade(@color_link, 100%);
+    font-weight: 500;
+}
+
 
 /* DROPDOWN MENUS */
 .dropdown-menu {
@@ -95,35 +103,88 @@
 
 /* NAVIGATION LEVELS */
 .navbar li.current_page_item a, 
-.navbar li.current_page_parent a, 
-.navbar li.current_page_ancestor a {
-  color: lighten(@color_text, 20%);
-  border-bottom: 2px solid fade(@color_link, 80%);
+.navbar li.current-page-parent a, 
+.navbar li.current-page-ancestor a,
+.navbar li.current_page_parent a,  {
+  color: darken(@color_link_secondary, 5%);
+  border-bottom: 3px solid fade(@color_link_secondary_hover, 80%);
 }
 .navbar li.current_page_item a:hover, 
+.navbar li.current-page-parent a:hover, 
+.navbar li.current-page-ancestor a:hover,
 .navbar li.current_page_parent a:hover, 
-.navbar li.current_page_ancestor a:hover {
+.navbar li.current_page_ancestor a:hover{
   color: @color_link_secondary_hover;
+  border-bottom: 3px solid fade(@color_link_secondary_hover, 80%);
+  cursor: default;
 }
 
-.navbar li.current_page_item a {
-  //border-bottom: 3px solid fade(@color_link_secondary, 60%);
+.navbar li.current-page-ancestor a,
+.navbar li.current_page_ancestor a{
+  border-bottom: transparent;
+  color: fade(@color_link_secondary_hover, 85%);
 }
 
-.second_level,
-.third_level {
+.navbar li.current-page-ancestor a:hover,
+.navbar li.current_page_ancestor a:hover{
+  cursor: pointer;
+ 
+}
+
+.subnav .second-level,
+.subnav .third-level {
   width: 100%;
-  text-transform: capitalize;
+  font-family: @font_condensed;
   clear:both;
 }
 
-.second_level{background-color: darken(@color_background, 3%);}
-.third_level{background-color: darken(@color_background, 6%);}
+.subnav .level-3 {
+  width:100%;
+  border-top: 1px solid darken(@color_background,3%)
+}
 
-.navbar.second_level li {
+.subnav {
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid darken(@color_background,3%)
+}
+
+.subnav .second-level .nav>li,
+.subnav .third-level .nav>li {
+ margin-right: 40px;
+}
+
+.subnav .nav>li>a{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.subnav .second-level .nav>li>a,
+.subnav .third-level .nav>li>a{
+ padding: 15px 6px;
+}
+
+.subnav .nav>li>a:hover{
+  border-bottom: 3px solid fade(@color_link_hover, 80%);
+  color: @color_link;
+}
+
+.subnav li.current_page_item a{
+  color: @color_link_secondary_hover;
+  border-bottom: 3px solid fade(@color_link_secondary_hover, 80%);
+}
+
+.subnav li.current_page_item a:hover{
+  color: @color_link_secondary;
+  border-bottom: 3px solid fade(@color_link_secondary_hover, 80%);
+  cursor: default;
+}
+
+.navbar.second-level li {
+  font-size: 110%;
   line-height: 80%;
 }
-.navbar.third_level li {
+.navbar.third-level li {
   line-height: 50%;
   font-size: 95%;
 }

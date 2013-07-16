@@ -59,8 +59,6 @@
 			          </a>
 				    <div class="clearfix"></div>
 			    </div> <!--  // NAV BAR -->
-				    <?php second_level_nav();?>
-				    <?php third_level_nav();?>
 			</div>
 		</div>
 <div class="clearfix"></div>

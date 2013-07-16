@@ -7,7 +7,7 @@
   background-color: @color_background;
   //border-top: 1px solid darken(@color_background, 10%);
   border-bottom: 3px solid darken(@color_background, 10%);
-  background-image: url(../images/frontpage_unit.jpg);
+  background-image: url(../images/placeholder_background.jpg);
   background-size: cover;
   clear:both;
   margin: -3px auto 0 auto;
@@ -21,6 +21,29 @@
 
 .hero-unit .panel {
   font-size: 80%;
+}
+
+.header_static .container {
+  position: relative;
+  min-height: 200px;
+}
+ 
+.header_static .container .panel {
+  position: absolute;
+  top: 68%;
+  min-width: 30%;
+  
+  margin: -50px 0 0 0;
+}
+
+.header_static .backdrop {
+  background-size: cover;
+  background-position: 50% 30%;
+}
+
+.header_static .container .panel h1 {
+  font-size:360%;
+  padding-bottom: 10px;
 }
 
 .hero-unit .search {

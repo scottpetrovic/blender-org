@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 	<head>
+		<? $template_name = get_page_template_name(); ?>
 		<meta charset="utf-8">
-		<title><?=get_bloginfo('name');?> - <?=get_bloginfo('description');?> </title>
+		<title><?=(($template_name != 'page-frontpage') ? the_title() . ' - ': '' )?><?=get_bloginfo('name');?> - <?=get_bloginfo('description');?> </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Blender is the open source, cross platform suite of tools for 3D creation." />
 		<meta name="author" content="">
@@ -17,7 +18,6 @@
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-blont.css" rel="stylesheet">
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-1.8.3.min.js" /></script>
 		<?php
-		$template_name = get_page_template_name();
 		if ($template_name == 'page-download') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_download.css" rel="stylesheet">
 		<? } else if ($template_name == 'page-frontpage') { ?>

@@ -25,9 +25,9 @@
 .subnav .second-level,.subnav .third-level{width:100%;font-family:'Open Sans Condensed',sans-serif;clear:both;}
 .subnav .level-3{width:100%;border-top:1px solid #f0f0f0;}
 .subnav{width:100%;background-color:white;border-bottom:3px solid #f0f0f0;margin-bottom:15px;}
-.subnav .second-level .nav>li,.subnav .third-level .nav>li{margin-right:40px;}
+.subnav .second-level .nav>li,.subnav .third-level .nav>li{margin-right:0;}
 .subnav .nav>li>a{padding-top:0;padding-bottom:0;}
-.subnav .second-level .nav>li>a,.subnav .third-level .nav>li>a{padding:15px 6px;}
+.subnav .second-level .nav>li>a,.subnav .third-level .nav>li>a{padding:15px 15px;}
 .subnav .nav>li>a:hover{border-bottom:3px solid rgba(255, 136, 68, 0.8);color:#ff5000;}
 .subnav li.current_page_item a{color:#3da0fb;border-bottom:3px solid rgba(61, 160, 251, 0.8);}
 .subnav li.current_page_item a:hover{color:#109df0;border-bottom:3px solid rgba(61, 160, 251, 0.8);cursor:default;}

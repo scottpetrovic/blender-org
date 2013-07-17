@@ -61,6 +61,7 @@
   color: fade(white, 85%);
   float:left;
   margin: 15px 0 0 15px;
+  bottom: 5px;
   .text-shadow(1px,1px,2px, black, 30%);
 }
 
@@ -84,11 +85,38 @@
 .download .header .depth {
   text-align: center;
   font-size: 120%;
+  overflow: hidden;
+  position: relative;
+  .transition(background-color, 0.2s, ease-in)
 }
 .download .header .depth small {
   color: fade(white, 60%);
+  margin-left: 3px;
   .text-shadow-none()
 }
+
+.download .header .depth:hover {
+  background-color: fade(white, 10%);
+}
+
+
+.download .header .depth .depth_text,
+.download .header .depth .depth_icon {
+  position: relative;
+  float:left;
+  .transition(all, 0.2s, ease-in-out)
+}
+
+.download .header .depth .depth_text {
+  top: 0; right: 15%;
+}
+
+.download .header .depth .depth_icon {
+  top: -80px; left: 30%;
+  font-size: 320%;}
+
+.download .header .depth:hover .depth_icon { top: 5px;}
+.download .header .depth:hover .depth_text { top: 80px;}
 
 .download .package .choose {
   position: absolute;
@@ -229,3 +257,7 @@
   -moz-animation: rotating 1s ease-in-out;
   -webkit-animation: rotating 1s ease-in-out;
 }
+
+.download .introduction {padding-left: 20px;}
+.download .introduction h1 {padding-top: 20px;}
+.download .box {padding: 0 10px 15px 0; min-height: 30px}

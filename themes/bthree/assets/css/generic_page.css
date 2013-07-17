@@ -4,7 +4,9 @@
 .horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH";}
 .page{margin-top:30px;}
 .nav-tabs{margin:0;border:none;}
-.nav-tabs>li>a{color:#333;border:none;-webkit-transition:all 0.15s ease-in;-moz-transition:all 0.15s ease-in;-o-transition:all 0.15s ease-in;-ms-transition:all 0.15s ease-in;transition:all 0.15s ease-in;}
+.nav-tabs>li>a{color:#333;border:none;background:transparent;font-size:120%;-webkit-transition:all 0.15s ease-in;-moz-transition:all 0.15s ease-in;-o-transition:all 0.15s ease-in;-ms-transition:all 0.15s ease-in;transition:all 0.15s ease-in;}
+.nav-tabs>li.active a,.nav-tabs>li.active a:focus,.nav-tabs>li.active a:active,.nav-tabs>li.active a:hover{background:transparent;border:none;color:white;font-weight:normal;}
+.nav-tabs>.active>a,.nav-tabs>.active>a:hover{border:0;}
 .tab-content h1{color:white;}
 .tab-pane{margin:5px 16px;}
 .carousel .item{background-position:50% 30%;-webkit-transition:opacity 2s ease-out;-moz-transition:opacity 2s ease-out;-o-transition:opacity 2s ease-out;-ms-transition:opacity 2s ease-out;transition:opacity 2s ease-out;}

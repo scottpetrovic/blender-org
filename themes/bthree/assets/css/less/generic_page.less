@@ -7,11 +7,26 @@
   border: none;
 }
 
-.nav-tabs>li>a {
-  color: #333;
+.nav-tabs>li>a{
+  color: #333; 
   border: none;
+  background: transparent;
+  font-size: 120%;
   .transition(all, 0.15s, ease-in)
 }
+
+
+.nav-tabs>li.active a,
+.nav-tabs>li.active a:focus,
+.nav-tabs>li.active a:active,
+.nav-tabs>li.active a:hover{
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: normal;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover { border: 0;}
 
 .tab-content h1 {
   color:white;

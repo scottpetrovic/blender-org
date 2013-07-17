@@ -76,9 +76,10 @@ if ($header_type == 'static'){
 					} else {
 						$current_version = $blender_version;
 					}
-					$os_prefix_windows = 'windows';
-					$os_prefix_osx = 'OSX_10.6';
-					$os_prefix_linux = 'linux-glibc211';
+
+					$os_prefix_windows = get_post_meta(get_the_ID(), 'url_prefix_windows', true);
+					$os_prefix_osx = get_post_meta(get_the_ID(), 'url_prefix_osx', true);
+					$os_prefix_linux = get_post_meta(get_the_ID(), 'url_prefix_linux', true);
 
 					/* URL of mirrors for easy changing some day */
 					$url_download_nl1 = 'http://download.blender.org/release/Blender' . $blender_version . '/blender-' . $current_version;
@@ -87,6 +88,12 @@ if ($header_type == 'static'){
 					$url_download_de = 'http://ftp.halifax.rwth-aachen.de/blender/release/Blender' . $blender_version . '/blender-' . $current_version;
 
 					$choose_mirror = '<div class="choose"><i class="icon-arrow-right"></i> Choose a mirror</div>';
+					
+					/* Release Candidates! */
+					$release_candidate 	  = get_post_meta(get_the_ID(), 'release_candidate', true);
+					$release_candidate_info = get_post_meta(get_the_ID(), 'release_candidate_info', true);
+					$release_candidate_url_download = get_post_meta(get_the_ID(), 'release_candidate_url_download', true);
+					$release_candidate_url_logs		= get_post_meta(get_the_ID(), 'release_candidate_url_logs', true);
 
 					function download_links($os, $architecture, $extension) {
 						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux, $download_mirrors,
@@ -107,8 +114,20 @@ if ($header_type == 'static'){
 					function download_depth_link($os, $bits, $architecture, $extension, $border = FALSE) {
 						global $os_prefix_windows, $os_prefix_osx, $os_prefix_linux, $url_download_nl2;
 						echo '<a id="do_download" href="' . $url_download_nl2 . '-' . $os . $architecture . $extension . '" title="Download Blender ' . $bits . 'bit">
-								<div class="depth '. $border . '"><h1>' . $bits . '<small>bit</small></h1></div>
+								<div class="depth '. $border . '">
+									<div class="depth_icon"><i class="icon-download"></i></div>
+									<div class="depth_text"><h1>' . $bits . '<small>bit</small></h1></div>
+								</div>
 							  </a>';
+					}
+
+					function release_candidate() {
+						global $release_candidate_info, $release_candidate_url_download, $release_candidate_url_logs;
+						echo '<div class="release_candidate panel">
+								<div class="rc_info"> ' . $release_candidate_info . '</div>
+								<a href="' . $release_candidate_download . '" class="rc_download"><i class="icon-download"></i></a>
+								<a href="' . $release_candidate_logs . '" class="rc_logs"><i class="icon-book"></i></a>
+							  </div>';
 					}
 
 					$user_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -135,13 +154,14 @@ if ($header_type == 'static'){
 					get_os();
 					?>
 
-				<div class="post_header">
+				<div class="post_header box">
 					<div class="introduction">
 						<h1>Get Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
 						Blender <?=$current_version?> is the latest release from the <a href="<?=get_site_url() . '/foundation'?>">Blender Foundation</a>.
 						To download it, please select your platform and location. Blender is Free & Open Source Software.
 						<br/><br/>
 						Blender <?=$current_version?> was released on <?=$release_date?>
+						<?=(($release_candidate) ? release_candidate() : '')?>
 					</div>
 				</div>
 				<div class="clearfix"></div>

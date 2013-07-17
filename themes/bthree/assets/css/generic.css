@@ -59,3 +59,4 @@ a.btn.external:after{content:'\f08e';float:right;font-size:75%;color:rgba(68, 68
 .box li{margin-left:20px;}
 .box .btn{min-width:90%;max-width:90%;font-weight:bold;color:rgba(68, 68, 68, 0.5);padding-top:4px;padding-bottom:4px;}
 .box .bottom{width:96%;margin:5px 10px 10px 10px;}
+.soyadmin{float:right;color:#444444;font-size:150%;position:fixed;right:17px;top:15px;z-index:9999;opacity:0.3;}

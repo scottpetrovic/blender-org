@@ -62,6 +62,7 @@
 .thanks .donations .donate_way.donation:hover h1{color:darkred;opacity:0.5;}
 .thanks .donations .donate_way.devfund:hover h1{animation:rotating 1s ease-in-out;-moz-animation:rotating 1s ease-in-out;-webkit-animation:rotating 1s ease-in-out;}
 .download .introduction{padding-left:20px;}
+.download .introduction p{margin-left:0;}
 .download .introduction h1{padding-top:20px;}
 .download .box{padding:0 10px 15px 0;min-height:30px;}
 .release_candidate{margin:20px 0 8px 0;padding:6px 0 10px 0;width:98%;border:thin solid #f6f6f6;-webkit-box-shadow:3px 3px 0 rgba(208, 208, 208, 0.6);-moz-box-shadow:3px 3px 0 rgba(208, 208, 208, 0.6);box-shadow:3px 3px 0 rgba(208, 208, 208, 0.6);background-color:#f8f8f8;color:#444444;clear:both;}

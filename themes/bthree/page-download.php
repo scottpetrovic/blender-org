@@ -158,11 +158,12 @@ if ($header_type == 'static'){
 				<div class="post_header box">
 					<div class="introduction">
 						<h1>Download Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
+						<p>
 						Blender <?=$current_version?> is the latest release from the <a href="<?=get_site_url() . '/foundation'?>">Blender Foundation</a>.
 						<br/>To download it, please select your platform and location. Blender is Free & Open Source Software.
 						<br/><br/>
 						Blender <?=$current_version?> was released on <?=$release_date?>
-
+						</p>
 						<?php the_content(); ?>
 
 						<?=(($release_candidate) ? release_candidate() : '')?>

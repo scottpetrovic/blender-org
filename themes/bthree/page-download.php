@@ -61,25 +61,23 @@ if ($header_type == 'static'){
 				<div class="<?=(($sidebar_type == 'sidebar') ? 'span8' : 'span12')?> relative">
 				<?=(($sidebar_type == 'sidebar') ? '<div class="row-fluid"><div class="span12">' : '')?>
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
 					<?php
 					/* Get the custom fields! */
 					$blender_version = get_post_meta(get_the_ID(), 'blender_version', true);
 					$blender_version_char = get_post_meta(get_the_ID(), 'blender_version_char', true);
 					$blender_release_date = get_post_meta(get_the_ID(), 'blender_release_date', true);
 					$download_mirrors 	  = get_post_meta(get_the_ID(), 'download_mirrors', false);
-
+					$os_prefix_windows = get_post_meta(get_the_ID(), 'url_prefix_windows', true);
+					$os_prefix_osx = get_post_meta(get_the_ID(), 'url_prefix_osx', true);
+					$os_prefix_linux = get_post_meta(get_the_ID(), 'url_prefix_linux', true);
 					$release_date = date('F j, Y',strtotime($blender_release_date));
 					
+					/* Build the current Blender version string */
 					if ($blender_version_char){
 						$current_version = $blender_version . $blender_version_char;						
 					} else {
 						$current_version = $blender_version;
 					}
-
-					$os_prefix_windows = get_post_meta(get_the_ID(), 'url_prefix_windows', true);
-					$os_prefix_osx = get_post_meta(get_the_ID(), 'url_prefix_osx', true);
-					$os_prefix_linux = get_post_meta(get_the_ID(), 'url_prefix_linux', true);
 
 					/* URL of mirrors for easy changing some day */
 					$url_download_nl1 = 'http://download.blender.org/release/Blender' . $blender_version . '/blender-' . $current_version;
@@ -123,10 +121,13 @@ if ($header_type == 'static'){
 
 					function release_candidate() {
 						global $release_candidate_info, $release_candidate_url_download, $release_candidate_url_logs;
-						echo '<div class="release_candidate panel">
+						echo '<div class="release_candidate">
 								<div class="rc_info"> ' . $release_candidate_info . '</div>
-								<a href="' . $release_candidate_download . '" class="rc_download"><i class="icon-download"></i></a>
-								<a href="' . $release_candidate_logs . '" class="rc_logs"><i class="icon-book"></i></a>
+								<a href="' . $release_candidate_url_download . '" class="rc_download"
+									title="Download Release Candidate builds" target="_blank"><i class="icon-download"></i></a>
+								<a href="' . $release_candidate_url_logs . '" class="rc_logs"
+									title="Read the logs" target="_blank"><i class="icon-file-text"></i></a>
+								<div class="clearfix"></div>
 							  </div>';
 					}
 
@@ -156,11 +157,14 @@ if ($header_type == 'static'){
 
 				<div class="post_header box">
 					<div class="introduction">
-						<h1>Get Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
+						<h1>Download Blender <?=$current_version?> <small>for</small> <?=$os_name?></h1>
 						Blender <?=$current_version?> is the latest release from the <a href="<?=get_site_url() . '/foundation'?>">Blender Foundation</a>.
-						To download it, please select your platform and location. Blender is Free & Open Source Software.
+						<br/>To download it, please select your platform and location. Blender is Free & Open Source Software.
 						<br/><br/>
 						Blender <?=$current_version?> was released on <?=$release_date?>
+
+						<?php the_content(); ?>
+
 						<?=(($release_candidate) ? release_candidate() : '')?>
 					</div>
 				</div>

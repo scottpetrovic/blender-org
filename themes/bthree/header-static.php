@@ -4,9 +4,11 @@
 				$header_title = get_post_meta(get_the_ID(), 'header_static_title', true);
 				$header_image_id = get_post_meta(get_the_ID(), 'header_static_image', true);
 				$header_image_src = wp_get_attachment_url( $header_image_id);
+				$header_image_offset_vertical = get_post_meta(get_the_ID(), 'header_static_image_vertical', true);
 			?>
 	        <div class="backdrop"
-	        	style="background-image: url(<?=$header_image_src?>);">
+	        	style="background-image: url(<?=$header_image_src?>);
+	        		   background-position: 50% '. $header_image_offset_vertical . '%;">
 	          <div class="container">
 	              <div class="panel"><h1><?=($header_title != '') ? $header_title : the_title() ; ?></h1>
 	              </div>

@@ -18,13 +18,14 @@ function slides($number){
 		$slide_description = get_post_meta(get_the_ID(), 'slide_' . $number . '_description', true);
 		$slide_position = get_post_meta(get_the_ID(), 'slide_' . $number . '_position', true);
 		$slide_image_id = get_post_meta(get_the_ID(), 'slide_' . $number . '_image', true);
+		$slide_image_offset_vertical = get_post_meta(get_the_ID(), 'slide_' . $number . '_image_vertical', true);
 		$slide_image = wp_get_attachment_url($slide_image_id);
 
 		echo '
 		<!-- Item ' . $number . ' -->
 		<div class="item' . (($count == 0) ? ' active' : '') . '"
 			style="background-image: url(' . $slide_image . ');
-	        		   background-position: 50% 30%;" >
+	        		   background-position: 50% '. $slide_image_offset_vertical . '%;" >
           <div class="container">
             ' . ((get_page_template_name() == 'page-frontpage') ? '
             <div class="download_panel">

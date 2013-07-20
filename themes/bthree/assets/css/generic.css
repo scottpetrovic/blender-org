@@ -10,7 +10,7 @@ a,a:link,a:visited{color:#109df0;text-decoration:none;outline:0;-webkit-transiti
 a:hover,a:active,a:focus{text-decoration:none;color:#ff8844;}
 .secondary a,.secondary a:link,.secondary a:visited{color:#109df0;}
 .secondary a:hover,.secondary a:active,.secondary a:focus{color:#3da0fb;}
-strong,b{font-weight:normal;}
+strong,b{font-weight:600;}
 h1,h2,h3,h4,h5{font-family:'Open Sans Condensed',sans-serif;font-weight:normal;-webkit-text-shadow:1px 1px 1px rgba(0, 0, 0, 0.12);-moz-text-shadow:1px 1px 1px rgba(0, 0, 0, 0.12);text-shadow:1px 1px 1px rgba(0, 0, 0, 0.12);-webkit-transition:color 0.1s ease-in;-moz-transition:color 0.1s ease-in;-o-transition:color 0.1s ease-in;-ms-transition:color 0.1s ease-in;transition:color 0.1s ease-in;}
 h1{font-size:260%;}
 h2{font-size:220%;}
@@ -60,3 +60,6 @@ a.btn.external:after{content:'\f08e';float:right;font-size:75%;color:rgba(68, 68
 .box .btn{min-width:90%;max-width:90%;font-weight:bold;color:rgba(68, 68, 68, 0.5);padding-top:4px;padding-bottom:4px;}
 .box .bottom{width:96%;margin:5px 10px 10px 10px;}
 .soyadmin{float:right;color:#444444;font-size:150%;position:fixed;right:17px;top:15px;z-index:9999;opacity:0.3;}
+ul.bullets li{list-style-type:none;position:relative;margin-left:20px;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+ul.bullets li:after,ul.bullets li:after{content:"›";position:absolute;left:-10px;top:-2px;text-align:right;font-size:120%;color:rgba(68, 68, 68, 0.5);-webkit-transition:all 0.15s ease-in;-moz-transition:all 0.15s ease-in;-o-transition:all 0.15s ease-in;-ms-transition:all 0.15s ease-in;transition:all 0.15s ease-in;}
+ul.bullets{margin:0;}

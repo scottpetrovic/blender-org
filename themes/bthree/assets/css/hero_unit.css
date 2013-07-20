@@ -29,6 +29,7 @@
 .carousel-caption.bottom{top:140px;bottom:0;}
 .carousel-caption.left{float:left;margin:0;text-align:left;}
 .carousel-caption.right{float:right;margin:0;right:-15px;text-align:right;left:40%;}
+.carousel-indicators{top:298px;right:0;}
 .download_panel{z-index:9999;min-width:300px;position:relative;top:462px;float:right;padding:6px;background-color:rgba(248, 248, 248, 0.9);-webkit-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);box-shadow:1px 1px 3px rgba(0, 0, 0, 0.1);}
 .download_panel .btn{padding:10px 16px;font-size:140%;float:left;margin-right:15px;background-color:#0095eb !important;background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00a1ff", endColorstr="#0094ea");background-image:-khtml-gradient(linear, left top, left bottom, from(#00a1ff), to(#0094ea));background-image:-moz-linear-gradient(top, #00a1ff, #0094ea);background-image:-ms-linear-gradient(top, #00a1ff, #0094ea);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #00a1ff), color-stop(100%, #0094ea));background-image:-webkit-linear-gradient(top, #00a1ff, #0094ea);background-image:-o-linear-gradient(top, #00a1ff, #0094ea);background-image:linear-gradient(#00a1ff, #0094ea);border-color:#0094ea #0094ea #0091e6;color:#fff !important;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.06);-webkit-font-smoothing:antialiased;}
 .download_panel .btn i{opacity:0.9;margin:0 4px 0 0;}

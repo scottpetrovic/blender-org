@@ -43,7 +43,7 @@ a:hover, a:active, a:focus {
 .secondary a:hover, .secondary a:active,
 .secondary a:focus { color: @color_link_secondary_hover}
 
-strong, b {font-weight: normal;}
+strong, b {font-weight: 600;}
 
 h1, h2, h3, h4, h5 {
   font-family: @font_condensed;
@@ -331,3 +331,24 @@ a.btn.external:after {
 .box .bottom {width: 96%; margin: 5px 10px 10px 10px;}
 
 .soyadmin {float:right; color: @color_text; font-size: 150%;position: fixed; right: 17px; top: 15px; z-index: 9999; opacity: 0.3;}
+
+ul.bullets li{
+  list-style-type: none;
+  position: relative;
+  margin-left: 20px;
+  .transition(all, .2s, ease-in-out)
+}
+  
+ul.bullets li:after,
+ul.bullets li:after {
+  content: "›";
+  position: absolute;
+  left: -10px;
+  top: -2px;
+  text-align: right;
+  font-size: 120%;
+  color: fade(@color_text, 50%);
+  .transition(all, 0.15s, ease-in);
+}
+
+ul.bullets {margin: 0;}

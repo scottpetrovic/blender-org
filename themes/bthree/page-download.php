@@ -317,7 +317,7 @@ if ($header_type == 'static'){
 			<div class="back">
 				<div class="thanks relative">
 					<h1>Congratulations!</h1>
-					<h2>You're the proud owner of your own 3D software.</h2>
+					<h2>You now can proudly use your own software for 3D creation</h2>
 					<div class="clearfix"></div>
 					<div class="donations">
 						<div class="donate_way shopping">

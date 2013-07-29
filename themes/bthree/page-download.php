@@ -42,10 +42,10 @@ get_os();
 
 ?>
 <script type="text/javascript">
+
+
 	$(document).ready(function(){
 		var padding = 70;
-		
-		$("#flexible").css({height:$("#<?=$os_platform?>").height()});
 
 		$('#active_windows').live('click',function(){
 		 	$("#flexible").animate({height:$("#windows").height() + padding}, 200);
@@ -85,7 +85,10 @@ get_os();
 		$('a#clear_download').click(function(){
 			$('.card').removeClass('flip');
 		});
+
+		$("#flexible").css({height:$("#<?=$os_platform?>").height() + padding});
 	});
+
 </script>
 		<div class="container download">
 			<div class="row">

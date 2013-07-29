@@ -15,39 +15,70 @@ if ($header_type == 'static'){
 	get_header('static');
 } else if ($header_type == 'carousel'){ 
 	get_header('carousel');
-}?>
+}
+
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+function get_os() { 
+
+    global $user_agent, $os_platform, $os_name;
+
+    $os_platform =   "unknown";
+    $os_array    =   array( '/win/i'     			=>  'windows',
+                            '/macintosh|mac os x/i' =>  'osx',
+                            '/linux/i'              =>  'linux'
+                        	);
+
+    foreach ($os_array as $regex => $value) { 
+        if (preg_match($regex, $user_agent)) {
+            $os_platform    =   $value;
+        }
+    }
+	if ($os_platform == 'windows') { $os_name = 'Windows';}
+	else if ($os_platform == 'linux'){ $os_name = 'GNU / Linux'; }
+	else if ($os_platform == 'osx'){ $os_name = 'Mac OSX'; }
+}
+get_os();
+
+?>
 <script type="text/javascript">
 	$(document).ready(function(){
-		//var padding = 15;
-		var padding = 0;
+		var padding = 70;
+		
+		$("#flexible").css({height:$("#<?=$os_platform?>").height()});
 
 		$('#active_windows').live('click',function(){
-		 	$(".tab-content").animate({height:$("#windows").height() + padding}, 200);
+		 	$("#flexible").animate({height:$("#windows").height() + padding}, 200);
+		 	$(".tab-content").animate({height:$("#windows").height()}, 200);
 		    $('.tab-content').addClass('windows').removeClass('linux osx source');
 		    $('.nav-tabs li').removeClass('osx linux source');
 			$('.nav-tabs li.active').addClass('windows');
 		});
 		$('#active_osx').live('click',function(){
-			$(".tab-content").animate({height:$("#osx").height() + padding}, 200);
+			$("#flexible").animate({height:$("#osx").height() + padding}, 200);
+			$(".tab-content").animate({height:$("#osx").height()}, 200);
 		    $('.tab-content').addClass('osx').removeClass('windows linux source');
 		    $('.nav-tabs li').removeClass('windows linux source');
 			$('.nav-tabs li.active').addClass('osx');
 		});
 		$('#active_linux').live('click',function(){
-			$(".tab-content").animate({height:$("#linux").height() + padding}, 200);
+			$("#flexible").animate({height:$("#linux").height() + padding}, 200);
+			$(".tab-content").animate({height:$("#linux").height()}, 200);
 		    $('.tab-content').addClass('linux').removeClass('windows osx source');
 		    $('.nav-tabs li').removeClass('windows osx source');
 			$('.nav-tabs li.active').addClass('linux');
 		});
 		$('#active_source').live('click',function(){
-			$(".tab-content").animate({height:$("#source").height() + padding + 60}, 200);
+			$("#flexible").animate({height:$("#source").height() + padding}, 200);
+			$(".tab-content").animate({height:$("#source").height()}, 200);
 		    $('.tab-content').addClass('source').removeClass('windows linux osx');
 		    $('.nav-tabs li').removeClass('windows linux osx');
 			$('.nav-tabs li.active').addClass('source');
 		});
 
 		$('a#do_download').click(function(e){
-			 e.preventDefault(); // Comment to activate downloads
+			e.preventDefault(); // Comment to activate downloads
+			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);
 			$('.card').addClass('flip');
 		});
 
@@ -130,29 +161,6 @@ if ($header_type == 'static'){
 								<div class="clearfix"></div>
 							  </div>';
 					}
-
-					$user_agent = $_SERVER['HTTP_USER_AGENT'];
-
-					function get_os() { 
-
-					    global $user_agent, $os_platform, $os_name;
-
-					    $os_platform =   "unknown";
-					    $os_array    =   array( '/win/i'     			=>  'windows',
-					                            '/macintosh|mac os x/i' =>  'osx',
-					                            '/linux/i'              =>  'linux'
-					                        	);
-
-					    foreach ($os_array as $regex => $value) { 
-					        if (preg_match($regex, $user_agent)) {
-					            $os_platform    =   $value;
-					        }
-					    }
-						if ($os_platform == 'windows') { $os_name = 'Windows';}
-						else if ($os_platform == 'linux'){ $os_name = 'GNU / Linux'; }
-						else if ($os_platform == 'osx'){ $os_name = 'Mac OSX'; }
-					}
-					get_os();
 					?>
 
 				<div class="post_header box">
@@ -170,7 +178,7 @@ if ($header_type == 'static'){
 					</div>
 				</div>
 				<div class="clearfix"></div>
-			<div class="relative" style="min-height: 450px"> <!-- relative parent -->
+			<div id="flexible" class="relative"> <!-- relative parent -->
 			<div class="card"> <!-- Flipity Flip! -->
 			<div class="front">
 				<ul class="nav nav-tabs">
@@ -186,7 +194,7 @@ if ($header_type == 'static'){
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-windows"></i> Blender <?=$current_version?> for Windows</h1>
-				  			<h4>Compatible with Windows 8 / 7 Vista / XP</h4>
+				  			<h4>Compatible with Windows 8 | 7 | Vista | XP</h4>
 						</div>
 						<? download_depth_link($os_prefix_windows, 32, 32, '.exe', 'border-left');?>
 						<? download_depth_link($os_prefix_windows, 64, 64, '.exe');?>
@@ -256,8 +264,7 @@ if ($header_type == 'static'){
 				  	<div class="header">
 				  		<div class="title">
 				  			<h1><i class="icon-linux"></i> Blender <?=$current_version?> for GNU / Linux</h1>
-				  			<h4>Requires glibc 2.11. Includes Python 3.3, FFmpeg<br/>
-				  				Suits most recent Linux distributions</h4>
+				  			<h4>Requires glibc 2.11. Suits most recent Linux distributions</h4>
 						</div>
 						<? download_depth_link($os_prefix_linux, 32, '-i686', '.tar.bz2', 'border-left');?>
 						<? download_depth_link($os_prefix_linux, 64, '-x86_64', '.tar.bz2');?>
@@ -301,14 +308,8 @@ if ($header_type == 'static'){
 
 				Download the md5sum to the same directory as the source tarball and run the following command to verify the integrity of the download.
 				<code>$ md5sum -c blender-2.66a.tar.gz.md5sum</code>
-
-				<h2>History</h2>
-
-				All past releases can be downloaded at <strong><a href="http://download.blender.org/source/">download.blender.org/source</a></strong>
+				<div class="clearfix"></div>
 				<br/>
-				Check <strong><a href="http://download.blender.org/source/chest/">download.blender.org/source/chest</a></strong> for interesting source code from the past.
-				It has old Blender versions as well as interesting in-house software from the company that developed Blender;
-				dutch studio NeoGeo (no not the game console!).
 				</div><!-- // SOURCE-->
 
   				<div class="clearfix"></div>
@@ -369,6 +370,15 @@ if ($header_type == 'static'){
 				    </div>
 				  </div>
 				</div> <!-- accordion -->
+
+				<h2>History</h2>
+
+				All past releases can be downloaded at <strong><a href="http://download.blender.org/source/">download.blender.org/source</a></strong>
+				<br/>
+				Check <strong><a href="http://download.blender.org/source/chest/">download.blender.org/source/chest</a></strong> for interesting source code from the past.
+				It has old Blender versions as well as interesting in-house software from the company that developed Blender;
+				dutch studio NeoGeo (no not the game console!).
+
 				<?php endwhile; // end of the loop. ?>
 				<?=(($sidebar_type == 'sidebar') ? '</div></div>' : '')?>
 			<? if ($sidebar_type == 'bottombar'){ ?>

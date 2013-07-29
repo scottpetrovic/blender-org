@@ -2,7 +2,7 @@
 .text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
 .horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH";}
-.nav-tabs>.active>a,.nav-tabs>.active>a:hover{color:white;background-color:transparent;border:none;}
+.nav-tabs>.active>a,.nav-tabs>.active>a:hover{color:white;background-color:transparent;border:none;pointer-events:none;}
 .tab-content{color:white;overflow:hidden;clear:both;border-top:thin solid rgba(248, 248, 248, 0.1);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);}
 .tab-content a{color:#ffffff;}
 .nav-tabs>li>a:hover{background-color:rgba(0, 128, 128, 0.1);}
@@ -45,12 +45,13 @@
 .download .source .package{background-color:#666666;}
 .download .source .package:hover{background-color:#6b6b6b;}
 .download .package:hover .links{background-color:rgba(248, 248, 248, 0.1);}
-.download .package .links a:hover li:before{content:"\f054";font-family:FontAwesome;float:left;left:28%;position:absolute;opacity:0.5;}
+.download .package .links a li:before{content:"\f054";font-family:FontAwesome;float:left;margin:1px;font-weight:light;left:23%;position:absolute;opacity:0;-webkit-transition:all 0.1s ease-out;-moz-transition:all 0.1s ease-out;-o-transition:all 0.1s ease-out;-ms-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}
+.download .package .links a:hover li:before{content:"\f054";font-family:FontAwesome;float:left;left:26%;position:absolute;opacity:0.5;}
 .download .tab-content .alert i{font-size:150%;float:left;margin:0 10px 0 0;opacity:0.5;}
 .download .tab-content .alert{background-color:transparent;font-size:90%;border:none;color:white;margin:0;-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .download .tab-content .alert a:hover{font-weight:bold;}
 #tab-replace{margin:0;padding:0;}
-.thanks{height:88%;text-align:center;clear:both;-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
+.thanks{height:400px;text-align:center;clear:both;-webkit-transition:all 0.2s ease-in;-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-ms-transition:all 0.2s ease-in;transition:all 0.2s ease-in;}
 #clear_download i{font-size:150%;color:rgba(68, 68, 68, 0.2);cursor:pointer;}
 .thanks h1{font-size:400%;font-weight:bold;}
 .thanks .donations{width:100%;margin:20px auto;}

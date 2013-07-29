@@ -4,10 +4,10 @@
     color: white;
     background-color: transparent;
     border:none;
+    pointer-events: none;
 }
 .tab-content {
   //position:relative;
-  //min-height: 100%;
   color: white;
   overflow: hidden;
   clear:both;
@@ -149,13 +149,24 @@
   background-color: fade(@color_background, 10%);
 }
 
-.download .package:hover .links a {
+.download .package .links a li:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  float:left;
+  margin: 1px;
+  font-weight: light;
+  left: 23%;
+  position: absolute;
+  opacity: 0;
+  .transition(all, 0.1s, ease-out)
 }
+
+
 .download .package .links a:hover li:before {
   content: "\f054";
   font-family: FontAwesome;
   float:left;
-  left: 28%;
+  left: 26%;
   position: absolute;
   opacity: 0.5;
 }
@@ -184,13 +195,14 @@
   margin: 0; padding: 0;
 }
 .thanks {
-  height: 88%;
+  height: 400px;
   text-align:center;
   clear:both;
   .transition(all, 0.2s, ease-in);
 }
 .thanks .alert {}
 #clear_download i {font-size: 150%; color: fade(@color_text, 20%); cursor:pointer;}
+
 .thanks h1 {
   font-size: 400%;
   font-weight: bold;

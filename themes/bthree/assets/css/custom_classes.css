@@ -1,4 +1,4 @@
 .box-shadow-none{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 .text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
-.horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
+.horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH";}

@@ -86,7 +86,7 @@ get_os();
 			$('.card').removeClass('flip');
 		});
 
-		$("#flexible").css({height:$("#<?=$os_platform?>").height() + padding});
+		$("#flexible").css({height:$("#<?=$os_platform?>").height() + padding + 20});
 	});
 
 </script>

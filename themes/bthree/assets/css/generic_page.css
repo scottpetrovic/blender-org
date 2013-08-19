@@ -19,3 +19,4 @@
 .carousel-indicators li{margin:0 0 0 10px;width:5px;height:5px;border:1px solid rgba(248, 248, 248, 0.45);}
 .carousel-indicators .active{-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-o-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;transition:all 0.5s ease-in;pointer-events:none;}
 .carousel-indicators li:hover{cursor:pointer;}
+ul.nobullets li:after,ul.nobullets li:after{list-style-type:none;display:none;}

@@ -13,4 +13,4 @@ footer .connect li{margin:0;}
 footer .connect i{margin:0 8px;font-size:300%;opacity:0.7;}
 .sitemap{width:98%;clear:both;padding:8px 0 20px 0;}
 .sitemap ul{display:block;}
-.sitemap li{float:left;clear:left;}
+.sitemap li{float:left;clear:left;-webkit-transition:color 0.1s ease-in;-moz-transition:color 0.1s ease-in;-o-transition:color 0.1s ease-in;-ms-transition:color 0.1s ease-in;transition:color 0.1s ease-in;}

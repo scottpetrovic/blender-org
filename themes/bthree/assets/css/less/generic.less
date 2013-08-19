@@ -4,7 +4,7 @@ body {
   background-color: @color_background;
   cursor: default;
   font-family: @font_normal;
-  font-weight: lighter;
+  //font-weight: lighter;
   font-size: @font_size;
   color: @color_text;
   height: 100%;
@@ -331,24 +331,3 @@ a.btn.external:after {
 .box .bottom {width: 96%; margin: 5px 10px 10px 10px;}
 
 .soyadmin {float:right; color: @color_text; font-size: 150%;position: fixed; right: 17px; top: 15px; z-index: 9999; opacity: 0.3;}
-
-ul.bullets li{
-  list-style-type: none;
-  position: relative;
-  margin-left: 20px;
-  .transition(all, .2s, ease-in-out)
-}
-  
-ul.bullets li:after,
-ul.bullets li:after {
-  content: "›";
-  position: absolute;
-  left: -10px;
-  top: -2px;
-  text-align: right;
-  font-size: 120%;
-  color: fade(@color_text, 50%);
-  .transition(all, 0.15s, ease-in);
-}
-
-ul.bullets {margin: 0;}

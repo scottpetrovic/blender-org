@@ -64,5 +64,5 @@
 		</div>
 <div class="clearfix"></div>
 <?php global $user_ID; if( $user_ID ) : ?>
-	<?=(current_user_can('level_10') ? '<div class="soyadmin"><i class="icon-rocket"></i></div>' : '')?>
+	<?=(current_user_can('level_10') ? '<a href="' . site_url() . '/wp-admin"><div class="soyadmin"><i class="icon-rocket"></i></div></a>' : '')?>
 <?php endif; ?>

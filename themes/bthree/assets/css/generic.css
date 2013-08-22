@@ -53,10 +53,12 @@ a.btn.external:after{content:'\f08e';float:right;font-size:75%;color:rgba(68, 68
 .box{position:relative;background-color:white;min-height:390px;padding-top:10px;padding-bottom:5px;-webkit-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 3px rgba(95, 95, 95, 0.25);}
 .box p{position:relative;margin:15px;}
 .box h2{margin:10px 0 0 15px;font-size:250%;text-transform:capitalize;}
+.box h3,.box h4,.box h5{margin:5px 0 0 15px;text-transform:capitalize;}
 .box ul li{list-style-type:none;position:relative;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
 .box ul li:after,.box ul li:after{content:"›";position:absolute;left:-10px;top:-2px;text-align:right;font-size:120%;color:rgba(68, 68, 68, 0.5);-webkit-transition:all 0.15s ease-in;-moz-transition:all 0.15s ease-in;-o-transition:all 0.15s ease-in;-ms-transition:all 0.15s ease-in;transition:all 0.15s ease-in;}
 .box ul{margin:0;}
 .box li{margin-left:20px;}
 .box .btn{min-width:90%;max-width:90%;font-weight:bold;color:rgba(68, 68, 68, 0.5);padding-top:4px;padding-bottom:4px;}
 .box .bottom{width:96%;margin:5px 10px 10px 10px;}
-.soyadmin{float:right;color:#444444;font-size:150%;position:fixed;right:17px;top:15px;z-index:9999;opacity:0.3;}
+.soyadmin{float:right;color:#444444;font-size:150%;position:fixed;right:17px;top:18px;z-index:9999;opacity:0.3;}
+.soyadmin:hover{color:#ff5000;opacity:1;}

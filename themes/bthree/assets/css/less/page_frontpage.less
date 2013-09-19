@@ -6,13 +6,30 @@
 }
 
 .box .rss-aggregator li {
-  margin-top: 5px;
-  margin-left: 25px;
+  margin-top: 9px;
+  margin-left: 15px;
   clear:both;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+  padding-left: 10px;
+  right: 5px;
+  //border-left: 2px solid transparent;
+  color: lighten(@color_link_secondary, 25%);
+  .transition(all, 0.15s, ease-in)
 }
 
-.rss-aggregator .feed-item {
+.box .rss-aggregator li:hover {
+  //border-left: 2px solid fade(@color_link_secondary, 15%); 
+  color: @color_link_hover;
+}
 
+.box .rss-aggregator li:hover a {
+  color: @color_link_hover;
+}
+ 
+.rss-aggregator .feed-item {
 }
 
 .box .rss-aggregator li a {
@@ -21,7 +38,7 @@
 
 .box .rss-aggregator .feed-source {
   font-size: 80%;
-  color: fade(@color_text, 80%)
+  color: fade(@color_text, 75%)
 }
 
 .box .rss-aggregator li:after{ .transition(all, 0.2s, ease-in)}

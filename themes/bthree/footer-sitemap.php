@@ -39,6 +39,6 @@
 					</div>
 				</div>
 			</div>
-			<p class="pull-right"><a href="#"><i class="icon-chevron-up"></i></a></p>
+			<p class="pull-right"><a href="#"><i class="icon-chevron-up goup"></i></a></p>
 		</div>
 	</footer>

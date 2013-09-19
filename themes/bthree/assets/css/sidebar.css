@@ -1,7 +1,7 @@
 .box-shadow-none{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 .text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
 .transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
-.horizontal_flip{-moz-transform:scalex(-1);-o-transform:scalex(-1);-webkit-transform:scalex(-1);transform:scalex(-1);filter:FlipH;-ms-filter:"FlipH";}
+.horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH";}
 .sidebar_block{background-color:#f3f3f3;-webkit-box-shadow:1px 1px 2px rgba(95, 95, 95, 0.25);-moz-box-shadow:1px 1px 2px rgba(95, 95, 95, 0.25);box-shadow:1px 1px 2px rgba(95, 95, 95, 0.25);padding:5px 14px;margin:0 0 10px 0;position:relative;overflow:hidden;}
 .sidebar_block h4{font-size:110%;font-weight:lighter;line-height:normal;}
 .sidebar_block article{border-top:thin solid #ebebeb;}
@@ -15,6 +15,8 @@ ul#sidebar h4,ol#sidebar h4{text-align:left;padding:10px 0 3px 8px;}
 .horizontal ul#sidebar h4,.horizontal ol#sidebar h4{margin:0;}
 #sidebar .widget{background-color:white;text-align:center;-webkit-box-shadow:1px 1px 1px rgba(95, 95, 95, 0.15);-moz-box-shadow:1px 1px 1px rgba(95, 95, 95, 0.15);box-shadow:1px 1px 1px rgba(95, 95, 95, 0.15);-webkit-transition:opacity 0.1s ease-out;-moz-transition:opacity 0.1s ease-out;-o-transition:opacity 0.1s ease-out;-ms-transition:opacity 0.1s ease-out;transition:opacity 0.1s ease-out;}
 #sidebar .widget:hover{opacity:0.9;}
-#sidebar .widget p{padding:0;margin:0;}
+#sidebar .widget p{padding:0;margin:0;padding-bottom:5px;}
+#sidebar .widget img{margin-bottom:-10px;}
+#sidebar .widget{padding-bottom:5px;margin-bottom:15px;}
 .horizontal #sidebar{margin:0;}
 @media (min-width:1200px){.horizontal .widget{width:270px;margin:0 0 0 30px;float:left;padding:0 0 2px 0;}}.horizontal .widget img{width:96%;margin:2px auto;opacity:0.8;padding:0;}

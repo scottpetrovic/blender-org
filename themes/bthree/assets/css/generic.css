@@ -65,5 +65,8 @@ p+h2,p+h3,p+h4{margin-top:25px;}
 .box .btn{min-width:90%;max-width:90%;font-weight:bold;color:rgba(68, 68, 68, 0.5);padding-top:4px;padding-bottom:4px;}
 .box .bottom{width:96%;margin:5px 10px 10px 10px;}
 .box h2 [class*="icon-"],h2 [class*="icon-"]{float:right;margin-right:6%;margin-top:-2%;font-size:145%;opacity:0.3;}
+.box hr{width:95%;opacity:0.6;}
+.thumbnail{padding:4px;border:none;background-color:white;-webkit-box-shadow:1px 1px 0px rgba(68, 68, 68, 0.25);-moz-box-shadow:1px 1px 0px rgba(68, 68, 68, 0.25);box-shadow:1px 1px 0px rgba(68, 68, 68, 0.25);-webkit-transition:all 0.1s ease-out;-moz-transition:all 0.1s ease-out;-o-transition:all 0.1s ease-out;-ms-transition:all 0.1s ease-out;transition:all 0.1s ease-out;}
+a img.thumbnail:hover{opacity:0.9;}
 .soyadmin{float:right;color:#444444;font-size:150%;position:fixed;right:17px;top:18px;z-index:9999;opacity:0.3;}
 .soyadmin:hover{color:#ff5000;opacity:1;}

@@ -218,14 +218,6 @@ get_os();
 						<div class="clearfix"></div>
 						<?=$choose_mirror?>
 				  	</div> <!-- .ZIP-->
-				  	<div class="package">
-				  		<div class="icon"><i class="icon-folder-close-alt"></i></div>
-				  		<h2>.7z</h2>
-						<? download_links($os_prefix_windows, 32, '.7z'); ?>
-						<? download_links($os_prefix_windows, 64, '.7z'); ?>
-						<div class="clearfix"></div>
-						<?=$choose_mirror?>
-				  	</div> <!-- 7z-->
 				 <div class="clearfix"></div>
 				 <div class="alert alert-info">
 				 	<i class="icon-info-sign"></i>

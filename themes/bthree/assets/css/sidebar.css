@@ -19,4 +19,4 @@ ul#sidebar h4,ol#sidebar h4{text-align:left;padding:10px 0 3px 8px;}
 #sidebar .widget img{margin-bottom:-10px;}
 #sidebar .widget{padding-bottom:5px;margin-bottom:15px;}
 .horizontal #sidebar{margin:0;}
-@media (min-width:1200px){.horizontal .widget{width:270px;margin:0 0 0 30px;float:left;padding:0 0 2px 0;}}.horizontal .widget img{width:96%;margin:2px auto;opacity:0.8;padding:0;}
+@media (min-width:1200px){.horizontal .widget{width:270px;margin:0 0 0 30px;float:left;padding:0 0 2px 0;}}.horizontal .widget img{width:100%;margin:6px auto 0 auto;padding:0;}

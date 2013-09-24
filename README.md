@@ -17,6 +17,21 @@ We are making the new blender.org skin. Join the discussion on the [dedicated ma
 - [Database dump](https://dl.dropboxusercontent.com/u/8149083/blender.org/wordpress_bthree_2013-09-23.sql.gz)
 - [Uploads folder](https://dl.dropboxusercontent.com/u/8149083/blender.org/uploads.zip)
 
+## Other info
+
+- WP username and password are (admin, password)
+- if you can add to your `/etc/hosts` file the following line:
+
+```
+local.blender.org	120.0.0.1
+```
+so that you can visit local.blender.org on your browser and see the website. Alternatively you can add to your `wp-config.php` the following lines to see it vising localhost/blender:
+
+```
+define('WP_HOME','http://localhost/blender');
+define('WP_SITEURL','http://localhost/blender');
+```
+
 
 ## Plugins currently used
 - [	CMS Tree Page View](http://eskapism.se/code-playground/cms-tree-page-view/)

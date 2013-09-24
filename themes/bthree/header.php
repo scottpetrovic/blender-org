@@ -21,9 +21,9 @@
 		<?php
 		if ($template_name == 'page-download') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_download.css" rel="stylesheet">
-		<? } else if ($template_name == 'page-frontpage') { ?>
+		<?php } else if ($template_name == 'page-frontpage') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_frontpage.css" rel="stylesheet">
-		<? } ?>
+		<?php } ?>
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

@@ -11,7 +11,17 @@
 
 @import 'page_features.css';
 
-/* Specific CSS */    
+
+.full .carousel .item {min-height: (@carousel_height * 1.8);}
+.full .carousel-caption {top: ((@carousel_height * 1.8) / 4.5);}
+.full .carousel-caption.bottom {top: @carousel_height + 60;}
+.full .carousel-caption.center {top: (@carousel_height / 2);} 
+
+.full .carousel-indicators {top: 555px;}
+
+
+/* for mobile ( anything under 768px */
+
 @media(max-width:767px){
   .sitemap .span3{
     float:left;
@@ -42,15 +52,79 @@
  .bottom {
 position: relative;  /* stops the text from going under the homepage section buttons */
 } 
+
+.full .carousel .item {
+   min-height: 360px;
+  }
+  
+.download_panel {
+top: 260px;
+width: 100%;
+float: left;
+}
+
+.download_panel .btn {
+font-size: 100%;
+}
+
+.download_panel ul {
+clear: both;
+float: left;
+}
+
+
+  
+ .full .carousel-caption.bottom {
+top: 10px;
+left: 10px;
+position: absolute;
+} 
+  
+  
+  .header {
+  position: relative;
+  }
+  
+  
+  .soyadmin { /* don't need to be logging in when you are on a small mobile device)*/
+    display:none;
+  }
+  
+  
+  	.carousel-caption h1 {
+	   font-size: 200%;
+	   text-shadow: 2px 2px 5px #000000;
+	}
+  
+ .carousel-caption .lead{
+  font-size: 70%;
+width: 300px;
+}
+ 
+  
   
 }
 
+
+/* for widths between full size and mobile */
 
 @media(min-width:768px) and (max-width: 1199px){
     .box {
   min-height:  520px;
   }
     
+.carousel-caption h1 {
+font-size: 250%;
+}
+	
+
+.carousel-caption .lead{
+  font-size: 90%;
+  max-width: 42%;
+  min-width: 34%;
+}
+
+	
 }
 
 /* Override Stuff */
@@ -60,12 +134,7 @@ position: relative;  /* stops the text from going under the homepage section but
   background-size: 123px 36px;
   top: -2px;
 }
-.full .carousel .item {min-height: (@carousel_height * 1.8);}
-.full .carousel-caption {top: ((@carousel_height * 1.8) / 4.5);}
-.full .carousel-caption.bottom {top: @carousel_height + 60;}
-.full .carousel-caption.center {top: (@carousel_height / 2);} 
 
-.full .carousel-indicators {top: 555px;}
  
  
 /*   
@@ -84,6 +153,9 @@ header.entry-header {
   header.entry-header {
     margin-left: 20px;
   }
+  
+
+  
 }
 
 @media (max-width: 767px){

@@ -1,18 +1,1 @@
-@import 'generic.css';
-@import 'custom_classes.css';
-@import 'header.css';
-@import 'sidebar.css';
-@import 'footer.css';
-@import 'hero_unit.css';
-@import 'generic_page.css';
-@import 'page_features.css';
-.box-shadow-none{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
-.text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none;}
-.transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none !important;-moz-transition-property:none !important;-ms-transition-property:none !important;-webkit-transition-property:none !important;transition-property:none !important;-o-transform:none !important;-moz-transform:none !important;-ms-transform:none !important;-webkit-transform:none !important;transform:none !important;-webkit-animation:none !important;-moz-animation:none !important;-o-animation:none !important;-ms-animation:none !important;animation:none !important;}
-.horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH";}
-@media (max-width:767px){.sitemap .span3{float:left;width:25%;} .sitemap .span3.connect a{display:block;clear:both;}}.header a.logo{width:123px;height:36px;background-size:123px 36px;top:-2px;}
-.full .carousel .item{min-height:576px;}
-.full .carousel-caption{top:128px;}
-.full .carousel-caption.bottom{top:380px;}
-.full .carousel-caption.center{top:160px;}
-.full .carousel-indicators{top:555px;}
+@import 'generic.css';@import 'custom_classes.css';@import 'header.css';@import 'sidebar.css';@import 'footer.css';@import 'hero_unit.css';@import 'generic_page.css';@import 'page_features.css';.box-shadow-none{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}.text-shadow-none{-webkit-text-shadow:none;-moz-text-shadow:none;text-shadow:none}.transition-none{-webkit-transition:none;-moz-transition:none;-o-transition:none;-ms-transition:none;transition:none;-o-transition-property:none!important;-moz-transition-property:none!important;-ms-transition-property:none!important;-webkit-transition-property:none!important;transition-property:none!important;-o-transform:none!important;-moz-transform:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;-moz-animation:none!important;-o-animation:none!important;-ms-animation:none!important;animation:none!important}.horizontal_flip{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}.full .carousel .item{min-height:576px}.full .carousel-caption{top:128px}.full .carousel-caption.bottom{top:380px}.full .carousel-caption.center{top:160px}.full .carousel-indicators{top:555px}@media(max-width:767px){.sitemap .span3{float:left;padding-left:2em;margin-bottom:5em}.sitemap .span3.connect a{display:block;clear:both}ul.span3 h4{font-size:3em;margin-top:1em}.sitemap li{line-height:1.7em;font-size:1.7em;margin-bottom:.4em}.pull-right{margin-right:1em}.bottom{position:relative}.full .carousel .item{min-height:360px}.download_panel{top:260px;width:100%;float:left}.download_panel .btn{font-size:100%}.download_panel ul{clear:both;float:left}.full .carousel-caption.bottom{top:10px;left:10px;position:absolute}.header{position:relative}.soyadmin{display:none}.carousel-caption h1{font-size:200%;text-shadow:2px 2px 5px #000}.carousel-caption .lead{font-size:70%;width:300px}}@media(min-width:768px) and (max-width:1199px){.box{min-height:520px}.carousel-caption h1{font-size:250%}.carousel-caption .lead{font-size:90%;max-width:42%;min-width:34%}}.header a.logo{width:123px;height:36px;background-size:123px 36px;top:-2px}

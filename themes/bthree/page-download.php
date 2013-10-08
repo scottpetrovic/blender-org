@@ -44,9 +44,16 @@ get_os();
 <script type="text/javascript">
 
 
+
+
+
 	$(document).ready(function(){
 		var padding = 70;
 
+		/*
+			controls all of the transitions when you click different OS to download
+		*/
+		
 		$('#active_windows').live('click',function(){
 		 	$("#flexible").animate({height:$("#windows").height() + padding}, 200);
 		 	$(".tab-content").animate({height:$("#windows").height()}, 200);
@@ -76,19 +83,86 @@ get_os();
 			$('.nav-tabs li.active').addClass('source');
 		});
 
+		
+		// flipping the front and back cards visibility makes it easier later to determine what is actively being shown
+		// useful for sizing the #flexible container
+		
 		$('a#do_download').click(function(e){
-			e.preventDefault(); // Comment to activate downloads
-			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);
+			e.preventDefault(); // Comment this line out to make downloads start
+			$(".card .back").show();
+			$(".card .front").hide();				
 			$('.card').addClass('flip');
+			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);
 		});
 
 		$('a#clear_download').click(function(){
 			$('.card').removeClass('flip');
+			$(".card .back").hide();
+			$(".card .front").show();	
+			
+			$("#flexible").animate({height:$("#tab-content div.active").height() + padding}, 200);					
+			$("#tab-content").animate( { height: $("#tab-content div.active").height()  + padding }, 200   );
+
 		});
 
+		$(".card .front li").click(function(e){
+			$(".card .back").hide();		
+			$(".card .front").show();		
+		});
+		
+		
 		$("#flexible").css({height:$("#<?=$os_platform?>").height() + padding + 30});
 	});
 
+	
+	//  resize end event  ( changing window size needs to only update content after .3 seconds)
+	// sizing is sporadic if you don't add a delay
+	// http://forum.jquery.com/topic/the-resizeend-event
+	
+	var rtime = new Date(1, 1, 2000, 12,00,00);
+	var timeout = false;
+	var delta = 300;
+	$(window).resize(function() {
+		rtime = new Date();
+		if (timeout === false) {
+			timeout = true;
+			setTimeout(resizeend, delta);
+		}
+	});
+
+	function resizeend() {
+		if (new Date() - rtime < delta) {
+			setTimeout(resizeend, delta);
+		} else {
+			timeout = false;			
+			
+			// alert('Done resizing');			
+			var padding = 30;
+			
+			
+
+			// position differently based on what layer is visible
+			// we need this logic because the height of the container will be very different depending on whether 
+			// the person is on the thank you area, or still looking at the download options
+			if (  $(".card .front").css('display') == 'none'   ) // thanks screen
+			{			
+				$("#flexible").animate({height:$(".thanks").height() + padding}, 200);					
+			}
+			else
+			{
+				$("#flexible").animate({height:$("#tab-content div.active").height() + padding}, 200);					
+				$("#tab-content").animate( { height: $("#tab-content div.active").height()  + padding }, 200   );
+			}
+			
+			$("#flexible").css('marginBottom',100 );	
+		
+			
+		}               
+	}	
+	
+	
+	
+	
 </script>
 		<div class="container download">
 			<div class="row">

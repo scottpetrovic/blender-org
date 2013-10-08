@@ -314,3 +314,102 @@
   .transition(all, 0.15s, ease-in)
 }
 .release_candidate .rc_logs {border:none;}
+
+
+/* mobile specific styless */
+
+
+@media(max-width: 1199px) {  
+	.download .header .depth .depth_text{
+		right: -10%;
+	}
+	
+	.download .package .choose {
+		top: 67%;
+		display:none;
+	}
+	
+	 /* Congratulations sections*/
+	 
+	 .thanks .donations .donate_way {
+		max-width:23%; 
+	 }
+	 
+	 .thanks {
+         height: 521px;
+	}
+	 
+	 .thanks .donations .donate_way {
+		min-height: 330px;
+	 }
+	
+}
+
+
+
+@media(max-width: 979px) {  
+
+
+.download .header .title {
+width: 100%;
+}
+
+
+	 
+	 .download .header .depth .depth_text,  .download .header .depth .depth_icon{
+		left: 10px;
+		
+	 }
+	 
+	 	.download .package .links, .download .header .depth {
+	width: 22%;
+	}
+	 
+	 
+	 .download .header .border-left {
+	   border-left: none;
+	 }
+	 
+	 	 
+	.thanks .donations .donate_way {
+		float: none;
+		margin: 1em 0;
+		max-width: 100%;
+		min-height: 0;
+		padding-bottom: 1em;
+	}	
+		 
+	.thanks {
+		height: auto;
+	}	
+		 
+}
+
+
+/* the words "bit" in 64 bit starts getting cut off here, so trigger 100% width level for everything */
+@media(max-width: 410px) {  
+
+  .download .header .depth {
+	  width:100%;
+	}
+	  
+.download .package li{
+    font-size: 147%;
+    line-height: 228%;
+    margin-left: 1em;
+    text-align: left;
+}
+
+	.download .package .links{
+	width: 100%;
+	margin-left: 1.0em;
+	}
+	  
+		  
+	.download .package h2{
+		font-size: 163%;
+		margin: 20px 0 0 9px;
+	}	 
+	  
+  
+  }

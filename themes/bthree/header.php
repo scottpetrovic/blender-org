@@ -16,18 +16,13 @@
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/bthree.css" rel="stylesheet">
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.css" rel="stylesheet">
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/font-blont.css" rel="stylesheet">
-		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/assets/js/jquery-1.8.3.min.js" /></script>
-		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/assets/js/bootstrap-tooltip.js"></script>
 		<?php
 		if ($template_name == 'page-download') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_download.css" rel="stylesheet">
 		<?php } else if ($template_name == 'page-frontpage') { ?>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/assets/css/page_frontpage.css" rel="stylesheet">
 		<?php } ?>
-		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+
 		
 		<!-- Fav and touch icons -->
 		<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/assets/images/favicon.ico">
@@ -35,6 +30,19 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_directory' ); ?>/assets/ico/apple-touch-icon-57-precomposed.png">
+		
+		
+		<!-- Javascript usually placed at the end of the document. There is inline jQuery, so it needs to be defined at the top  to understand common events (ie document.ready) -->
+		<!-- The libs.js holds all of the main libraries that the site uses in minified format -->
+		<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/libs.js"></script>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->			
+		
+		
+		
 	</head>
 
 	<body>

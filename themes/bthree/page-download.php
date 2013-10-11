@@ -100,9 +100,7 @@ get_os();
 			$(".card .back").hide();
 			$(".card .front").show();	
 			
-			$("#flexible").animate({height:$("#tab-content div.active").height() + padding}, 200);					
-			$("#tab-content").animate( { height: $("#tab-content div.active").height()  + padding }, 200   );
-
+			$("#flexible").animate({height:$("#tab-content div.active").height() + 120}, 200);		
 		});
 
 		$(".card .front li").click(function(e){

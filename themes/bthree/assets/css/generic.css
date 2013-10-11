@@ -70,3 +70,4 @@ p+h2,p+h3,p+h4{margin-top:25px;}
 a img.thumbnail:hover{opacity:0.9;}
 .soyadmin{float:right;color:#444444;font-size:150%;position:fixed;right:17px;top:18px;z-index:9999;opacity:0.3;}
 .soyadmin:hover{color:#ff5000;opacity:1;}
+h2+small{top:-10px;position:relative;}

@@ -46,6 +46,7 @@ if (in_category( 'press' ) || in_category( 'faq' )) {
 				<?=(($sidebar_type == 'sidebar') ? '<div class="row-fluid"><div class="span12">' : '')?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php edit_post_link('<i class="icon-edit"></i> Edit', '<span class="edit" style="margin-top: -17px;">', '</span>'); ?>
 						<h1><?php the_title(); ?></h1>
 						<?php if (in_category( 'press' )){?>
 							<h5 style="margin-bottom: 0;"><i class="icon-time"></i>  <?php the_time('F jS, Y'); ?></h5>

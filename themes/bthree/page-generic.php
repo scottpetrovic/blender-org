@@ -22,6 +22,7 @@ if ($header_type == 'static'){
 				<?=(($sidebar_type == 'sidebar') ? '<div class="row-fluid"><div class="span12">' : '')?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php edit_post_link('<i class="icon-edit"></i> Edit', '<span class="edit">', '</span>'); ?>
 						<div class="entry-content">
 							<?php the_content(); ?>
 						</div><!-- .entry-content -->

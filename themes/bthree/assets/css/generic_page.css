@@ -20,3 +20,4 @@
 .carousel-indicators .active{-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-o-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;transition:all 0.5s ease-in;pointer-events:none;}
 .carousel-indicators li:hover{cursor:pointer;}
 ul.nobullets li:after,ul.nobullets li:after{list-style-type:none;display:none;}
+.edit{float:right;margin-top:-35px;}

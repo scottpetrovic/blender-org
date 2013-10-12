@@ -89,25 +89,14 @@ get_os();
 		
 		$('a#do_download').click(function(e){
 			e.preventDefault(); // Comment this line out to make downloads start
-			$(".card .back").show();
-			$(".card .front").hide();				
 			$('.card').addClass('flip');
-			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);
+			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);		
 		});
 
 		$('a#clear_download').click(function(){
 			$('.card').removeClass('flip');
-			$(".card .back").hide();
-			$(".card .front").show();	
-			
 			$("#flexible").animate({height:$("#tab-content div.active").height() + 120}, 200);		
 		});
-
-		$(".card .front li").click(function(e){
-			$(".card .back").hide();		
-			$(".card .front").show();		
-		});
-		
 		
 		$("#flexible").css({height:$("#<?=$os_platform?>").height() + padding + 30});
 	});

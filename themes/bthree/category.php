@@ -1,47 +1,46 @@
 <?php
-/**
-* A Simple Category Template
-*/
+/*
+ * Template for Generic Category
+ */
 ?>
 
 <?php get_header(); ?>
-<?php
-while ( have_posts() ) : the_post();
-// loop to get custom ids, not efficient but headers can't be defined within a loop
-$header_type = get_post_meta(get_the_ID(), 'header_type', true);
-$sidebar_type = get_post_meta(get_the_ID(), 'sidebar_type', true);
-endwhile; // end of the loop.
 
-if ($header_type == 'static'){
-	get_header('static');
-} else if ($header_type == 'carousel'){ 
-	get_header('carousel');
-}?>
+<div class="hero-unit header_static">
+	    <div id="header_static">
+	        <div class="backdrop">
+	          <div class="container">
+	              <div class="panel"><h1><?php single_cat_title(); ?></h1>
+	              </div>
+	          </div>
+	      </div>
+	    </div><!-- //carousel -->
+</div><!-- //hero-unit -->
+<div class="subnav">
+	<div class="container level-2">
+	<?php second_level_nav();?>
+	</div>
+	<div class="level-3">
+		<div class="container">
+			<?php third_level_nav();?>
+		</div>
+	</div>
+</div>
+
 
 <div id="content" role="main" class="container">
 
 <?php if ( have_posts() ) : ?>
+	<?php
+	while ( have_posts() ) : the_post();?>
+	<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+	<small><?php the_time('F jS, Y'); ?></small>
 
-<?php
+	<?php endwhile;
+	else: ?>
+	<p>No articles under this category.</p>
 
-// The Loop
-while ( have_posts() ) : the_post();?>
-<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
-
-	<div class="entry">
-	<?php the_excerpt(); ?>
-	
-	 <p class="postmetadata"><?php
-	  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-	?></p>
-	</div>
-
-<?php endwhile; // End Loop
-else: ?>
-<p>Sorry, no posts matched your criteria.</p>
-
-<?php endif; ?>
+	<?php endif; ?>
 </div>
 
 <?php get_footer('sitemap'); ?>

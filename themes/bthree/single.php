@@ -14,6 +14,9 @@ $category_id = $category[0]->cat_ID;
 if (in_category( 'press' ) || in_category( 'faq' )) {
 	$is_archive = TRUE;
 	include(TEMPLATEPATH . '/header-archive.php');
+} else {
+    $is_archive = FALSE;
+	include(TEMPLATEPATH . '/header-archive.php');
 }
 ?>
 

@@ -19,13 +19,13 @@
 
 
    <div class="container">
-	   <div class="row row-fluid">
+	   <div class="row-fluid">
 	   		<div class="span12">
-		   		<h1>Page doesn't exist (anymore)</h1>
+		   		<h1>Page doesn't exist</h1>
 				<article>					
 						<p>Oops! You have accessed the Blender website with a link to a page that does not exist, or was moved away. Please browse our site to find the content you were looking for. Below you can find sitemap overview as well.</p>
-						<p>Thanks,</p>
-						<p>blender.org web team</p>
+						<p>Thanks,<br>
+						blender.org web team</p>
 				</article>				
 	   		</div>
 	   </div>
@@ -69,11 +69,7 @@
 		</div> <!-- // span12 -->
 </div> <!-- // row --> 	   
 	   
-	   
-	   
-	   
-	   
-	   
+
 	   
    </div> <!-- //end container -->
 

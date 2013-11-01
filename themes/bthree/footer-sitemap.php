@@ -1,44 +1,40 @@
-	<div class="clearfix"></div>
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="span12 sitemap">
-					<div class="row">
-					<ul class="span3">
-						<h4>Network</h4>
-						<a href="{url path="/blog"}"><li>News</li></a>
-						<a href="{url path="/events"}"><li>Events</li></a>
-						<a href="{url path="/faq"}"><li>FAQ</li></a>
-						<a href="{url path="/join"}"><li>Join the Network</li></a>
-						<a href="{url path="/contact"}"><li>Contact & Support</li></a>
-					</ul>
-					<ul class="span3">
-						<a href="http://www.blender.org" target="_blank"><h4>Blender.org</h4></a>
-						<a href="http://www.blender.org/download/get-blender/" target="_blank"><li>Get Blender</li></a>
-						<a href="http://www.blender.org/blenderorg/blender-foundation/" target="_blank"><li>Foundation</li></a>
-						<a href="http://www.blender.org/blenderorg/blender-institute/" target="_blank"><li>Institute</li></a>
-						<a href="http://wiki.blender.org/index.php/Dev:Doc/Projects" target="_blank"><li>Projects</li></a>
-						<a href="http://www.blender.org/e-shop" target="_blank"><li>Store</li></a>
-					</ul>
-					<ul class="span3">
-						<a href="http://www.blender.org" target="_blank"><h4>Blender.org</h4></a>
-	
-						<a href="http://www.blender.org/download/get-blender/" target="_blank"><li>Get Blender</li></a>
-						<a href="http://www.blender.org/blenderorg/blender-foundation/" target="_blank"><li>Foundation</li></a>
-						<a href="http://www.blender.org/blenderorg/blender-institute/" target="_blank"><li>Institute</li></a>
-						<a href="http://wiki.blender.org/index.php/Dev:Doc/Projects" target="_blank"><li>Projects</li></a>
-						<a href="http://www.blender.org/e-shop" target="_blank"><li>Store</li></a>
-					</ul>
-					<ul class="span3 connect">
-						<h4>Connect</h4>
-						<a href="http://www.twitter.com/blendernetwork"><li><i class="icon-twitter"></i></li></a>
-						<a href="http://www.facebook.com/BlenderNetwork"><li><i class="icon-facebook"></i></li></a>
-						<a href="https://plus.google.com/100968658642850241998"><li><i class="icon-google-plus"></i></li></a>
-						<a href="{url path="/contact"}"><li><i class="icon-envelope"></i></li></a>
-					</ul>
-					</div>
-				</div>
-			</div>
-			<p class="pull-right"><a href="#"><i class="icon-chevron-up goup"></i></a></p>
-		</div>
-	</footer>
+		<div class="clearfix"></div> 
+		<footer> 
+			<div class="container"> 
+				<div class="row"> 
+					<div class="span12 sitemap"> 
+						<div class="row"> 
+							<ul class="span3"> 
+								<h4>Blender</h4> 
+								<li><a href="http://www.blender.org/download/" >Download</a></li>
+								<li><a href="http://www.blender.org/download/" >Source code</a></li>
+								<li><a href="http://www.blender.org/features/" >Features</a></li>
+								<li><a href="http://wiki.blender.org/index.php/Doc:2.6/Manual" >Documentation</a></li>
+							</ul> 
+							<ul class="span3"> 
+								<h4>Organization</h4> 
+								<li><a href="http://www.blender.org/foundation/" >Foundation</a></li>
+								<li><a href="http://www.blender.org/institute/" >Institute</a></li>
+								<li><a href="http://www.blender.org/get-involved/developers/" >Developers</a></li>
+								<li><a href="http://network.blender.org" >Partners Network</a></li>
+							</ul> 
+							<ul class="span3"> 
+								<h4>Get Involved</h4> 
+								<li><a href="http://www.blender.org/get-involved/developers/" >Software</a></li>
+								<li><a href="http://www.blender.org/get-involved/" >Websites and docs</a></li>
+								<li><a href="http://www.blender.org/foundation/donation-payment/" >Donations</a></li>
+								<li><a href="http://www.blender.org/conference/" >Conferences</a></li>
+							</ul> 
+							<ul class="span3 connect"> 
+								<h4>blender.org</h4> 
+								<li><a href="http://www.blender.org/news/" >News</a></li>
+								<li><a href="http://www.blender.org/foundation/" >Contact us</a></li>
+								<li><a href="http://www.blender.org/about/logo/" >Trademark and logo</a></li>
+								<li><a href="http://www.blender.org/about/website/" >Website license</a></li>
+							</ul> 
+						</div> 
+					</div> 
+				</div> 
+				<p class="pull-right"><a href="#"><i class="icon-chevron-up goup"></i></a></p> 
+			</div> 
+		</footer>

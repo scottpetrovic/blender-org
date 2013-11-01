@@ -9,3 +9,4 @@
 /uploads
 .project
 .DS_Store
+*.sublime*

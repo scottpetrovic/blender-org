@@ -88,7 +88,7 @@ get_os();
 		// useful for sizing the #flexible container
 		
 		$('a#do_download').click(function(e){
-			e.preventDefault(); // Comment this line out to make downloads start
+			// e.preventDefault(); // Comment this line out to make downloads start
 			$('.card').addClass('flip');
 			$("#flexible").animate({height:$(".thanks").height() + padding}, 300);		
 		});

@@ -31,7 +31,7 @@
 <div id="content" role="main" class="container">
 	<div class="row-fluid">
 		<div class="span4">
-			<h2>Blender.org News</h2>
+			<h2>Blender.org</h2>
 		<?php if ( have_posts() ) : ?>
 			<?php
 			while ( have_posts() ) : the_post();?>
@@ -47,11 +47,11 @@
 		<div class="span8">
 			<div class="row-fluid">
 				<div class="span6">
-					<h2>Blender Network News</h2>
+					<h2>Blender Network</h2>
 					<?php echo do_shortcode('[wp_rss_aggregator source="377" limit="5"]'); ?>
 				</div>
 				<div class="span6">
-					<h2>Blender Nation News</h2>
+					<h2>BlenderNation</h2>
 					<?php echo do_shortcode('[wp_rss_aggregator source="1589" limit="5"]'); ?>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 					<?php echo do_shortcode('[wp_rss_aggregator]'); ?>
 				</div>
 				<div class="span6">
-					<h2>Some other news</h2>
+					<h2>Some other items</h2>
 					<?php echo do_shortcode('[wp_rss_aggregator]'); ?>
 				</div>
 			</div>

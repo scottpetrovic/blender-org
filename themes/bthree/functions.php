@@ -19,7 +19,7 @@ add_action( 'init', 'register_my_menus' );
 
 // register_sidebar(2,array( 'name' => 'Sidebar %d' ) );
 
-register_sidebar(array( 'name' => 'Sidebar 1' ) );
+register_sidebar(array( 'name' => 'Sidebar 1'));
 
 
 function page_ancestry() { 

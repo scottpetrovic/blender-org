@@ -37,6 +37,9 @@ if ($header_type == 'static'){
 					<div class="row">
 					<?php get_sidebar(); ?>
 					</div>
+					<script>
+						$('#sidebar').children().addClass('span3');
+					</script>
 				</div> <!-- // span12 -->
 			</div> <!-- // row --> 
 			<? } else if ($sidebar_type == 'sidebar') { ?>

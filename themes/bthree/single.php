@@ -11,6 +11,10 @@ global $category, $category_id;
 $category = get_the_category();
 $category_id = $category[0]->cat_ID;
 
+/* Here we check if the type of page we want belongs to an 'archive' category.
+ * For the moment the only type of page is press (faq have been moved to a single page)
+ */
+
 if (in_category( 'press' ) || in_category( 'faq' )) {
 	$is_archive = TRUE;
 	include(TEMPLATEPATH . '/header-archive.php');
@@ -44,16 +48,17 @@ if (in_category( 'press' ) || in_category( 'faq' )) {
 </div>
 <? } ?>
 		<div class="container">
-			<div class="row">
+			<div class="row-fluid">
 				<div class="<?=(($sidebar_type == 'sidebar') ? 'span8' : 'span12')?>">
 				<?=(($sidebar_type == 'sidebar') ? '<div class="row-fluid"><div class="span12">' : '')?>
 				<?php while ( have_posts() ) : the_post(); ?>
+					
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<?php edit_post_link('<i class="icon-edit"></i> Edit', '<span class="edit" style="margin-top: -17px;">', '</span>'); ?>
 						<h1><?php the_title(); ?></h1>
-						<?php if (in_category( 'press' )){?>
+						<?php // if (in_category( 'press' )){?>
 							<h5 style="margin-bottom: 0;"><i class="icon-time"></i>  <?php the_time('F jS, Y'); ?></h5>
-						<?php } ?>
+						<?php // } ?>
 						<hr class="left width-full" />
 						<div class="entry-content">
 							<?php the_content(); ?>

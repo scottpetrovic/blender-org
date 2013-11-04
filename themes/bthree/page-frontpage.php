@@ -31,6 +31,7 @@ if ($header_type == 'static'){
 			<? if ($sidebar_type == 'bottombar'){ ?>
 				</div> <!-- // span12 -->
 			</div> <!-- // row --> 
+			<?php the_post(); ?> 
 			<div class="row">
 				<div class="span12 horizontal">
 					<hr/>
